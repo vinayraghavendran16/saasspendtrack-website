@@ -9,10 +9,13 @@
   <meta property="og:description" content="Track contracts, renewals, invoices, and vendor spend in one dashboard. Free forever.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saasspendtrack.com">
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230D9668'/%3E%3Cpath d='M8 22V14l4 4 4-6 4 3 4-5' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+
+  <!-- Favicon: three ascending bars in a rounded square (navy bg, green bars) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230F1829'/%3E%3Crect x='6' y='18' width='5' height='8' rx='1.5' fill='%2322C55E'/%3E%3Crect x='13.5' y='12' width='5' height='14' rx='1.5' fill='%2322C55E'/%3E%3Crect x='21' y='6' width='5' height='20' rx='1.5' fill='%2322C55E'/%3E%3C/svg%3E">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -21,10 +24,14 @@
   <nav class="nav">
     <div class="nav-inner">
       <a href="/" class="logo">
-        <div class="logo-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V14l4 4 4-6 4 3 4-5"/></svg>
-        </div>
-        SaaSSpendTrack
+        <!-- Three ascending bars logo -->
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="7" fill="#0F1829"/>
+          <rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/>
+          <rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/>
+          <rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/>
+        </svg>
+        <span>SaaSSpendTrack</span>
       </a>
       <div class="nav-links">
         <a href="#features">Features</a>
@@ -41,22 +48,22 @@
       <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
       <a href="#faq">FAQ</a>
-      <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-primary" style="width:100%">Start free →</a>
+      <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-primary" style="width:100%;text-align:center;">Start free →</a>
     </div>
   </nav>
 
   <!-- Hero -->
   <section class="hero">
-    <div class="container">
-      <div class="hero-badge">🔥 80% cheaper than Zluri & Spendflo</div>
-      <h1>Stop overpaying<br>for SaaS.</h1>
+    <div class="hero-grid-bg"></div>
+    <div class="container hero-content">
+      <div class="hero-badge">🔥 80% cheaper than Zluri &amp; Spendflo</div>
+      <h1>Stop overpaying<br>for <span class="hero-accent">SaaS.</span></h1>
       <p class="hero-sub">Track every contract, renewal, and invoice across your entire vendor stack. One dashboard. Zero surprises. Live in 30 minutes.</p>
       <div class="hero-actions">
         <a href="https://contractiq.whizzlead.com" class="btn btn-lg btn-primary">Start free — no card needed →</a>
-        <a href="#demo" class="btn btn-lg btn-outline">See it in action</a>
+        <a href="#demo" class="btn btn-lg btn-dark-outline">See it in action</a>
       </div>
     </div>
-    <div class="hero-glow"></div>
   </section>
 
   <!-- Stats bar -->
@@ -64,19 +71,22 @@
     <div class="container">
       <div class="stats-grid">
         <div class="stat-block">
-          <span class="stat-num" data-target="30">0</span><span class="stat-suffix">min</span>
+          <div class="stat-top"><span class="stat-num" data-target="30">0</span><span class="stat-suffix">min</span></div>
           <span class="stat-desc">to go live</span>
         </div>
+        <div class="stat-divider"></div>
         <div class="stat-block">
-          <span class="stat-num" data-target="80">0</span><span class="stat-suffix">%</span>
+          <div class="stat-top"><span class="stat-num" data-target="80">0</span><span class="stat-suffix">%</span></div>
           <span class="stat-desc">cheaper than enterprise tools</span>
         </div>
+        <div class="stat-divider"></div>
         <div class="stat-block">
-          <span class="stat-num" data-target="0">0</span><span class="stat-suffix"></span>
+          <div class="stat-top"><span class="stat-dollar">$</span><span class="stat-num" data-target="0">0</span></div>
           <span class="stat-desc">to get started</span>
         </div>
+        <div class="stat-divider"></div>
         <div class="stat-block">
-          <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
+          <div class="stat-top"><span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span></div>
           <span class="stat-desc">free — forever</span>
         </div>
       </div>
@@ -89,53 +99,81 @@
       <div class="preview-window reveal">
         <div class="preview-chrome">
           <div class="chrome-dots"><span></span><span></span><span></span></div>
-          <div class="chrome-bar">saasspendtrack.com/dashboard</div>
+          <div class="chrome-bar">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:.4"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            saasspendtrack.com/dashboard
+          </div>
         </div>
         <div class="preview-body">
-          <div class="dash-header">
-            <div>
-              <span class="dash-eyebrow">Dashboard</span>
-              <span class="dash-title">Vendor spend overview</span>
+          <div class="dash-sidebar">
+            <div class="sidebar-logo">
+              <svg width="22" height="22" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
+              <span>SSTrack</span>
             </div>
-            <div class="dash-period">
-              <span class="period-btn">Monthly</span>
-              <span class="period-btn active">Annual</span>
+            <div class="sidebar-item active">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+              Dashboard
             </div>
-          </div>
-          <div class="dash-cards">
-            <div class="dash-card">
-              <span class="dc-label">Total spend</span>
-              <span class="dc-value">$47,200</span>
-              <span class="dc-change up">↓ 12% vs last year</span>
+            <div class="sidebar-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+              Vendors
             </div>
-            <div class="dash-card">
-              <span class="dc-label">Active vendors</span>
-              <span class="dc-value">24</span>
-              <span class="dc-change neutral">+2 this quarter</span>
+            <div class="sidebar-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              Contracts
             </div>
-            <div class="dash-card warn">
-              <span class="dc-label">Upcoming renewals</span>
-              <span class="dc-value">3</span>
-              <span class="dc-change warn">Action needed</span>
+            <div class="sidebar-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg>
+              Invoices
             </div>
-            <div class="dash-card">
-              <span class="dc-label">Avg cost per user</span>
-              <span class="dc-value">$18.40</span>
-              <span class="dc-change up">↓ $3.20 saved</span>
+            <div class="sidebar-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+              Analytics
             </div>
           </div>
-          <div class="dash-table">
-            <div class="dt-header">
-              <span class="dt-h-name">Vendor</span>
-              <span class="dt-h-cost">Annual cost</span>
-              <span class="dt-h-users">Users</span>
-              <span class="dt-h-status">Status</span>
+          <div class="dash-main">
+            <div class="dash-header">
+              <div>
+                <span class="dash-eyebrow">Overview</span>
+                <span class="dash-title">Vendor spend</span>
+              </div>
+              <div class="dash-period">
+                <span class="period-btn">Monthly</span>
+                <span class="period-btn active">Annual</span>
+              </div>
             </div>
-            <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Salesforce</span><span class="dt-cost">$14,400</span><span class="dt-users">45</span><span class="badge active">Active</span></div>
-            <div class="dt-row"><span class="dt-name"><span class="dot amber"></span>Figma</span><span class="dt-cost">$8,640</span><span class="dt-users">32</span><span class="badge renew">Renews Aug 3</span></div>
-            <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Notion</span><span class="dt-cost">$4,800</span><span class="dt-users">60</span><span class="badge active">Active</span></div>
-            <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Slack</span><span class="dt-cost">$6,120</span><span class="dt-users">58</span><span class="badge active">Active</span></div>
-            <div class="dt-row"><span class="dt-name"><span class="dot red"></span>Intercom</span><span class="dt-cost">$9,600</span><span class="dt-users">12</span><span class="badge overdue">Invoice overdue</span></div>
+            <div class="dash-cards">
+              <div class="dash-card">
+                <span class="dc-label">Total spend</span>
+                <span class="dc-value">$47,200</span>
+                <span class="dc-change up">↓ 12% vs last year</span>
+              </div>
+              <div class="dash-card">
+                <span class="dc-label">Active vendors</span>
+                <span class="dc-value">24</span>
+                <span class="dc-change neutral">+2 this quarter</span>
+              </div>
+              <div class="dash-card warn">
+                <span class="dc-label">Renewals due</span>
+                <span class="dc-value">3</span>
+                <span class="dc-change warn">⚠ Action needed</span>
+              </div>
+              <div class="dash-card">
+                <span class="dc-label">Avg cost/user</span>
+                <span class="dc-value">$18.40</span>
+                <span class="dc-change up">↓ $3.20 saved</span>
+              </div>
+            </div>
+            <div class="dash-table">
+              <div class="dt-header">
+                <span>Vendor</span><span>Annual cost</span><span>Users</span><span>Status</span>
+              </div>
+              <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Salesforce</span><span class="dt-cost">$14,400</span><span>45</span><span class="badge active">Active</span></div>
+              <div class="dt-row"><span class="dt-name"><span class="dot amber"></span>Figma</span><span class="dt-cost">$8,640</span><span>32</span><span class="badge renew">Renews Aug 3</span></div>
+              <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Notion</span><span class="dt-cost">$4,800</span><span>60</span><span class="badge active">Active</span></div>
+              <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Slack</span><span class="dt-cost">$6,120</span><span>58</span><span class="badge active">Active</span></div>
+              <div class="dt-row"><span class="dt-name"><span class="dot red"></span>Intercom</span><span class="dt-cost">$9,600</span><span>12</span><span class="badge overdue">Invoice overdue</span></div>
+            </div>
           </div>
         </div>
       </div>
@@ -147,36 +185,36 @@
     <div class="container">
       <div class="section-header">
         <span class="sh-badge">Features</span>
-        <h2>Everything Zluri does at $30K.<br>We do it at <span class="highlight">$99.</span></h2>
+        <h2>Everything Zluri does at $30K.<br>We do it at <span class="green-text">$99.</span></h2>
       </div>
       <div class="features-grid">
         <div class="fcard reveal">
-          <div class="fcard-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
+          <div class="fcard-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
           <h3>Contract ingestion</h3>
-          <p>Upload from Drive, your CLM, or add manually. We read and extract every detail automatically.</p>
+          <p>Upload from Drive, your CLM, or add manually. We extract every detail automatically.</p>
         </div>
         <div class="fcard reveal">
-          <div class="fcard-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
+          <div class="fcard-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
           <h3>Smart alerts</h3>
-          <p>Email and Slack notifications before renewals hit. Escalation paths so nothing slips through.</p>
+          <p>Email and Slack notifications before renewals hit. Escalation paths so nothing slips.</p>
         </div>
         <div class="fcard reveal">
-          <div class="fcard-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M9 15h6M9 11h6"/></svg></div>
+          <div class="fcard-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
           <h3>Invoice tracking</h3>
           <p>Pending, paid, overdue — every invoice across every vendor in one view.</p>
         </div>
         <div class="fcard reveal">
-          <div class="fcard-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
+          <div class="fcard-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
           <h3>Spend analytics</h3>
           <p>Per-user costs, department splits, adoption rates. Forecast next year with real data.</p>
         </div>
         <div class="fcard reveal">
-          <div class="fcard-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+          <div class="fcard-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg></div>
           <h3>Workflow automation</h3>
           <p>Build escalation paths. Customize every alert and trigger. The right people act at the right time.</p>
         </div>
         <div class="fcard reveal">
-          <div class="fcard-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+          <div class="fcard-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
           <h3>Integrations</h3>
           <p>Slack, Google Drive, CLM tools, ERP systems. One source of truth for everything.</p>
         </div>
@@ -187,9 +225,9 @@
   <!-- Comparison -->
   <section class="compare-section">
     <div class="container">
-      <div class="section-header light">
-        <span class="sh-badge dark">Why switch</span>
-        <h2>Enterprise visibility.<br><span class="highlight-light">Startup pricing.</span></h2>
+      <div class="section-header">
+        <span class="sh-badge green">Why switch</span>
+        <h2>Enterprise visibility.<br><span class="green-text">Startup pricing.</span></h2>
       </div>
       <div class="compare-grid">
         <div class="compare-card them">
@@ -203,7 +241,7 @@
           </ul>
         </div>
         <div class="compare-card us">
-          <div class="compare-badge">Your pick</div>
+          <div class="compare-best">Your pick</div>
           <div class="compare-label">SaaSSpendTrack</div>
           <div class="compare-price">$0 – $99<span>/yr</span></div>
           <ul>
@@ -226,32 +264,26 @@
         <p class="sh-sub">Every plan includes unlimited users and unlimited contracts.</p>
       </div>
       <div class="pricing-grid">
-
         <div class="plan reveal">
-          <div class="plan-head">
-            <h3>Free</h3>
-            <div class="plan-price"><span class="price-dollar">$</span>0</div>
-            <span class="plan-period">Forever</span>
-          </div>
+          <div class="plan-name">Free</div>
+          <div class="plan-price"><span class="price-dollar">$</span>0</div>
+          <div class="plan-period">Forever</div>
           <div class="plan-sep"></div>
           <div class="plan-limit">Up to 3 vendors</div>
           <ul>
             <li>Unlimited users</li>
             <li>Unlimited contracts</li>
-            <li>Integrated dashboard</li>
+            <li>Dashboard + alerts</li>
             <li>Renewal tracking</li>
-            <li>Email alerts</li>
+            <li>Email notifications</li>
           </ul>
-          <a href="https://contractiq.whizzlead.com" class="btn btn-outline btn-full">Start free</a>
+          <a href="https://contractiq.whizzlead.com" class="btn btn-outline-dark btn-full">Start free</a>
         </div>
-
         <div class="plan featured reveal">
-          <div class="plan-flag">Most popular</div>
-          <div class="plan-head">
-            <h3>Pro</h3>
-            <div class="plan-price"><span class="price-dollar">$</span>99<span class="price-yr">/yr</span></div>
-            <span class="plan-period">Less than $9/month</span>
-          </div>
+          <div class="plan-popular">Most popular</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-price"><span class="price-dollar">$</span>99<span class="price-yr">/yr</span></div>
+          <div class="plan-period">Less than $9/month</div>
           <div class="plan-sep"></div>
           <div class="plan-limit">Up to 100 vendors</div>
           <ul>
@@ -264,13 +296,10 @@
           </ul>
           <a href="https://rzp.io/rzp/2T2PfXBC" class="btn btn-primary btn-full">Get started →</a>
         </div>
-
         <div class="plan reveal">
-          <div class="plan-head">
-            <h3>Enterprise</h3>
-            <div class="plan-price"><span class="price-dollar">$</span>999<span class="price-yr">/yr</span></div>
-            <span class="plan-period">Unlimited everything</span>
-          </div>
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price"><span class="price-dollar">$</span>999<span class="price-yr">/yr</span></div>
+          <div class="plan-period">Unlimited everything</div>
           <div class="plan-sep"></div>
           <div class="plan-limit">100+ vendors</div>
           <ul>
@@ -281,9 +310,8 @@
             <li>Escalation workflows</li>
             <li>Priority support</li>
           </ul>
-          <a href="https://rzp.io/rzp/MhqdtN2a" class="btn btn-outline btn-full">Get started →</a>
+          <a href="https://rzp.io/rzp/MhqdtN2a" class="btn btn-outline-dark btn-full">Get started →</a>
         </div>
-
       </div>
     </div>
   </section>
@@ -296,40 +324,25 @@
         <h2>Questions? Answers.</h2>
       </div>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>What can SaaSSpendTrack help me track?</summary>
-          <p>Everything — vendor details, per-user costs, team-wise spend splits, pending invoices, upcoming renewals, adoption rates, and more. If it's part of your SaaS stack, we track it.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How are you different from Zluri or Spendflo?</summary>
-          <p>They cost $30K–$60K/year and take months to deploy. We give you 80% of the visibility at less than 1% of the cost, and you're live in 30 minutes.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How long does onboarding take?</summary>
-          <p>Under 30 minutes. Connect your data sources, configure alerts, and your dashboard is ready. No implementation team needed.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Can I add unlimited users on the free plan?</summary>
-          <p>Yes. Every plan — including Free — supports unlimited users and unlimited contracts. The only variable is vendor count.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Is there a free trial for paid plans?</summary>
-          <p>Yes. 7-day free trial with full access. No credit card required.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How do I get support?</summary>
-          <p>Lifetime support on all plans. Email support@saasspendtrack.com — we respond within hours, not days.</p>
-        </details>
+        <details class="faq-item"><summary>What can SaaSSpendTrack help me track?</summary><p>Everything — vendor details, per-user costs, team-wise spend splits, pending invoices, upcoming renewals, adoption rates, and more. If it's part of your SaaS stack, we track it.</p></details>
+        <details class="faq-item"><summary>How are you different from Zluri or Spendflo?</summary><p>They cost $30K–$60K/year and take months to deploy. We give you 80% of the visibility at less than 1% of the cost, and you're live in 30 minutes.</p></details>
+        <details class="faq-item"><summary>How long does onboarding take?</summary><p>Under 30 minutes. Connect your data sources, configure alerts, and your dashboard is ready. No implementation team needed.</p></details>
+        <details class="faq-item"><summary>Can I add unlimited users on the free plan?</summary><p>Yes. Every plan — including Free — supports unlimited users and unlimited contracts. The only variable is vendor count.</p></details>
+        <details class="faq-item"><summary>Is there a free trial for paid plans?</summary><p>Yes. 7-day free trial with full access. No credit card required.</p></details>
+        <details class="faq-item"><summary>How do I get support?</summary><p>Lifetime support on all plans. Email support@saasspendtrack.com — we respond within hours, not days.</p></details>
       </div>
     </div>
   </section>
 
-  <!-- CTA -->
+  <!-- Final CTA -->
   <section class="final-cta">
     <div class="container">
-      <h2>Your SaaS stack is bleeding money.<br>Let's fix that.</h2>
+      <div class="cta-logo">
+        <svg width="48" height="48" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
+      </div>
+      <h2>Your SaaS stack is<br><span class="green-text">bleeding money.</span></h2>
       <p>Start free. Upgrade when you're ready. Cancel anytime.</p>
-      <a href="https://contractiq.whizzlead.com" class="btn btn-lg btn-white">Start tracking — free →</a>
+      <a href="https://contractiq.whizzlead.com" class="btn btn-lg btn-primary">Start tracking — free →</a>
     </div>
   </section>
 
@@ -339,8 +352,8 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="/" class="logo">
-            <div class="logo-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V14l4 4 4-6 4 3 4-5"/></svg></div>
-            SaaSSpendTrack
+            <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
+            <span>SaaSSpendTrack</span>
           </a>
           <p>SaaS spend management for teams that move fast.</p>
         </div>
@@ -364,6 +377,7 @@
       </div>
       <div class="footer-bottom">
         <p>© 2026 SaaSSpendTrack. All rights reserved.</p>
+        <p class="footer-tagline">Track every dollar you spend on SaaS. Automatically.</p>
       </div>
     </div>
   </footer>
@@ -371,24 +385,28 @@
   <script>
     // Mobile menu
     const toggle=document.querySelector('.mobile-toggle'),menu=document.querySelector('.mobile-menu');
-    toggle.addEventListener('click',()=>{menu.classList.toggle('open');});
+    toggle.addEventListener('click',()=>menu.classList.toggle('open'));
     document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
 
     // Scroll reveal
-    const reveals=document.querySelectorAll('.reveal');
-    const io=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}});},{threshold:0.15});
-    reveals.forEach(el=>io.observe(el));
+    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.12});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 
     // Counter animation
-    const counters=document.querySelectorAll('.stat-num');
-    const cio=new IntersectionObserver((entries)=>{entries.forEach(e=>{if(e.isIntersecting){const el=e.target,target=+el.dataset.target;if(target===0){el.textContent='$0';cio.unobserve(el);return;}
-    let current=0;const step=Math.ceil(target/40);const timer=setInterval(()=>{current+=step;if(current>=target){current=target;clearInterval(timer);}el.textContent=current;},30);cio.unobserve(el);}});},{threshold:0.5});
-    counters.forEach(el=>cio.observe(el));
+    const cio=new IntersectionObserver(entries=>entries.forEach(e=>{
+      if(!e.isIntersecting)return;
+      const el=e.target,target=+el.dataset.target;
+      if(target===0){el.textContent='0';cio.unobserve(el);return;}
+      let cur=0;const step=Math.ceil(target/50);
+      const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur>=target)clearInterval(t);},25);
+      cio.unobserve(el);
+    }),{threshold:0.5});
+    document.querySelectorAll('.stat-num').forEach(el=>cio.observe(el));
 
     // Dashboard row hover
-    document.querySelectorAll('.dt-row').forEach(row=>{
-      row.addEventListener('mouseenter',()=>row.style.background='#f0faf4');
-      row.addEventListener('mouseleave',()=>row.style.background='');
+    document.querySelectorAll('.dt-row').forEach(r=>{
+      r.addEventListener('mouseenter',()=>r.style.background='rgba(34,197,94,.06)');
+      r.addEventListener('mouseleave',()=>r.style.background='');
     });
   </script>
 </body>
