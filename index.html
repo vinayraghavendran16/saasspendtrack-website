@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SaaSSpendTrack — Track every dollar you spend on SaaS</title>
+  <meta name="description" content="Track contracts, renewals, invoices, and vendor spend in one dashboard. Free forever for up to 3 vendors. Go live in 30 minutes.">
+  <meta property="og:title" content="SaaSSpendTrack — SaaS Spend Management">
+  <meta property="og:description" content="Track contracts, renewals, invoices, and vendor spend in one dashboard. Free forever for up to 3 vendors.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saasspendtrack.com">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230B4D3B'/%3E%3Cpath d='M8 22V14l4 4 4-6 4 3 4-5' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">
+        <div class="logo-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V14l4 4 4-6 4 3 4-5"/></svg>
+        </div>
+        <span>SaaSSpendTrack</span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://contractiq.whizzlead.com" class="btn btn-nav">Get started</a>
+      </div>
+      <button class="mobile-toggle" aria-label="Toggle menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+    <div class="mobile-menu">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://contractiq.whizzlead.com" class="btn btn-nav">Get started</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">No more spreadsheet chaos</div>
+      <h1>Track every dollar you spend on SaaS. Automatically.</h1>
+      <p class="hero-sub">Contracts, renewals, invoices, vendor details — one dashboard, zero surprises. Free forever for small teams.</p>
+      <div class="hero-actions">
+        <a href="https://contractiq.whizzlead.com" class="btn btn-primary">Start free</a>
+        <a href="#demo" class="btn btn-outline">Watch demo</a>
+      </div>
+      <p class="hero-note">Live in 30 minutes &middot; No credit card required</p>
+    </div>
+  </section>
+
+  <!-- Social proof strip -->
+  <section class="proof">
+    <div class="container">
+      <div class="proof-grid">
+        <div class="proof-item">
+          <span class="proof-number">30 min</span>
+          <span class="proof-label">Onboarding time</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">80%</span>
+          <span class="proof-label">Cost of enterprise tools</span>
+        </div>
+        <div class="proof-divider"></div>
+        <div class="proof-item">
+          <span class="proof-number">$0</span>
+          <span class="proof-label">To get started</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dashboard preview -->
+  <section class="preview">
+    <div class="container">
+      <div class="preview-window">
+        <div class="preview-toolbar">
+          <div class="preview-dots">
+            <span></span><span></span><span></span>
+          </div>
+          <span class="preview-title">Vendor spend overview — Jul 2026</span>
+        </div>
+        <div class="preview-body">
+          <div class="preview-stats">
+            <div class="stat-card">
+              <span class="stat-label">Total annual spend</span>
+              <span class="stat-value">$47,200</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Active vendors</span>
+              <span class="stat-value">24</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Renewals this month</span>
+              <span class="stat-value stat-warning">3</span>
+            </div>
+          </div>
+          <div class="preview-table">
+            <div class="preview-row">
+              <span class="row-dot dot-green"></span>
+              <span class="row-name">Salesforce</span>
+              <span class="row-amount">$14,400/yr</span>
+              <span class="row-badge badge-active">Active</span>
+            </div>
+            <div class="preview-row">
+              <span class="row-dot dot-amber"></span>
+              <span class="row-name">Figma</span>
+              <span class="row-amount">$8,640/yr</span>
+              <span class="row-badge badge-renew">Renews Aug 3</span>
+            </div>
+            <div class="preview-row">
+              <span class="row-dot dot-green"></span>
+              <span class="row-name">Notion</span>
+              <span class="row-amount">$4,800/yr</span>
+              <span class="row-badge badge-active">Active</span>
+            </div>
+            <div class="preview-row">
+              <span class="row-dot dot-green"></span>
+              <span class="row-name">Slack</span>
+              <span class="row-amount">$6,120/yr</span>
+              <span class="row-badge badge-active">Active</span>
+            </div>
+            <div class="preview-row">
+              <span class="row-dot dot-red"></span>
+              <span class="row-name">Intercom</span>
+              <span class="row-amount">$9,600/yr</span>
+              <span class="row-badge badge-overdue">Invoice overdue</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Features</span>
+        <h2>Everything you need to stop SaaS sprawl</h2>
+        <p>Set it up once. Track everything forever.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          </div>
+          <h3>Contract ingestion</h3>
+          <p>Upload contracts from Drive, your CLM, or add them manually. We read and extract the details automatically.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <h3>Renewal alerts</h3>
+          <p>Get notified on email and Slack before renewals hit. Send alerts to all relevant stakeholders automatically.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M9 15h6M9 11h6"/></svg>
+          </div>
+          <h3>Invoice tracking</h3>
+          <p>Track pending invoices, paid amounts, and overdue payments across every vendor in one view.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg>
+          </div>
+          <h3>Spend analytics</h3>
+          <p>See per-user costs, department splits, and adoption rates. Forecast next year's spend with real data.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
+          </div>
+          <h3>Workflow automation</h3>
+          <p>Build escalation paths so the right people act at the right time. Customize every alert and trigger.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Integrations</h3>
+          <p>Connect with Slack, Google Drive, CLM tools, and your ERP. Pull everything into a single source of truth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="compare">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Why us</span>
+        <h2>Enterprise visibility without the enterprise price tag</h2>
+      </div>
+      <div class="compare-table-wrap">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Zluri / Spendflo</th>
+              <th class="highlight-col">SaaSSpendTrack</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Starting price</td>
+              <td>$30,000+/yr</td>
+              <td class="highlight-col">$0 — free forever</td>
+            </tr>
+            <tr>
+              <td>Time to go live</td>
+              <td>2–3 months</td>
+              <td class="highlight-col">30 minutes</td>
+            </tr>
+            <tr>
+              <td>Target company size</td>
+              <td>500+ employees</td>
+              <td class="highlight-col">20–500 employees</td>
+            </tr>
+            <tr>
+              <td>Unlimited users</td>
+              <td>Extra cost</td>
+              <td class="highlight-col">Included on every plan</td>
+            </tr>
+            <tr>
+              <td>Contract limit</td>
+              <td>Tiered</td>
+              <td class="highlight-col">Unlimited on every plan</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">Pricing</span>
+        <h2>Pick a plan. Add unlimited users.</h2>
+        <p>Every plan includes unlimited users and unlimited contracts.</p>
+      </div>
+      <div class="pricing-grid">
+
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Free</h3>
+            <div class="plan-price">$0</div>
+            <span class="plan-period">Forever</span>
+          </div>
+          <div class="plan-details">
+            <div class="plan-limit">Up to 3 vendors</div>
+            <ul>
+              <li>Unlimited users</li>
+              <li>Unlimited contracts</li>
+              <li>Integrated dashboard</li>
+              <li>Renewal tracking</li>
+              <li>Standard email alerts</li>
+            </ul>
+          </div>
+          <a href="https://contractiq.whizzlead.com" class="btn btn-outline btn-full">Start free</a>
+        </div>
+
+        <div class="plan-card plan-featured">
+          <div class="plan-popular">Most popular</div>
+          <div class="plan-header">
+            <h3>Pro</h3>
+            <div class="plan-price">$99</div>
+            <span class="plan-period">Per year</span>
+          </div>
+          <div class="plan-details">
+            <div class="plan-limit">Up to 100 vendors</div>
+            <ul>
+              <li>Everything in Free</li>
+              <li>Invoice tracking</li>
+              <li>Adoption tracking</li>
+              <li>Vendor management</li>
+              <li>Slack integration</li>
+              <li>Multi-department access</li>
+            </ul>
+          </div>
+          <a href="https://contractiq.whizzlead.com" class="btn btn-primary btn-full">Get started</a>
+        </div>
+
+        <div class="plan-card">
+          <div class="plan-header">
+            <h3>Enterprise</h3>
+            <div class="plan-price">$999</div>
+            <span class="plan-period">Per year</span>
+          </div>
+          <div class="plan-details">
+            <div class="plan-limit">100+ vendors</div>
+            <ul>
+              <li>Everything in Pro</li>
+              <li>Full clause analysis</li>
+              <li>Automated risk scoring</li>
+              <li>SSO + ERP integrations</li>
+              <li>Escalation workflows</li>
+              <li>Priority support</li>
+            </ul>
+          </div>
+          <a href="https://contractiq.whizzlead.com" class="btn btn-outline btn-full">Contact us</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge">FAQ</span>
+        <h2>Common questions</h2>
+      </div>
+      <div class="faq-list">
+        <details class="faq-item">
+          <summary>What can SaaSSpendTrack help me track?</summary>
+          <p>Everything related to your SaaS stack — vendor details, per-user-per-month costs for each tool, team-wise spend splits, pending invoices, upcoming renewals, adoption rates, and more.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How are you different from Zluri or Spendflo?</summary>
+          <p>They target enterprise teams and cost $30K–$60K per year. SaaSSpendTrack gives you 80% of the visibility at a fraction of the cost, and you'll be live in 30 minutes — not 3 months.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How long does onboarding take?</summary>
+          <p>Less than 30 minutes. Connect your data sources, configure alerts and workflows, and your dashboard is ready. You won't miss a single renewal or invoice.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I add unlimited users on the free plan?</summary>
+          <p>Yes. Every plan — including Free — supports unlimited users and unlimited contracts. The only limit is the number of vendors you can track.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Is there a free trial for paid plans?</summary>
+          <p>Yes. All paid plans include a 7-day free trial with full access to every feature. No credit card required to start.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do I get support?</summary>
+          <p>We offer lifetime support for all plans. Email us at support@saasspendtrack.com — we typically respond within a few hours.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to stop overpaying for SaaS?</h2>
+      <p>Start free. Scale when you're ready. No credit card, no sales calls.</p>
+      <a href="https://contractiq.whizzlead.com" class="btn btn-primary btn-lg">Start tracking — free</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">
+            <div class="logo-icon">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V14l4 4 4-6 4 3 4-5"/></svg>
+            </div>
+            <span>SaaSSpendTrack</span>
+          </a>
+          <p>SaaS spend management for growing teams.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+          <a href="https://contractiq.whizzlead.com">Dashboard</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About</a>
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="mailto:support@saasspendtrack.com">support@saasspendtrack.com</a>
+          <a href="#">Documentation</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 SaaSSpendTrack. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.querySelector('.mobile-toggle');
+    const menu = document.querySelector('.mobile-menu');
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', menu.classList.contains('open'));
+    });
+    document.querySelectorAll('.mobile-menu a').forEach(link => {
+      link.addEventListener('click', () => menu.classList.remove('open'));
+    });
+  </script>
+</body>
+</html>
