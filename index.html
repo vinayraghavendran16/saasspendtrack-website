@@ -455,7 +455,7 @@
             <li>Slack integration</li>
             <li>Multi-department access</li>
           </ul>
-          <a href="https://rzp.io/rzp/2T2PfXBC" class="btn btn-primary btn-full" data-plg="pricing-pro" id="pro-cta">Get started →</a>
+          <a href="https://rzp.io/rzp/nsTE3gR" class="btn btn-primary btn-full" data-plg="pricing-pro" id="pro-cta">Get started →</a>
         </div>
 
         <!-- Enterprise -->
@@ -628,6 +628,13 @@
       const entPeriod=document.getElementById('ent-period');
       const proSub=document.getElementById('pro-subline');
       const entSub=document.getElementById('ent-subline');
+      const proCta=document.getElementById('pro-cta');
+      const entCta=document.getElementById('ent-cta');
+
+      const links={
+        pro:{monthly:'https://rzp.io/rzp/nsTE3gR',annual:'https://rzp.io/rzp/2T2PfXBC'},
+        ent:{monthly:'https://rzp.io/rzp/oP8t6Unk',annual:'https://rzp.io/rzp/MhqdtN2a'}
+      };
 
       function setMonthly(){
         btnM.classList.add('active');btnA.classList.remove('active');
@@ -636,6 +643,8 @@
         proPeriod.textContent='/mo';entPeriod.textContent='/mo';
         proSub.textContent='Billed monthly';
         entSub.textContent='Billed monthly';
+        proCta.href=links.pro.monthly;
+        entCta.href=links.ent.monthly;
       }
       function setAnnual(){
         btnA.classList.add('active');btnM.classList.remove('active');
@@ -644,6 +653,8 @@
         proPeriod.textContent='/yr';entPeriod.textContent='/yr';
         proSub.textContent='~$41/mo — no budget approval needed';
         entSub.textContent='~$125/mo — easy corporate card purchase';
+        proCta.href=links.pro.annual;
+        entCta.href=links.ent.annual;
       }
       btnM.addEventListener('click',setMonthly);
       btnA.addEventListener('click',setAnnual);
