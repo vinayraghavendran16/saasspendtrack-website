@@ -198,7 +198,7 @@
   <section class="hero" aria-labelledby="hero-headline">
     <div class="hero-grid-bg" aria-hidden="true"></div>
     <div class="container hero-content">
-      <div class="hero-badge">🔥 80% cheaper than Zluri &amp; Spendflo</div>
+      <div class="hero-badge">🔥 90% cheaper than Zluri &amp; Spendflo</div>
       <h1 id="hero-headline">Stop overpaying<br>for <span class="hero-accent">SaaS.</span></h1>
       <p class="hero-sub">Track every contract, renewal, and invoice across your entire vendor stack. One dashboard. Zero surprises. Live in 30 minutes.</p>
       <div class="hero-actions">
@@ -219,7 +219,7 @@
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
         <div class="stat-block">
-          <div class="stat-top"><span class="stat-num" data-target="80" aria-label="80 percent">0</span><span class="stat-suffix">%</span></div>
+          <div class="stat-top"><span class="stat-num" data-target="90" aria-label="90 percent">0</span><span class="stat-suffix">%</span></div>
           <span class="stat-desc">cheaper than enterprise tools</span>
         </div>
         <div class="stat-divider" aria-hidden="true"></div>
@@ -331,7 +331,7 @@
     <div class="container">
       <div class="section-header">
         <span class="sh-badge">Features</span>
-        <h2 id="features-heading">Everything Zluri does at $30K.<br>We do it at <span class="green-text">$99.</span></h2>
+        <h2 id="features-heading">Everything Zluri does at $30K.<br>We do it at <span class="green-text">$499.</span></h2>
       </div>
       <div class="features-grid">
         <article class="fcard reveal">
@@ -389,7 +389,7 @@
         <div class="compare-card us">
           <div class="compare-best">Your pick</div>
           <div class="compare-label">SaaSSpendTrack</div>
-          <div class="compare-price">$0 – $99<span>/yr</span></div>
+          <div class="compare-price">$0 – $499<span>/yr</span></div>
           <ul>
             <li class="pos">Live in 30 minutes</li>
             <li class="pos">Built for 20–500 employees</li>
@@ -409,7 +409,18 @@
         <h2 id="pricing-heading">Transparent pricing.<br>No sales calls. No surprises.</h2>
         <p class="sh-sub">Every plan includes unlimited users and unlimited contracts.</p>
       </div>
+
+      <!-- Billing toggle -->
+      <div class="billing-toggle" role="group" aria-label="Billing period">
+        <button class="toggle-btn active" id="btn-monthly" data-period="monthly">Monthly</button>
+        <button class="toggle-btn" id="btn-annual" data-period="annual">
+          Annual
+          <span class="toggle-save">Save 17%</span>
+        </button>
+      </div>
+
       <div class="pricing-grid">
+        <!-- Free -->
         <div class="plan reveal">
           <div class="plan-name">Free</div>
           <div class="plan-price"><span class="price-dollar">$</span>0</div>
@@ -425,11 +436,15 @@
           </ul>
           <a href="https://contractiq.whizzlead.com" class="btn btn-outline-dark btn-full" data-plg="pricing-free">Start free</a>
         </div>
+
+        <!-- Pro -->
         <div class="plan featured reveal">
           <div class="plan-popular">Most popular</div>
           <div class="plan-name">Pro</div>
-          <div class="plan-price"><span class="price-dollar">$</span>99<span class="price-yr">/yr</span></div>
-          <div class="plan-period">Less than $9/month</div>
+          <div class="plan-price">
+            <span class="price-dollar">$</span><span class="price-val" data-monthly="49" data-annual="499">49</span><span class="price-yr" id="pro-period">/mo</span>
+          </div>
+          <div class="plan-period" id="pro-subline">Billed monthly</div>
           <div class="plan-sep"></div>
           <div class="plan-limit">Up to 100 vendors</div>
           <ul>
@@ -440,12 +455,16 @@
             <li>Slack integration</li>
             <li>Multi-department access</li>
           </ul>
-          <a href="https://rzp.io/rzp/2T2PfXBC" class="btn btn-primary btn-full" data-plg="pricing-pro">Get started →</a>
+          <a href="https://rzp.io/rzp/2T2PfXBC" class="btn btn-primary btn-full" data-plg="pricing-pro" id="pro-cta">Get started →</a>
         </div>
+
+        <!-- Enterprise -->
         <div class="plan reveal">
           <div class="plan-name">Enterprise</div>
-          <div class="plan-price"><span class="price-dollar">$</span>999<span class="price-yr">/yr</span></div>
-          <div class="plan-period">Unlimited everything</div>
+          <div class="plan-price">
+            <span class="price-dollar">$</span><span class="price-val" data-monthly="149" data-annual="1,499">149</span><span class="price-yr" id="ent-period">/mo</span>
+          </div>
+          <div class="plan-period" id="ent-subline">Billed monthly</div>
           <div class="plan-sep"></div>
           <div class="plan-limit">100+ vendors</div>
           <ul>
@@ -456,12 +475,13 @@
             <li>Escalation workflows</li>
             <li>Priority support</li>
           </ul>
-          <a href="https://rzp.io/rzp/MhqdtN2a" class="btn btn-outline-dark btn-full" data-plg="pricing-enterprise">Get started →</a>
+          <a href="https://rzp.io/rzp/MhqdtN2a" class="btn btn-outline-dark btn-full" data-plg="pricing-enterprise" id="ent-cta">Get started →</a>
         </div>
       </div>
+
       <!-- PLG inline nudge -->
       <div class="pricing-nudge">
-        <span>🎯 Most teams start free and upgrade to Pro within 2 weeks of seeing their first renewal alert.</span>
+        <span>🎯 Most teams save more in their first caught renewal than a full year's subscription.</span>
       </div>
     </div>
   </section>
@@ -480,7 +500,7 @@
         </details>
         <details class="faq-item">
           <summary>How much does SaaSSpendTrack cost?</summary>
-          <p>Free forever for up to 3 vendors with unlimited users and contracts. The Pro plan is $99/year (less than $9/month) for up to 100 vendors. The Enterprise plan is $999/year for 100+ vendors with SSO, ERP integrations, and risk scoring. All plans include unlimited users and unlimited contracts.</p>
+          <p>Free forever for up to 3 vendors with unlimited users and contracts. The Pro plan is $499/year (~$41/month) for up to 100 vendors — no budget approval needed. The Enterprise plan is $1,499/year (~$125/month) for 100+ vendors with SSO, ERP integrations, and risk scoring. All plans include unlimited users and unlimited contracts.</p>
         </details>
         <details class="faq-item">
           <summary>How is SaaSSpendTrack different from Zluri or Spendflo?</summary>
@@ -597,6 +617,37 @@
       r.addEventListener('mouseenter',()=>r.style.background='rgba(34,197,94,.06)');
       r.addEventListener('mouseleave',()=>r.style.background='');
     });
+
+    // Pricing toggle
+    (function(){
+      const btnM=document.getElementById('btn-monthly');
+      const btnA=document.getElementById('btn-annual');
+      const proVal=document.querySelector('#pricing .plan.featured .price-val');
+      const entVal=document.querySelector('#pricing .plan:last-child .price-val');
+      const proPeriod=document.getElementById('pro-period');
+      const entPeriod=document.getElementById('ent-period');
+      const proSub=document.getElementById('pro-subline');
+      const entSub=document.getElementById('ent-subline');
+
+      function setMonthly(){
+        btnM.classList.add('active');btnA.classList.remove('active');
+        proVal.textContent=proVal.dataset.monthly;
+        entVal.textContent=entVal.dataset.monthly;
+        proPeriod.textContent='/mo';entPeriod.textContent='/mo';
+        proSub.textContent='Billed monthly';
+        entSub.textContent='Billed monthly';
+      }
+      function setAnnual(){
+        btnA.classList.add('active');btnM.classList.remove('active');
+        proVal.textContent=proVal.dataset.annual;
+        entVal.textContent=entVal.dataset.annual;
+        proPeriod.textContent='/yr';entPeriod.textContent='/yr';
+        proSub.textContent='~$41/mo — no budget approval needed';
+        entSub.textContent='~$125/mo — easy corporate card purchase';
+      }
+      btnM.addEventListener('click',setMonthly);
+      btnA.addEventListener('click',setAnnual);
+    })();
 
     // Cookie banner
     (function(){
