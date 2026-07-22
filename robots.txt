@@ -1,0 +1,15 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://saasspendtrack.com/sitemap-blog.xml
+
+User-agent: GPTBot
+Allow: /blog/
+User-agent: Google-Extended
+Allow: /blog/
+User-agent: anthropic-ai
+Allow: /blog/
+User-agent: ClaudeBot
+Allow: /blog/
+User-agent: PerplexityBot
+Allow: /blog/

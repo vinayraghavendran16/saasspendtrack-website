@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Run a SaaS Spend Audit in 60 Minutes | SaaSSpendTrack</title>
+  <meta name="description" content="Step-by-step guide to auditing your company's SaaS spend. Find unused licenses, duplicate tools, and unoptimized contracts in 60 minutes. Free audit template included.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://saasspendtrack.com/blog/saas-spend-audit">
+
+  <meta property="og:title" content="How to Run a SaaS Spend Audit in 60 Minutes (Free Template)">
+  <meta property="og:description" content="Most companies waste 25–30% of their SaaS budget. Here's how to find every dollar in 60 minutes.">
+  <meta property="og:url" content="https://saasspendtrack.com/blog/saas-spend-audit">
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2026-07-18T00:00:00Z">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Run a SaaS Spend Audit in 60 Minutes",
+    "description": "A step-by-step guide to auditing your company's SaaS spend and finding wasted budget.",
+    "totalTime": "PT60M",
+    "step": [
+      { "@type": "HowToStep", "name": "Discovery", "text": "Build a complete inventory of every SaaS tool your company pays for by pulling data from accounting, expense reports, and credit card statements." },
+      { "@type": "HowToStep", "name": "Usage analysis", "text": "For each tool, determine actual usage vs. licensed seats. Flag any tool where usage is below 60% of licensed capacity." },
+      { "@type": "HowToStep", "name": "Overlap detection", "text": "Identify tools with overlapping functionality across departments — project management, communication, analytics, and design are the most common overlap categories." },
+      { "@type": "HowToStep", "name": "Contract review", "text": "Review contract terms, renewal dates, and price escalators for your top 10 vendors by spend." },
+      { "@type": "HowToStep", "name": "Action plan", "text": "Create a prioritized list of actions: cancel unused tools, downgrade underutilized licenses, consolidate overlapping tools, and renegotiate top contracts before renewal." }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is a SaaS spend audit?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A SaaS spend audit is a systematic review of every software subscription your company pays for. The goal is to identify waste — unused licenses, duplicate tools, and contracts that auto-renewed without negotiation — and build an action plan to eliminate it. Most companies discover 25–30% waste during their first audit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often should you audit SaaS spend?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A full audit should happen quarterly. Between audits, a SaaS spend management dashboard like SaaSSpendTrack provides continuous visibility — tracking renewals, flagging underutilized licenses, and alerting you to upcoming contract deadlines automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much SaaS spend is typically wasted?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Industry research consistently shows that organizations waste approximately 25–30% of their SaaS budgets on unused licenses, overlapping tools, and unoptimized contracts. For a company spending $300K annually on software, that's $75K–$90K in recoverable waste."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FAFAFA; --surface: #FFFFFF; --text: #111111;
+      --text-secondary: #555555; --text-muted: #888888;
+      --accent: #2563EB; --accent-hover: #1D4ED8; --accent-light: #EFF6FF;
+      --green: #059669; --green-light: #ECFDF5;
+      --red: #DC2626; --red-light: #FEF2F2;
+      --amber: #D97706; --amber-light: #FFFBEB;
+      --border: #E5E7EB; --radius: 12px;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', -apple-system, sans-serif; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; }
+    nav { position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: 0 24px; }
+    .nav-inner { max-width: 720px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; height: 64px; }
+    .logo { font-weight: 800; font-size: 18px; text-decoration: none; color: var(--text); letter-spacing: -0.5px; }
+    .logo span { color: var(--accent); }
+    .nav-cta { background: var(--accent); color: #fff; padding: 8px 20px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; }
+    article { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    .breadcrumb { font-size: 13px; color: var(--text-muted); margin-bottom: 32px; }
+    .breadcrumb a { color: var(--accent); text-decoration: none; }
+    .meta { display: flex; gap: 16px; align-items: center; font-size: 13px; color: var(--text-muted); margin-bottom: 24px; }
+    .tag { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; padding: 4px 10px; border-radius: 4px; }
+    .tag-guide { background: var(--accent-light); color: var(--accent); }
+    h1 { font-size: clamp(28px, 5vw, 40px); font-weight: 800; letter-spacing: -1.5px; line-height: 1.15; margin-bottom: 20px; }
+    .subtitle { font-size: 18px; color: var(--text-secondary); line-height: 1.6; margin-bottom: 40px; }
+    h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.5px; margin: 48px 0 16px; line-height: 1.3; }
+    h3 { font-size: 18px; font-weight: 700; margin: 32px 0 12px; }
+    p { font-size: 16px; line-height: 1.75; margin-bottom: 20px; color: var(--text-secondary); }
+    p strong { color: var(--text); }
+    .callout { border-radius: var(--radius); padding: 24px 28px; margin: 32px 0; font-size: 15px; line-height: 1.7; }
+    .callout-red { background: var(--red-light); border-left: 4px solid var(--red); }
+    .callout-green { background: var(--green-light); border-left: 4px solid var(--green); }
+    .callout-blue { background: var(--accent-light); border-left: 4px solid var(--accent); }
+    .callout-amber { background: var(--amber-light); border-left: 4px solid var(--amber); }
+    .callout-title { font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .callout p { font-size: 15px; margin-bottom: 8px; }
+    .callout p:last-child { margin-bottom: 0; }
+
+    .phase { margin: 32px 0; padding: 28px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+    .phase-header { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+    .phase-badge { background: var(--accent); color: #fff; font-size: 12px; font-weight: 800; padding: 6px 14px; border-radius: 100px; white-space: nowrap; }
+    .phase-time { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--text-muted); }
+    .phase h3 { margin: 0 0 8px; }
+    .phase p { font-size: 15px; }
+    .phase p:last-child { margin-bottom: 0; }
+
+    .waste-category { display: flex; gap: 20px; margin: 20px 0; padding: 20px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+    .waste-icon { font-size: 28px; flex-shrink: 0; }
+    .waste-content h4 { font-size: 16px; font-weight: 700; margin-bottom: 4px; }
+    .waste-content p { font-size: 14px; margin-bottom: 0; }
+
+    .cta-box { background: var(--text); border-radius: 16px; padding: 40px; text-align: center; margin: 56px 0; }
+    .cta-box h3 { color: #fff; margin: 0 0 8px; font-size: 22px; }
+    .cta-box p { color: #aaa; font-size: 15px; margin-bottom: 20px; }
+    .cta-btn { display: inline-block; background: var(--accent); color: #fff; padding: 14px 32px; border-radius: 10px; font-weight: 700; font-size: 16px; text-decoration: none; }
+
+    .related { margin: 56px 0 0; padding-top: 32px; border-top: 1px solid var(--border); }
+    .related h3 { margin-top: 0; }
+    .related a { display: block; padding: 16px 0; border-bottom: 1px solid var(--border); text-decoration: none; color: var(--accent); font-weight: 600; font-size: 15px; }
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; font-size: 14px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+
+<nav><div class="nav-inner">
+  <a href="https://saasspendtrack.com" class="logo">SaaS<span>Spend</span>Track</a>
+  <a href="https://contractiq.whizzlead.com" class="nav-cta">Start free →</a>
+</div></nav>
+
+<article>
+  <div class="breadcrumb"><a href="https://saasspendtrack.com">Home</a> / <a href="https://saasspendtrack.com/blog">Blog</a> / SaaS Spend Audit</div>
+  <div class="meta">
+    <span class="tag tag-guide">Guide</span>
+    <span>July 18, 2026</span>
+    <span>9 min read</span>
+  </div>
+
+  <h1>How to Run a SaaS Spend Audit in 60 Minutes (With Free Template)</h1>
+  <p class="subtitle">Most companies waste 25–30% of their SaaS budget on unused licenses, duplicate tools, and contracts that auto-renewed without review. Here's how to find every wasted dollar — in a single afternoon.</p>
+
+  <h2>Why You Need a SaaS Spend Audit (and Why You Probably Haven't Done One)</h2>
+
+  <p>Here's a pattern that plays out at every growing company: engineering picks a monitoring tool, marketing buys an analytics platform, sales subscribes to a prospecting service, and customer success signs up for a feedback tool. Each decision makes sense in isolation. Nobody checks if the company already pays for something that does the same thing.</p>
+
+  <p>Twelve months later, the CFO runs the numbers and discovers the company is running <strong>four different project management tools</strong>, three of which do essentially the same thing for different departments. There are 200 licensed seats for a design platform that 80 people actually use. And a contract management tool auto-renewed last month at a 15% price increase that nobody negotiated because nobody knew the renewal was coming.</p>
+
+  <p>Industry research consistently shows that <strong>organizations waste approximately 30% of their SaaS budgets</strong>. Most of it comes from three sources: licenses nobody uses, tools that overlap with something the company already pays for, and renewals that go through without any pushback.</p>
+
+  <div class="callout callout-red">
+    <div class="callout-title">🔍 The scale of the problem</div>
+    <p>The average seed-stage startup uses 25–40 SaaS tools within its first year. By the time a company reaches 100 employees, that number often exceeds 80. Most of those tools were chosen for speed, not strategy — creating expensive stack debt that compounds as the company scales.</p>
+  </div>
+
+  <h2>The 60-Minute Audit: Five Phases</h2>
+
+  <p>A SaaS spend audit doesn't need to be a month-long consulting engagement. If you have access to your company's expense reports and credit card statements, you can get 80% of the value in a single focused session. Here's the process:</p>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 1</span>
+      <span class="phase-time">~15 minutes</span>
+    </div>
+    <h3>Discovery: Build Your Complete SaaS Inventory</h3>
+    <p>The first step is finding every tool your company pays for. This is harder than it sounds because SaaS purchases happen through multiple channels: corporate credit cards, individual expense reports, departmental budgets, and sometimes personal cards that get reimbursed.</p>
+    <p><strong>Where to look:</strong> Start with your accounting system and pull every recurring charge. Cross-reference with expense reports for the past 12 months. Check corporate card statements for recurring charges you don't recognize. Ask each department head to list the tools their team uses daily. The gap between what accounting knows about and what departments actually use is where shadow IT hides.</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 2</span>
+      <span class="phase-time">~15 minutes</span>
+    </div>
+    <h3>Usage Analysis: Licensed Seats vs. Active Users</h3>
+    <p>For each tool in your inventory, answer two questions: how many seats are you paying for, and how many people actually use it regularly? A tool with 50 licensed seats and 12 active users represents 76% waste on that line item alone.</p>
+    <p><strong>The 60% rule:</strong> Any tool where actual usage falls below 60% of licensed capacity is an immediate action item. Either downgrade the license count, negotiate a lower per-seat rate, or evaluate whether the tool is necessary at all.</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 3</span>
+      <span class="phase-time">~10 minutes</span>
+    </div>
+    <h3>Overlap Detection: Find the Duplicates</h3>
+    <p>Sort your inventory by category: project management, communication, analytics, design, CRM, storage, documentation. Any category where you're paying for two or more tools is a consolidation opportunity.</p>
+    <p><strong>The usual suspects:</strong> Project management is the number-one overlap category. It's common to find Asana, Monday, Jira, and Linear all active simultaneously across different teams. Communication is second — Slack, Teams, and various email tools often coexist without anyone realizing the redundancy costs thousands per month.</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 4</span>
+      <span class="phase-time">~10 minutes</span>
+    </div>
+    <h3>Contract Review: Renewal Dates and Price Traps</h3>
+    <p>For your top 10 vendors by spend, pull the actual contract terms. Record the renewal date, the cancellation notice window, and any price escalation clauses. Calculate the notice deadline for each (renewal date minus notice window) and put those dates in a tracking system immediately.</p>
+    <p><strong>The discovery that saves the most money:</strong> This step alone typically reveals 1–3 contracts that are about to auto-renew without review — and at least one where you have enough advance notice to renegotiate before the window closes.</p>
+  </div>
+
+  <div class="phase">
+    <div class="phase-header">
+      <span class="phase-badge">Phase 5</span>
+      <span class="phase-time">~10 minutes</span>
+    </div>
+    <h3>Action Plan: Prioritize by Impact</h3>
+    <p>Sort your findings into three buckets by expected savings:</p>
+    <p><strong>Quick wins (this week):</strong> Cancel tools nobody uses. Downgrade licenses to match actual seat counts. These typically recover 10–15% of total SaaS spend with zero operational impact.</p>
+    <p><strong>Consolidation plays (this month):</strong> Choose one tool per category and migrate overlapping teams. This requires more coordination but eliminates ongoing duplicate costs.</p>
+    <p><strong>Negotiation targets (this quarter):</strong> Approach your top 5 vendors by spend with usage data and competitive alternatives before their renewal windows close. Companies that negotiate with data consistently save 15–30% on individual contracts.</p>
+  </div>
+
+  <h2>The Three Categories of SaaS Waste</h2>
+
+  <p>Every SaaS audit uncovers the same three types of waste. Understanding them helps you know what to look for and how to fix it:</p>
+
+  <div class="waste-category">
+    <div class="waste-icon">👻</div>
+    <div class="waste-content">
+      <h4>Ghost licenses</h4>
+      <p>Seats assigned to employees who left the company, changed roles, or simply stopped using the tool. These accumulate silently because most tools charge per-seat regardless of activity. A 100-person company typically has 15–25% ghost licenses across its stack.</p>
+    </div>
+  </div>
+
+  <div class="waste-category">
+    <div class="waste-icon">🔄</div>
+    <div class="waste-content">
+      <h4>Functional overlap</h4>
+      <p>Multiple tools that do the same thing for different teams. Three departments using three different project management platforms. Two analytics tools that pull the same data. A company-wide file storage tool and a team-specific one running simultaneously.</p>
+    </div>
+  </div>
+
+  <div class="waste-category">
+    <div class="waste-icon">📈</div>
+    <div class="waste-content">
+      <h4>Price creep</h4>
+      <p>Contracts that auto-renewed with built-in price increases, seat expansions that were never reviewed, and enterprise tiers that were purchased for a feature nobody ended up using. This is the hardest to catch without a dedicated tracking system because it looks normal — the invoice just gets slightly bigger each year.</p>
+    </div>
+  </div>
+
+  <h2>From One-Time Audit to Continuous Visibility</h2>
+
+  <p>A 60-minute audit is a great starting point, but the real value comes from making it continuous. The waste you eliminate today starts re-accumulating the moment new tools get purchased, team sizes shift, and contracts renew.</p>
+
+  <p>That's why companies graduate from spreadsheets to dedicated SaaS spend management dashboards. Instead of running a manual audit every quarter, you have <strong>real-time visibility</strong> into every vendor, every contract, every invoice, and every renewal deadline — with automated alerts that surface issues before they cost money.</p>
+
+  <div class="callout callout-green">
+    <div class="callout-title">✅ Turn your audit into always-on visibility</div>
+    <p>SaaSSpendTrack takes the output of your audit and turns it into a living dashboard. Upload contracts from Google Drive or add them manually. Configure Slack and email alerts for renewals. Track per-user costs, adoption rates, and department-level spend splits. All for $0 (up to 3 vendors) or $99/year (up to 100).</p>
+    <p>Your audit findings become the foundation of a system that prevents waste from recurring — not a one-time exercise that gets forgotten.</p>
+  </div>
+
+  <h2>Common Audit Findings (and What They're Worth)</h2>
+
+  <p>Based on typical patterns seen across growing companies, here's what a first audit usually uncovers for a team of 50–200 employees:</p>
+
+  <p><strong>3–5 completely unused tools</strong> still billing monthly, usually signed by someone who has since left the company. Average savings: $5,000–$15,000/year.</p>
+
+  <p><strong>20–30% over-licensed seats</strong> on your top 5 tools. Rightsizing to actual usage saves $8,000–$25,000/year with a single conversation per vendor.</p>
+
+  <p><strong>2–3 overlapping tool categories</strong> where consolidation eliminates $10,000–$30,000/year in redundant subscriptions.</p>
+
+  <p><strong>1–2 contracts approaching renewal</strong> with price escalators that can be negotiated down before the window closes. Savings: $5,000–$20,000 per contract.</p>
+
+  <p>Total first-year savings from a thorough audit: <strong>$30,000–$90,000</strong> for a mid-size company. That's not a projection — it's the math that falls out of the spreadsheet when you actually look.</p>
+
+  <div class="cta-box">
+    <h3>Run your audit. Then automate it.</h3>
+    <p>SaaSSpendTrack makes your audit findings permanent. Free for up to 3 vendors. Live in 30 minutes.</p>
+    <a href="https://contractiq.whizzlead.com" class="cta-btn">Start tracking — free →</a>
+  </div>
+
+  <div class="related">
+    <h3>Keep reading</h3>
+    <a href="/blog/missed-saas-renewal/">→ We Missed a SaaS Renewal and It Cost Us $43,000</a>
+    <a href="/blog/shadow-it-saas-sprawl/">→ Shadow IT Is Eating Your SaaS Budget</a>
+    <a href="/blog/saas-budget-cfo-guide/">→ The CFO's Blind Spot: Why SaaS Is Your Third-Largest Expense</a>
+  </div>
+</article>
+
+<footer><p>© 2026 SaaSSpendTrack. All rights reserved.</p></footer>
+</body>
+</html>
