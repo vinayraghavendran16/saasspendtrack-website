@@ -113,7 +113,7 @@ section { padding: clamp(4rem, 8vw, 7rem) 0; position: relative; }
 .stat .src { font-family: var(--mono); font-size: .68rem; color: var(--graphite-dim); margin-top: .45rem; }
 
 /* =========================================================
-   THE TIMELINE — signature element
+   THE TIMELINE  signature element
    ========================================================= */
 .tl-wrap { margin-top: 1rem; }
 
@@ -293,3 +293,23 @@ footer { border-top: 1px solid var(--seam); padding: 3rem 0 2.5rem; }
   .tl-fill { width: 100% !important; }
   .tl-mark { opacity: .55 !important; }
 }
+
+/* ---------- apply ---------- */
+.apply-shell { background: linear-gradient(180deg, var(--slate-2), var(--slate)); border: 1px solid var(--seam-lit); border-radius: 16px; overflow: hidden; }
+.apply-head { padding: clamp(1.7rem,3.5vw,2.6rem); border-bottom: 1px solid var(--seam); text-align: center; }
+.apply-head h2 { margin-bottom: .9rem; }
+.apply-head p { margin: 0 auto; max-width: 52ch; }
+.apply-body { display: grid; grid-template-columns: 1fr 1fr; }
+@media (max-width: 800px) { .apply-body { grid-template-columns: 1fr; } }
+.apply-mail, .apply-what { padding: clamp(1.6rem,3vw,2.2rem); }
+.apply-mail { border-right: 1px solid var(--seam); }
+@media (max-width: 800px) { .apply-mail { border-right: none; border-bottom: 1px solid var(--seam); } }
+.apply-label { font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--graphite-dim); display: block; margin-bottom: .9rem; }
+.apply-addr { display: flex; align-items: center; justify-content: space-between; gap: 1rem; background: var(--ink); border: 1px solid var(--seam-lit); border-radius: 8px; padding: .8rem 1rem; font-family: var(--mono); font-size: .9rem; color: var(--paper); }
+.copybtn { font-family: var(--mono); font-size: .74rem; background: none; border: 1px solid var(--seam-lit); color: var(--credit); border-radius: 5px; padding: .3rem .7rem; cursor: pointer; }
+.copybtn:hover { background: var(--credit-dim); }
+.copybtn:focus-visible { outline: 2px solid var(--credit); outline-offset: 2px; }
+.apply-tiny { font-size: .78rem; color: var(--graphite-dim); margin-top: 1rem; line-height: 1.5; }
+.apply-list { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+.apply-list li { font-size: .93rem; color: var(--graphite); padding-left: 1.4rem; position: relative; }
+.apply-list li::before { content: '+'; position: absolute; left: 0; color: var(--credit); font-family: var(--mono); }
