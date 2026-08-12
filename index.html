@@ -1,718 +1,536 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- ═══ SEO ═══ -->
-  <title>Never Get Auto-Renewed Again | SaaS Renewal Tracking - SaaSSpendTrack</title>
-  <meta name="description" content="Upload your SaaS contracts. We extract every auto-renew clause and notice deadline, then alert you while you can still cancel or renegotiate. Free for unlimited vendors.">
-  <meta name="keywords" content="SaaS renewal tracking, auto-renewal alerts, contract renewal reminders, notice period tracking, auto-renew clause, SaaS contract management, renewal calendar, cancellation window">
-  <meta name="author" content="SaaSSpendTrack">
-  <link rel="canonical" href="https://saasspendtrack.com/">
+<title>SaaS Overbilling Audit | Get Back What Your Vendors Overcharged — SaaSSpendTrack</title>
+<meta name="description" content="We audit 24 months of your SaaS invoices against what your contracts actually permit, then dispute every discrepancy until the credit lands. Find $10,000 or you pay nothing.">
+<meta name="keywords" content="SaaS billing audit, software overcharge recovery, invoice contract reconciliation, SaaS invoice audit, uplift cap breach, seat overbilling, software refund recovery">
+<meta name="author" content="SaaSSpendTrack">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="canonical" href="https://saasspendtrack.com/">
 
-  <!-- ═══ Open Graph / Social ═══ -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://saasspendtrack.com/">
-  <meta property="og:title" content="Never Get Auto-Renewed Again - SaaSSpendTrack">
-  <meta property="og:description" content="Every SaaS contract has a cancellation window buried in it. We find it, track it, and warn you before it closes. Free for unlimited vendors.">
-  <meta property="og:image" content="https://saasspendtrack.com/og-image.png">
-  <meta property="og:site_name" content="SaaSSpendTrack">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Never Get Auto-Renewed Again - SaaSSpendTrack">
-  <meta name="twitter:description" content="We read your contracts, find the notice deadline, and alert you while you can still act. Free for unlimited vendors.">
-  <meta name="twitter:image" content="https://saasspendtrack.com/og-image.png">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://saasspendtrack.com/">
+<meta property="og:site_name" content="SaaSSpendTrack">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Your software vendors are overcharging you. We get the money back.">
+<meta property="og:description" content="We audit 24 months of SaaS invoices against your actual contracts, then dispute every discrepancy until the credit lands. Find $10,000 or you pay nothing.">
+<meta property="og:image" content="https://saasspendtrack.com/og-image.png">
 
-  <!-- ═══ GEO-  AI Engine Visibility ═══ -->
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Your software vendors are overcharging you. We get the money back.">
+<meta name="twitter:description" content="24 months of invoices, checked line by line against your contracts. Find $10,000 or you pay nothing.">
+<meta name="twitter:image" content="https://saasspendtrack.com/og-image.png">
 
-  <!-- ═══ Structured Data-  SoftwareApplication ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "SaaSSpendTrack",
-    "url": "https://saasspendtrack.com",
-    "description": "SaaSSpendTrack is renewal-defense software for SaaS contracts. It extracts the auto-renew clause and notice period from every contract you upload, tracks the cancellation deadline, and alerts your team while there is still time to cancel or renegotiate. Free for unlimited vendors.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": [
-      {
-        "@type": "Offer",
-        "name": "Free",
-        "price": "0",
-        "priceCurrency": "USD",
-        "description": "Free forever. Unlimited vendors, unlimited contracts, unlimited users. Renewal date tracking, notice-window countdown, and email alerts."
-      },
-      {
-        "@type": "Offer",
-        "name": "Pro",
-        "price": "499",
-        "priceCurrency": "USD",
-        "billingDuration": "P1Y",
-        "description": "$499/year or $49/month. Adds automatic clause extraction, Slack alerts and escalation, renewal prep briefs, invoice and spend tracking."
-      },
-      {
-        "@type": "Offer",
-        "name": "Enterprise",
-        "price": "1499",
-        "priceCurrency": "USD",
-        "billingDuration": "P1Y",
-        "description": "$1,499/year or $149/month. Adds price benchmarking, automated risk scoring, SSO and ERP integrations, custom approval workflows, priority support."
-      }
-    ],
-    "featureList": [
-      "Auto-renew clause extraction from uploaded contracts",
-      "Notice-period and cancellation-window tracking",
-      "Renewal countdown alerts via email and Slack",
-      "Escalation workflows so renewals never sit unowned",
-      "Renewal prep briefs with spend and usage context",
-      "Invoice and vendor spend tracking",
-      "Unlimited vendors, contracts, and users on every plan"
-    ]
+<link rel="stylesheet" href="/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "SaaS Overbilling Recovery Audit",
+  "provider": { "@type": "Organization", "name": "SaaSSpendTrack", "url": "https://saasspendtrack.com/" },
+  "serviceType": "Software billing audit and overcharge recovery",
+  "description": "A 24-month reconciliation of SaaS invoices against signed contract terms, with dispute letters filed and managed to credit. Priced as a percentage of recovered funds.",
+  "areaServed": "Worldwide",
+  "offers": {
+    "@type": "Offer",
+    "name": "The 24-Month SaaS Refund Audit",
+    "description": "Contingency-priced billing audit. 25% of recovered credits, payable only after funds land. No recovery, no fee.",
+    "priceCurrency": "USD",
+    "priceSpecification": { "@type": "PriceSpecification", "price": "0", "priceCurrency": "USD", "description": "No upfront fee. 25% of recovered credits." }
   }
-  </script>
+}
+</script>
 
-  <!-- ═══ Structured Data-  FAQ (AEO) ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is SaaSSpendTrack?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "SaaSSpendTrack is renewal-defense software for SaaS contracts. You upload your contracts, it extracts the auto-renew clause and the notice period, and it alerts you before the cancellation window closes-  while you can still cancel, downgrade, or renegotiate. It is built for the finance or ops person at a 20-500 employee company who owns renewals without a procurement team behind them."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a notice period or cancellation window in a SaaS contract?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most SaaS contracts renew automatically unless you give written notice a fixed number of days before the renewal date-  commonly 30, 60, or 90 days. That gap is the notice period, and the span of time in which you can act is the cancellation window. Miss it by a day and you are contractually committed to another full term, even if you stopped using the tool months ago."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does SaaSSpendTrack cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Renewal tracking is free forever, with no vendor limit: unlimited vendors, unlimited contracts, and unlimited users on the free plan. Pro is $49/month or $499/year and adds automatic clause extraction, Slack alerts and escalation, renewal prep briefs, and invoice tracking. Enterprise is $149/month or $1,499/year and adds price benchmarking, risk scoring, SSO, and ERP integrations."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Why is the free plan unlimited instead of capped at a few vendors?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Because renewal defense only works if it is complete. Tracking three vendors out of twenty-four still leaves twenty-one that can auto-renew on you, and a tool that catches some of your renewals is not meaningfully better than none. So every vendor is free to track. What you pay for is the intelligence on top: reading the clauses, routing the alerts, and preparing the negotiation."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is this different from a calendar reminder or a spreadsheet?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A calendar reminder assumes someone already read the contract, found the notice period, did the date math correctly, and will still be in the role when it fires. SaaSSpendTrack reads the contract for you, calculates the deadline from the actual clause, escalates to a second owner if the first one does not act, and survives the person who set it up leaving the company."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is SaaSSpendTrack different from Zluri or Spendflo?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Zluri and Spendflo are full SaaS management suites aimed at 500+ employee companies, typically costing tens of thousands per year with a multi-week implementation. They do more than we do. SaaSSpendTrack does one thing-  stopping renewals you did not intend to make-  and does it starting free, with no implementation, in about 30 minutes. If you need full discovery, license reclamation, and procurement workflow, they are the better fit."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does setup take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Around 30 minutes. Upload or link your contracts, confirm the renewal and notice dates we pull out, choose who gets alerted, and you are done. No implementation consultant, no sales call, no credit card."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What if I do not have the contract PDF for a vendor?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You can add a vendor manually with just the renewal date, and still get the countdown and alerts. Clause extraction needs the document, but tracking does not. Most teams start with the contracts they can find and backfill the rest over time."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What integrations does SaaSSpendTrack support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Google Drive for contract uploads and Slack for renewal alerts and escalation on the Pro plan. CLM and ERP integrations plus SSO are available on Enterprise. Additional integrations are added regularly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How do I get support?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Email support@saasspendtrack.com on any plan, including Free-  we respond within hours, not days. Enterprise customers get a dedicated Slack channel."
-        }
-      }
-    ]
-  }
-  </script>
-
-  <!-- ═══ Structured Data-  Breadcrumb ═══ -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://saasspendtrack.com/" }
-    ]
-  }
-  </script>
-
-  <!-- ═══ Fonts & Styles ═══ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-
-  <!-- ═══ RB2B Visitor Tracking ═══ -->
-  <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("0NW1GHJ823O4");</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "How can a software vendor overcharge us without us noticing?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Because nobody reads the invoice against the contract. The contract sits in a Drive folder and the invoice goes straight to accounts payable. The two documents never meet. Overcharges accumulate as small monthly deltas: an uplift above the contracted cap, seats billed above the order form count, a tier migration nobody agreed to, or an add-on that should have been bundled." } },
+    { "@type": "Question", "name": "What does the audit cost?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Nothing upfront. If we recover money for you, we take 25% of what actually lands in your account. If we recover nothing, you pay nothing and owe nothing. There is no retainer, no platform fee and no minimum term." } },
+    { "@type": "Question", "name": "Will disputing invoices damage our vendor relationships?",
+      "acceptedAnswer": { "@type": "Answer", "text": "In practice, no. A dispute that cites the exact clause and the exact invoice line is a bookkeeping correction, not a confrontation. Vendors correct clear-cut errors quickly because the alternative is a documented breach of their own contract. Every letter goes out in your name, and you approve each one before it is sent." } },
+    { "@type": "Question", "name": "How long does the audit take?",
+      "acceptedAnswer": { "@type": "Answer", "text": "You get a findings ledger within 14 days of us receiving your documents. Recovery timelines depend on each vendor's dispute process, typically ranging from a few days for clear-cut errors to several weeks for contested items." } },
+    { "@type": "Question", "name": "What do we have to give you?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Two things: 24 months of SaaS invoices, and the signed contracts or order forms that go with them. Most teams pull both from an accounting export and a Drive folder in about 30 minutes. If contracts are missing for some vendors, we work with what exists and flag the gaps." } },
+    { "@type": "Question", "name": "How is this different from a SaaS management platform?",
+      "acceptedAnswer": { "@type": "Answer", "text": "SaaS management platforms show you what you are spending. They do not check whether that spend is contractually permitted, and they do not recover anything. Industry data suggests only 5 to 15 percent of identified software waste is ever actually recovered, because finding the problem and fixing it are separate jobs. We do the second one." } },
+    { "@type": "Question", "name": "How far back can we claim?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It depends on your contract. Many SaaS agreements contain an invoice-acceptance clause that limits disputes to 30 to 90 days after invoicing, while others are silent, which leaves the statutory limitation period. Part of the audit is telling you exactly which of your contracts still have an open dispute window and which have closed." } }
+  ]
+}
+</script>
 </head>
 <body>
 
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo" aria-label="SaaSSpendTrack home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="7" fill="#0F1829"/>
-          <rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/>
-          <rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/>
-          <rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/>
-        </svg>
-        <span>SaaSSpendTrack</span>
-      </a>
-      <div class="nav-links">
-        <a href="#features">How it works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="/blog/">Blog</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-ghost">Log in</a>
-        <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-primary" data-plg="nav-cta">Track free →</a>
-      </div>
-      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-    <div class="mobile-menu" role="navigation" aria-label="Mobile navigation">
-      <a href="#features">How it works</a>
-      <a href="#pricing">Pricing</a>
+<nav class="nav">
+  <div class="wrap nav-in">
+    <a href="/" class="brand" aria-label="SaaSSpendTrack home">
+      <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+        <rect width="26" height="26" rx="7" fill="#0C1422" stroke="#1A2740"/>
+        <rect x="6" y="14" width="3.2" height="6" rx="1" fill="#22C55E"/>
+        <rect x="11.4" y="10" width="3.2" height="10" rx="1" fill="#22C55E"/>
+        <rect x="16.8" y="6" width="3.2" height="14" rx="1" fill="#22C55E"/>
+      </svg>
+      SaaSSpendTrack
+    </a>
+    <div class="nav-links">
+      <a href="#how">How it works</a>
+      <a href="#offer">The audit</a>
+      <a href="#fit">Who it's for</a>
       <a href="/blog/">Blog</a>
       <a href="#faq">FAQ</a>
-      <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-primary" style="width:100%;text-align:center;" data-plg="mobile-cta">Track free →</a>
+      <a href="#offer" class="btn btn-primary nav-cta">Claim an audit slot</a>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <!-- Hero -->
-  <section class="hero" aria-labelledby="hero-headline">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="container hero-content">
-      <div class="hero-badge">⏱ Most SaaS contracts need 30–90 days' notice to cancel</div>
-      <h1 id="hero-headline">Never get auto-renewed<br>by <span class="hero-accent">accident.</span></h1>
-      <p class="hero-sub">Every SaaS contract has a cancellation window buried in it. Upload your contracts and we'll find the deadline, track it, and warn you while you can still act. Free for every vendor you own.</p>
-      <div class="hero-actions">
-        <a href="https://contractiq.whizzlead.com" class="btn btn-lg btn-primary" data-plg="hero-primary">Track your renewals-  free →</a>
-        <a href="#demo" class="btn btn-lg btn-dark-outline" data-plg="hero-demo">See the renewal calendar</a>
+<!-- ========== HERO ========== -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="hero-flag"><span class="dot"></span>Audited invoices contain a ~5% billing error rate</span>
+      <h1>Your software vendors are overcharging you. <em>We get the money back.</em></h1>
+      <p class="lede">Nobody checks the invoice against the contract. So the uplift exceeds its cap, seats get billed above the order form, tiers migrate without consent — and accounts payable pays it, every month, for years.</p>
+      <p class="lede" style="margin-top:1rem">We read both documents, find every discrepancy, and file the disputes until the credit lands in your account.</p>
+      <div class="btn-row" style="margin-top:2rem">
+        <a href="#offer" class="btn btn-primary">Claim an audit slot →</a>
+        <a href="#how" class="btn btn-ghost">See how it works</a>
       </div>
-      <p class="hero-trust">Unlimited vendors on the free plan &nbsp;·&nbsp; No card &nbsp;·&nbsp; No sales call</p>
+      <p class="fineprint">No upfront fee · You pay only from recovered money · Findings in 14 days</p>
     </div>
-  </section>
 
-  <!-- Stats -->
-  <section class="stats-bar" aria-label="Key metrics">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="stat-block">
-          <div class="stat-top"><span class="stat-num" data-target="90" aria-label="90 days">0</span><span class="stat-suffix">day</span></div>
-          <span class="stat-desc">notice windows you can't afford to miss</span>
+    <div>
+      <!-- SIGNATURE ELEMENT: the reconciliation ledger -->
+      <div class="ledger">
+        <div class="ledger-top">
+          <span class="ledger-title">Findings ledger — sample</span>
+          <span class="ledger-tag">4 discrepancies</span>
         </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-block">
-          <div class="stat-top"><span class="stat-num" data-target="30" aria-label="30 minutes">0</span><span class="stat-suffix">min</span></div>
-          <span class="stat-desc">to get every contract tracked</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-block">
-          <div class="stat-top"><span class="stat-dollar">$</span><span class="stat-num" data-target="0" aria-label="zero dollars">0</span></div>
-          <span class="stat-desc">to track unlimited vendors</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true"></div>
-        <div class="stat-block">
-          <div class="stat-top"><span class="stat-num" data-target="1" aria-label="one">0</span></div>
-          <span class="stat-desc">caught renewal pays for the year</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- PLG Value Ladder -->
-  <section class="plg-ladder">
-    <div class="container">
-      <div class="section-header">
-        <span class="sh-badge">How it works</span>
-        <h2>From "wait, when does this renew?"<br>to <span class="green-text">a deadline you control</span></h2>
-      </div>
-      <div class="ladder-grid">
-        <div class="ladder-step reveal">
-          <div class="ladder-num">01</div>
-          <div class="ladder-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+        <div class="ledger-row">
+          <div>
+            <div class="lr-clause">Annual uplift capped at 5%<span>MSA §7.2 — "shall not exceed five percent (5%)"</span></div>
+            <div class="lr-billed">Invoice applied 11.4%</div>
           </div>
-          <h3>Drop in your contracts</h3>
-          <p>Upload PDFs, link a Google Drive folder, or just type in a vendor and its renewal date. Every vendor is free-  there's no cap to work around.</p>
-          <span class="ladder-cta-inline"><a href="https://contractiq.whizzlead.com" data-plg="ladder-step1">Start free →</a></span>
+          <div class="lr-amt">$8,240</div>
         </div>
-        <div class="ladder-arrow" aria-hidden="true">→</div>
-        <div class="ladder-step reveal">
-          <div class="ladder-num">02</div>
-          <div class="ladder-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg>
+
+        <div class="ledger-row">
+          <div>
+            <div class="lr-clause">142 licensed seats<span>Order Form, Exhibit A</span></div>
+            <div class="lr-billed">Billed 190 seats for 11 months</div>
           </div>
-          <h3>We find the real deadline</h3>
-          <p>We pull the auto-renew clause and notice period out of the document, then count backwards from the renewal date. Not "renews in November"-  "you must give notice by Sept 15."</p>
-          <span class="ladder-cta-inline"><a href="#demo" data-plg="ladder-step2">See an example →</a></span>
+          <div class="lr-amt">$14,976</div>
         </div>
-        <div class="ladder-arrow" aria-hidden="true">→</div>
-        <div class="ladder-step reveal">
-          <div class="ladder-num">03</div>
-          <div class="ladder-icon">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+
+        <div class="ledger-row">
+          <div>
+            <div class="lr-clause">Business tier — $18 / seat / mo<span>Order Form, pricing schedule</span></div>
+            <div class="lr-billed">Charged Enterprise at $32</div>
           </div>
-          <h3>You get warned in time</h3>
-          <p>Email and Slack alerts fire while the window is still open, and escalate to a second owner if nobody acts. Teams upgrade to Pro the first time an alert saves them a contract.</p>
-          <span class="ladder-cta-inline"><a href="#pricing" data-plg="ladder-step3">See Pro →</a></span>
+          <div class="lr-amt">$6,384</div>
+        </div>
+
+        <div class="ledger-row">
+          <div>
+            <div class="lr-clause">Support included at no charge<span>MSA §4.1 — "included in the Subscription Fee"</span></div>
+            <div class="lr-billed">Premium support line item added</div>
+          </div>
+          <div class="lr-amt">$11,720</div>
+        </div>
+
+        <div class="ledger-foot">
+          <span class="lbl">Recoverable</span>
+          <span class="val">$41,320</span>
         </div>
       </div>
+      <p class="ledger-cap">Illustrative. Every line cites the clause it came from.</p>
     </div>
-  </section>
+  </div>
+</header>
 
-  <!-- Dashboard preview -->
-  <section class="preview" id="demo" aria-label="Product preview">
-    <div class="container">
-      <div class="preview-label">Renewal calendar preview</div>
-      <div class="preview-window reveal">
-        <div class="preview-chrome" aria-hidden="true">
-          <div class="chrome-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-          <div class="chrome-bar">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="opacity:.4"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-            saasspendtrack.com/renewals
-          </div>
-        </div>
-        <div class="preview-body">
-          <div class="dash-sidebar" aria-hidden="true">
-            <div class="sidebar-logo">
-              <svg width="20" height="20" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
-              <span>SSTrack</span>
+<!-- ========== PROOF ========== -->
+<div class="proof">
+  <div class="wrap proof-grid">
+    <div class="stat">
+      <span class="v">~5%</span>
+      <div class="k">Billing error rate found across $34M of enterprise invoices audited in 2026</div>
+      <div class="src">Vaudit / The Information</div>
+    </div>
+    <div class="stat">
+      <span class="v">80%</span>
+      <div class="k">Of disputed overcharges credited back once the error was formally presented</div>
+      <div class="src">Same audit, 60 enterprise customers</div>
+    </div>
+    <div class="stat">
+      <span class="v">7–12%</span>
+      <div class="k">Of enterprise telecom invoices contain errors — the same problem, one category over</div>
+      <div class="src">Gartner</div>
+    </div>
+    <div class="stat">
+      <span class="v">5–15%</span>
+      <div class="k">Of identified software waste is ever actually recovered. Finding it isn't the hard part</div>
+      <div class="src">Software asset management research</div>
+    </div>
+  </div>
+</div>
+
+<!-- ========== THE PROBLEM ========== -->
+<section id="how" class="rule">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow charge">Where the money goes</span>
+      <h2>Four ways the invoice quietly stops matching the contract.</h2>
+      <p>None of these look like fraud. Each one looks like a slightly larger number on a bill that somebody already approved last month. That's exactly why they survive for years.</p>
+    </div>
+
+    <div class="patterns">
+      <article class="pattern">
+        <span class="tag">Pattern 01</span>
+        <h3>The cap that wasn't honoured</h3>
+        <p>You negotiated a 5% ceiling on annual increases. The renewal came through at 11%. Software prices rose 12.2% in 2026 against roughly 3% inflation, so CPI-linked caps are now routinely exceeded — and almost nobody goes back to check the clause they fought for.</p>
+      </article>
+
+      <article class="pattern">
+        <span class="tag">Pattern 02</span>
+        <h3>Seats that were never ordered</h3>
+        <p>The order form says 142. Somebody provisioned 190 during a hiring push that stalled. Some vendors now actively audit seat counts and back-bill retroactively for provisioned-but-unused seats — a charge that arrives with no order form behind it.</p>
+      </article>
+
+      <article class="pattern">
+        <span class="tag">Pattern 03</span>
+        <h3>The tier you were moved into</h3>
+        <p>Grandfathered plans get discontinued and customers are migrated to a replacement costing 30–200% more. AI features get bundled into a higher SKU and the tier you actually signed for quietly disappears. Your contract still names the old one.</p>
+      </article>
+
+      <article class="pattern">
+        <span class="tag">Pattern 04</span>
+        <h3>Line items that were already included</h3>
+        <p>Support, onboarding, an integration, a sandbox — negotiated into the subscription fee during the deal, then invoiced separately eighteen months later by a billing system that never saw the redlines.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ========== THE OFFER (GSO) ========== -->
+<section id="offer" class="rule">
+  <div class="wrap">
+    <div class="offer-shell">
+      <div class="offer-head">
+        <span class="eyebrow">The offer</span>
+        <h2>The 24-Month SaaS Refund Audit</h2>
+        <p class="lede" style="margin:0 auto">Send us 24 months of invoices and the contracts behind them. In 14 days you get a line-by-line ledger of every dollar you were charged that your contracts don't permit — and we chase each one to credit.</p>
+      </div>
+
+      <div class="offer-body">
+        <div class="offer-stack">
+          <span class="eyebrow mute">What you get</span>
+
+          <div class="stack-item">
+            <span class="tick"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="t">Full 24-month reconciliation</div>
+              <div class="d">Every invoice line matched against the clause that governs it, across every vendor you send us.</div>
             </div>
-            <div class="sidebar-item active"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Renewals</div>
-            <div class="sidebar-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Contracts</div>
-            <div class="sidebar-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Vendors</div>
-            <div class="sidebar-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>Alerts</div>
+            <span class="v">$6,000</span>
           </div>
-          <div class="dash-main">
-            <div class="dash-header">
-              <div><span class="dash-eyebrow">Renewals</span><span class="dash-title">Notice windows</span></div>
-              <div class="dash-period"><span class="period-btn">90 days</span><span class="period-btn active">180 days</span></div>
+
+          <div class="stack-item">
+            <span class="tick"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="t">The findings ledger</div>
+              <div class="d">Each discrepancy with the contract language, the invoice line, the delta and the recoverable amount. Auditable by your CFO, not a dashboard.</div>
             </div>
-            <div class="dash-cards">
-              <div class="dash-card"><span class="dc-label">Renewals ahead</span><span class="dc-value">7</span><span class="dc-change neutral">next 180 days</span></div>
-              <div class="dash-card warn"><span class="dc-label">Windows closing</span><span class="dc-value">2</span><span class="dc-change warn">⚠ Act this week</span></div>
-              <div class="dash-card"><span class="dc-label">Value at risk</span><span class="dc-value">$32,400</span><span class="dc-change neutral">if all auto-renew</span></div>
-              <div class="dash-card"><span class="dc-label">Caught this year</span><span class="dc-value">$18,200</span><span class="dc-change up">↑ 3 contracts killed</span></div>
+            <span class="v">$2,500</span>
+          </div>
+
+          <div class="stack-item">
+            <span class="tick"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="t">Dispute letters, written and filed</div>
+              <div class="d">Drafted in your name, citing clause and line. You approve each one; we send and track it.</div>
             </div>
-            <div class="dash-table">
-              <div class="dt-header"><span>Vendor</span><span>Renews</span><span>Notice by</span><span>Status</span></div>
-              <div class="dt-row"><span class="dt-name"><span class="dot red"></span>Intercom</span><span class="dt-cost">Sep 9</span><span>Aug 10</span><span class="badge overdue">4 days left</span></div>
-              <div class="dt-row"><span class="dt-name"><span class="dot amber"></span>Salesforce</span><span class="dt-cost">Nov 14</span><span>Sep 15</span><span class="badge renew">40 days left</span></div>
-              <div class="dt-row"><span class="dt-name"><span class="dot amber"></span>Figma</span><span class="dt-cost">Dec 3</span><span>Nov 3</span><span class="badge renew">89 days left</span></div>
-              <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Notion</span><span class="dt-cost">Jan 22</span><span>Dec 23</span><span class="badge active">Tracked</span></div>
-              <div class="dt-row"><span class="dt-name"><span class="dot green"></span>Slack</span><span class="dt-cost">Feb 1</span><span>Jan 2</span><span class="badge active">Tracked</span></div>
+            <span class="v">$4,000</span>
+          </div>
+
+          <div class="stack-item">
+            <span class="tick"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="t">Recovery chased to credit</div>
+              <div class="d">We handle the follow-ups, the escalations and the billing contacts until the credit note actually issues. You don't chase anyone.</div>
             </div>
+            <span class="v">$5,000</span>
+          </div>
+
+          <div class="stack-item bonus">
+            <span class="tick"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="t">Bonus — Dispute-window map</div>
+              <div class="d">Which of your contracts still have an open window to claim, and which have already closed. Tells you what's urgent.</div>
+            </div>
+            <span class="v">Included</span>
+          </div>
+
+          <div class="stack-item bonus">
+            <span class="tick"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="t">Bonus — Renewal exposure calendar</div>
+              <div class="d">Every auto-renewal and notice deadline we find in your contracts, with the date you must act by.</div>
+            </div>
+            <span class="v">Included</span>
+          </div>
+
+          <div class="stack-item bonus">
+            <span class="tick"><svg width="10" height="8" viewBox="0 0 10 8" fill="none"><path d="M1 4l2.5 2.5L9 1" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <div>
+              <div class="t">Bonus — 90 days of forward monitoring</div>
+              <div class="d">We keep checking new invoices as they arrive, so the next overcharge gets caught before AP pays it.</div>
+            </div>
+            <span class="v">Included</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Features -->
-  <section class="features" id="features" aria-labelledby="features-heading">
-    <div class="container">
-      <div class="section-header">
-        <span class="sh-badge">What you get</span>
-        <h2 id="features-heading">Everything you need to kill<br>a contract <span class="green-text">on time.</span></h2>
-        <p class="sh-sub">Built around one job: making sure no vendor renews without you choosing to renew it.</p>
-      </div>
-      <div class="features-grid">
-        <article class="fcard reveal">
-          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="8" y1="13" x2="16" y2="13"/><line x1="8" y1="17" x2="13" y2="17"/></svg></div>
-          <h3>Auto-renew clause extraction</h3>
-          <p>We read the contract and pull out the terms that actually matter: renewal type, notice period, term length, and any price-escalation cap. No more Ctrl-F through a 40-page MSA.</p>
-        </article>
-        <article class="fcard reveal">
-          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15.5 14"/></svg></div>
-          <h3>Notice-window countdown</h3>
-          <p>Every vendor gets a live "act by" date calculated from its own clause, not a generic 30-day guess. You see exactly how many days of leverage you have left.</p>
-        </article>
-        <article class="fcard reveal">
-          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
-          <h3>Alerts that escalate</h3>
-          <p>Email and Slack warnings at 90, 60, and 30 days out. If the owner doesn't acknowledge, it escalates to their manager. Renewals stop depending on one person remembering.</p>
-        </article>
-        <article class="fcard reveal">
-          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
-          <h3>Renewal prep briefs</h3>
-          <p>Before every renewal you get a one-pager: what you pay, what you paid last term, seats vs. seats used, and the clauses worth pushing back on. Walk into the call with leverage.</p>
-        </article>
-        <article class="fcard reveal">
-          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
-          <h3>Invoice &amp; spend tracking</h3>
-          <p>Also included: every invoice and every dollar per vendor, in one view. Useful context at renewal time, and it means the spreadsheet finally goes away.</p>
-        </article>
-        <article class="fcard reveal">
-          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <h3>Drive, Slack &amp; ERP</h3>
-          <p>Point us at a Drive folder and contracts flow in on their own. Alerts land in Slack where work happens. SSO and ERP sync on Enterprise.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Comparison -->
-  <section class="compare-section" aria-labelledby="compare-heading">
-    <div class="container">
-      <div class="section-header">
-        <span class="sh-badge green">Why not a reminder?</span>
-        <h2 id="compare-heading">A calendar invite<br><span class="green-text">is not a system.</span></h2>
-      </div>
-      <div class="compare-grid">
-        <div class="compare-card them">
-          <div class="compare-label">Spreadsheet + calendar reminder</div>
-          <div class="compare-price">$0<span>/yr, until one slips</span></div>
-          <ul>
-            <li class="neg">Assumes someone read the notice clause</li>
-            <li class="neg">Date math done by hand, once, months ago</li>
-            <li class="neg">Fires at the renewal date-  too late to cancel</li>
-            <li class="neg">Dies when the person who set it up leaves</li>
-          </ul>
-        </div>
-        <div class="compare-card us">
-          <div class="compare-best">Your pick</div>
-          <div class="compare-label">SaaSSpendTrack</div>
-          <div class="compare-price">$0 – $499<span>/yr</span></div>
-          <ul>
-            <li class="pos">Reads the clause out of the contract for you</li>
-            <li class="pos">Deadline calculated from the real notice period</li>
-            <li class="pos">Warns you while the window is still open</li>
-            <li class="pos">Escalates to a second owner if nobody acts</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Pricing -->
-  <section class="pricing" id="pricing" aria-labelledby="pricing-heading">
-    <div class="container">
-      <div class="section-header">
-        <span class="sh-badge">Pricing</span>
-        <h2 id="pricing-heading">Tracking is free. Forever.<br>You pay for <span class="green-text">the leverage.</span></h2>
-        <p class="sh-sub">Unlimited vendors, contracts, and users on every plan-  including Free. Partial coverage doesn't protect you, so we don't cap it.</p>
-      </div>
-
-      <!-- Billing toggle -->
-      <div class="billing-toggle" role="group" aria-label="Billing period">
-        <button class="toggle-btn active" id="btn-monthly" data-period="monthly">Monthly</button>
-        <button class="toggle-btn" id="btn-annual" data-period="annual">
-          Annual
-          <span class="toggle-save">Save 17%</span>
-        </button>
-      </div>
-
-      <div class="pricing-grid">
-        <!-- Free -->
-        <div class="plan reveal">
-          <div class="plan-name">Free</div>
-          <div class="plan-price"><span class="price-dollar">$</span>0</div>
-          <div class="plan-period">Forever</div>
-          <div class="plan-sep"></div>
-          <div class="plan-limit">Unlimited vendors</div>
-          <ul>
-            <li>Unlimited vendors &amp; contracts</li>
-            <li>Unlimited users</li>
-            <li>Renewal &amp; notice date tracking</li>
-            <li>Notice-window countdown</li>
-            <li>Email alerts at 90/60/30 days</li>
-          </ul>
-          <a href="https://contractiq.whizzlead.com" class="btn btn-outline-dark btn-full" data-plg="pricing-free">Start tracking free</a>
-        </div>
-
-        <!-- Pro -->
-        <div class="plan featured reveal">
-          <div class="plan-popular">Most popular</div>
-          <div class="plan-name">Pro</div>
-          <div class="plan-price">
-            <span class="price-dollar">$</span><span class="price-val" data-monthly="49" data-annual="499">49</span><span class="price-yr" id="pro-period">/mo</span>
+        <div class="offer-close">
+          <span class="eyebrow mute">What it costs</span>
+          <div class="price-line">
+            <span class="price-strike">$17,500</span>
+            <span class="price-main">$0 upfront</span>
           </div>
-          <div class="plan-period" id="pro-subline">Billed monthly</div>
-          <div class="plan-sep"></div>
-          <div class="plan-limit">For teams that negotiate</div>
-          <ul>
-            <li>Everything in Free</li>
-            <li>Automatic clause extraction</li>
-            <li>Slack alerts + escalation paths</li>
-            <li>Renewal prep briefs</li>
-            <li>Invoice &amp; spend tracking</li>
-            <li>Multi-department access</li>
-          </ul>
-          <a href="https://rzp.io/rzp/nsTE3gR" class="btn btn-primary btn-full" data-plg="pricing-pro" id="pro-cta">Get started →</a>
-        </div>
+          <p class="price-sub">Then 25% of what we actually recover — invoiced after the credit lands in your account, not before.</p>
 
-        <!-- Enterprise -->
-        <div class="plan reveal">
-          <div class="plan-name">Enterprise</div>
-          <div class="plan-price">
-            <span class="price-dollar">$</span><span class="price-val" data-monthly="149" data-annual="1,499">149</span><span class="price-yr" id="ent-period">/mo</span>
+          <div class="guarantee">
+            <div class="g-t">The $10,000 guarantee</div>
+            <p>If we don't find at least $10,000 you've been overcharged, you pay nothing and owe nothing — and you keep the ledger, the dispute-window map and the renewal calendar anyway.</p>
           </div>
-          <div class="plan-period" id="ent-subline">Billed monthly</div>
-          <div class="plan-sep"></div>
-          <div class="plan-limit">For complex vendor stacks</div>
-          <ul>
-            <li>Everything in Pro</li>
-            <li>Price benchmarking at renewal</li>
-            <li>Automated contract risk scoring</li>
-            <li>SSO + ERP integrations</li>
-            <li>Custom approval workflows</li>
-            <li>Priority support</li>
-          </ul>
-          <a href="https://rzp.io/rzp/MhqdtN2a" class="btn btn-outline-dark btn-full" data-plg="pricing-enterprise" id="ent-cta">Get started →</a>
-        </div>
-      </div>
 
-      <!-- PLG inline nudge -->
-      <div class="pricing-nudge">
-        <span>🎯 One caught renewal on a mid-size contract covers Pro for a decade.</span>
-      </div>
-    </div>
-  </section>
+          <a href="mailto:audit@saasspendtrack.com?subject=Audit%20slot%20request" class="btn btn-primary" style="justify-content:center">Claim an audit slot →</a>
+          <p class="fineprint" style="text-align:center">No card. No call required. Send documents, get findings.</p>
 
-  <!-- FAQ-  AEO optimised -->
-  <section class="faq" id="faq" aria-labelledby="faq-heading">
-    <div class="container">
-      <div class="section-header">
-        <span class="sh-badge">FAQ</span>
-        <h2 id="faq-heading">Questions? Answers.</h2>
-      </div>
-      <div class="faq-list">
-        <details class="faq-item">
-          <summary>What is SaaSSpendTrack and who is it for?</summary>
-          <p>SaaSSpendTrack is renewal-defense software for SaaS contracts. You upload your contracts, we extract the auto-renew clause and the notice period, and we alert you before the cancellation window closes-  while you can still cancel, downgrade, or renegotiate. It's built for the finance or ops person at a 20–500 employee company who owns renewals without a procurement team behind them.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What is a notice period or cancellation window?</summary>
-          <p>Most SaaS contracts renew automatically unless you give written notice a fixed number of days before the renewal date-  commonly 30, 60, or 90. That gap is the notice period, and the time you have to act is the cancellation window. Miss it by a day and you're contractually committed to another full term, even if the tool has been unused for months.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How much does SaaSSpendTrack cost?</summary>
-          <p>Renewal tracking is free forever, with no vendor limit-  unlimited vendors, contracts, and users on the Free plan. Pro is $49/month or $499/year and adds automatic clause extraction, Slack alerts and escalation, renewal prep briefs, and invoice tracking. Enterprise is $149/month or $1,499/year and adds price benchmarking, risk scoring, SSO, and ERP integrations.</p>
-        </details>
-        <details class="faq-item">
-          <summary>Why is the free plan unlimited instead of capped at a few vendors?</summary>
-          <p>Because renewal defense only works if it's complete. Tracking 3 vendors out of 24 leaves 21 that can still auto-renew on you, and a tool that catches some of your renewals isn't meaningfully better than none. So every vendor is free to track. What you pay for is the intelligence on top: reading the clauses, routing the alerts, and preparing the negotiation.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How is this different from a calendar reminder or a spreadsheet?</summary>
-          <p>A calendar reminder assumes someone already read the contract, found the notice period, did the date math correctly, and will still be in the role when it fires. We read the contract for you, calculate the deadline from the actual clause, escalate to a second owner if the first doesn't act, and survive the person who set it up leaving.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How is SaaSSpendTrack different from Zluri or Spendflo?</summary>
-          <p>Zluri and Spendflo are full SaaS management suites aimed at 500+ employee companies, typically costing tens of thousands per year with a multi-week implementation. They do more than we do. We do one thing-  stopping renewals you didn't intend to make-  and we do it starting free, with no implementation, in about 30 minutes. If you need full app discovery, license reclamation, and procurement workflow, they're the better fit.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How long does setup take?</summary>
-          <p>Around 30 minutes. Upload or link your contracts, confirm the renewal and notice dates we pull out, choose who gets alerted, and you're done. No implementation consultant, no sales call, no credit card.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What if I don't have the contract PDF for a vendor?</summary>
-          <p>Add the vendor manually with just the renewal date and you still get the countdown and the alerts. Clause extraction needs the document; tracking doesn't. Most teams start with the contracts they can find and backfill the rest over time.</p>
-        </details>
-        <details class="faq-item">
-          <summary>What integrations do you support?</summary>
-          <p>Google Drive for contract uploads and Slack for renewal alerts and escalation on Pro. CLM and ERP integrations plus SSO on Enterprise. More are added regularly.</p>
-        </details>
-        <details class="faq-item">
-          <summary>How do I get support?</summary>
-          <p>Email support@saasspendtrack.com on any plan, including Free-  we respond within hours, not days. Enterprise customers get a dedicated Slack channel.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Final CTA -->
-  <section class="final-cta" aria-labelledby="cta-heading">
-    <div class="container">
-      <div class="cta-logo" aria-hidden="true">
-        <svg width="52" height="52" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
-      </div>
-      <h2 id="cta-heading">Something in your stack<br><span class="green-text">renews next month.</span></h2>
-      <p>Find out which one before the window closes. Unlimited vendors, free forever.</p>
-      <a href="https://contractiq.whizzlead.com" class="btn btn-lg btn-primary" data-plg="final-cta">Track your renewals-  free →</a>
-      <p class="cta-sub">No credit card &nbsp;·&nbsp; No sales call &nbsp;·&nbsp; Live in 30 minutes</p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="logo" aria-label="SaaSSpendTrack home">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
-            <span>SaaSSpendTrack</span>
-          </a>
-          <p>Renewal defense for SaaS contracts. We find the cancellation window before it closes.</p>
+          <div class="scarcity"><span class="dot"></span>8 audits per month. Each one is read by a human.</div>
         </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="#features">How it works</a>
-          <a href="#pricing">Pricing</a>
-          <a href="https://contractiq.whizzlead.com">Dashboard</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#">About</a>
-          <a href="/privacy">Privacy policy</a>
-          <a href="#">Terms of service</a>
-        </div>
-        <div class="footer-col">
-          <h4>Support</h4>
-          <a href="mailto:support@saasspendtrack.com">support@saasspendtrack.com</a>
-          <a href="#">Documentation</a>
-          <a href="#faq">FAQ</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>© 2026 SaaSSpendTrack. All rights reserved.</p>
-        <p class="footer-tagline">Never get auto-renewed by accident.</p>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Cookie Banner (RB2B compliance) -->
-  <div id="cookie-banner" role="dialog" aria-label="Cookie consent" style="display:none;">
-    <div class="cookie-inner">
-      <p>We use cookies and tracking technologies-  including <a href="https://www.rb2b.com/privacy-policy" target="_blank" rel="noopener">RB2B</a>-  to identify website visitors and improve our service. By continuing, you agree to our <a href="/privacy">Privacy Policy</a>. You can <a href="https://app.retention.com/optout" target="_blank" rel="noopener">opt out of visitor tracking</a> at any time.</p>
-      <div class="cookie-actions">
-        <button id="cookie-accept" class="btn btn-sm btn-primary">Accept</button>
-        <a href="https://app.retention.com/optout" target="_blank" rel="noopener" class="cookie-optout">Opt out of tracking</a>
       </div>
     </div>
   </div>
+</section>
 
-  <script>
-    // Mobile menu
-    const toggle=document.querySelector('.mobile-toggle'),menu=document.querySelector('.mobile-menu');
-    toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});
-    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
+<!-- ========== STEPS ========== -->
+<section class="rule">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">The process</span>
+      <h2>Thirty minutes of your time. Fourteen days of ours.</h2>
+      <p>These steps are sequential — each one depends on the last, and nothing starts until your documents are in.</p>
+    </div>
 
-    // Scroll reveal
-    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    <div class="steps">
+      <div class="step">
+        <span class="n">STEP 01</span>
+        <h3>You send two things</h3>
+        <p>24 months of SaaS invoices — usually one export from your accounting system — and the contracts or order forms behind them. A shared Drive folder is fine. Missing contracts get flagged, not guessed at.</p>
+        <div class="when">Your effort: ~30 minutes</div>
+      </div>
 
-    // Counter animation
-    const cio=new IntersectionObserver(entries=>entries.forEach(e=>{
-      if(!e.isIntersecting)return;
-      const el=e.target,target=+el.dataset.target;
-      if(target===0){el.textContent='0';cio.unobserve(el);return;}
-      let cur=0;const step=Math.ceil(target/50);
-      const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur>=target)clearInterval(t);},25);
-      cio.unobserve(el);
-    }),{threshold:0.5});
-    document.querySelectorAll('.stat-num').forEach(el=>cio.observe(el));
+      <div class="step">
+        <span class="n">STEP 02</span>
+        <h3>We reconcile every line</h3>
+        <p>Each charge is matched to the clause that authorises it: the pricing schedule, the seat count, the uplift cap, the inclusions. Anything that doesn't reconcile goes in the ledger with the contract language quoted next to it.</p>
+        <div class="when">Findings delivered: day 14</div>
+      </div>
 
-    // Dashboard row hover
-    document.querySelectorAll('.dt-row').forEach(r=>{
-      r.addEventListener('mouseenter',()=>r.style.background='rgba(34,197,94,.06)');
-      r.addEventListener('mouseleave',()=>r.style.background='');
-    });
+      <div class="step">
+        <span class="n">STEP 03</span>
+        <h3>We file and chase</h3>
+        <p>You approve the findings you want pursued. We draft the dispute in your name, send it, and follow it through the vendor's billing process until a credit note issues. You get paid, then we invoice.</p>
+        <div class="when">Credits: days to weeks per vendor</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // Pricing toggle
-    (function(){
-      const btnM=document.getElementById('btn-monthly');
-      const btnA=document.getElementById('btn-annual');
-      const proVal=document.querySelector('#pricing .plan.featured .price-val');
-      const entVal=document.querySelector('#pricing .plan:last-child .price-val');
-      const proPeriod=document.getElementById('pro-period');
-      const entPeriod=document.getElementById('ent-period');
-      const proSub=document.getElementById('pro-subline');
-      const entSub=document.getElementById('ent-subline');
-      const proCta=document.getElementById('pro-cta');
-      const entCta=document.getElementById('ent-cta');
+<!-- ========== FIT ========== -->
+<section id="fit" class="rule">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Qualification</span>
+      <h2>This is worth doing for some companies and a waste of time for others.</h2>
+      <p>The audit only pays for itself above a certain volume of contracted spend. We'd rather tell you now than take a slot you won't benefit from.</p>
+    </div>
 
-      const links={
-        pro:{monthly:'https://rzp.io/rzp/nsTE3gR',annual:'https://rzp.io/rzp/2T2PfXBC'},
-        ent:{monthly:'https://rzp.io/rzp/oP8t6Unk',annual:'https://rzp.io/rzp/MhqdtN2a'}
-      };
+    <div class="fit">
+      <div class="fit-col yes">
+        <h3>Send us your invoices if</h3>
+        <ul>
+          <li>You spend $500K or more a year on software</li>
+          <li>You have 150–2,000 employees</li>
+          <li>Most vendors are on signed contracts or order forms, not credit-card self-serve</li>
+          <li>Somebody in finance or procurement owns renewals, but nobody audits the bills</li>
+          <li>You've had at least one renewal come in higher than you expected and moved on</li>
+          <li>Your contracts contain uplift caps, seat commitments or negotiated inclusions</li>
+        </ul>
+      </div>
 
-      function setMonthly(){
-        btnM.classList.add('active');btnA.classList.remove('active');
-        proVal.textContent=proVal.dataset.monthly;
-        entVal.textContent=entVal.dataset.monthly;
-        proPeriod.textContent='/mo';entPeriod.textContent='/mo';
-        proSub.textContent='Billed monthly';
-        entSub.textContent='Billed monthly';
-        proCta.href=links.pro.monthly;
-        entCta.href=links.ent.monthly;
-      }
-      function setAnnual(){
-        btnA.classList.add('active');btnM.classList.remove('active');
-        proVal.textContent=proVal.dataset.annual;
-        entVal.textContent=entVal.dataset.annual;
-        proPeriod.textContent='/yr';entPeriod.textContent='/yr';
-        proSub.textContent='~$41/mo-  no budget approval needed';
-        entSub.textContent='~$125/mo-  easy corporate card purchase';
-        proCta.href=links.pro.annual;
-        entCta.href=links.ent.annual;
-      }
-      btnM.addEventListener('click',setMonthly);
-      btnA.addEventListener('click',setAnnual);
-    })();
+      <div class="fit-col no">
+        <h3>Don't bother if</h3>
+        <ul>
+          <li>Your SaaS spend is under $250K a year — the recovery won't justify anyone's time</li>
+          <li>Everything is month-to-month on a company card with no contracts</li>
+          <li>You have fewer than 15 paid vendors</li>
+          <li>You already run a contract-to-invoice reconciliation every quarter</li>
+          <li>You want negotiation help for an upcoming purchase — that's a different service, and Vendr or Sastrify do it well</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
 
-    // Cookie banner
-    (function(){
-      if(!localStorage.getItem('cookie_consent')){
-        setTimeout(()=>document.getElementById('cookie-banner').style.display='flex',1200);
-      }
-      document.getElementById('cookie-accept').addEventListener('click',function(){
-        localStorage.setItem('cookie_consent','accepted');
-        document.getElementById('cookie-banner').style.display='none';
-      });
-    })();
+<!-- ========== FAQ ========== -->
+<section id="faq" class="rule">
+  <div class="wrap">
+    <div class="head">
+      <span class="eyebrow">Questions</span>
+      <h2>The things finance teams ask first.</h2>
+    </div>
 
-    // PLG click tracking (fires to console; wire to analytics of choice)
-    document.querySelectorAll('[data-plg]').forEach(el=>{
-      el.addEventListener('click',()=>{
-        const event={event:'plg_click',location:el.dataset.plg,timestamp:new Date().toISOString()};
-        console.log('[PLG]',event);
-        // Replace with: analytics.track('PLG Click', event); or gtag('event', ...)
-      });
-    });
-  </script>
+    <div class="faq-list">
+      <details>
+        <summary>How can a vendor overcharge us without anyone noticing?</summary>
+        <p>Because the two documents never meet. The contract lives in a Drive folder owned by whoever ran the deal. The invoice goes straight to accounts payable, where it's checked against the previous invoice — not against the agreement. As long as this month looks roughly like last month, it gets paid. Overcharges survive as small monthly deltas that compound quietly across a full term.</p>
+      </details>
+
+      <details>
+        <summary>What does it cost?</summary>
+        <p>Nothing upfront. If we recover money, we take 25% of what actually lands in your account. If we recover nothing, you pay nothing and owe nothing. No retainer, no platform fee, no minimum term, no auto-renewal — which would be a poor look for us.</p>
+      </details>
+
+      <details>
+        <summary>Won't disputing invoices damage our vendor relationships?</summary>
+        <p>A dispute that cites the exact clause and the exact invoice line reads as a bookkeeping correction, not a confrontation. Vendors correct clear-cut errors quickly, because the alternative is a documented departure from their own contract. In comparable enterprise audits, roughly 80% of formally presented overcharges were credited back — and several providers were described by the auditors as cooperative once the error was laid out plainly.</p>
+        <p>Every letter goes out in your name and you approve each one before it's sent. If you'd rather not pursue a particular vendor, we drop it and it doesn't count toward the guarantee threshold.</p>
+      </details>
+
+      <details>
+        <summary>How far back can we actually claim?</summary>
+        <p>It depends on your contract, and this is one of the first things the audit tells you. Many SaaS agreements contain an invoice-acceptance clause limiting disputes to 30–90 days after the invoice date. Others are silent, which leaves the statutory limitation period. We map which of your contracts still have an open dispute window and which have closed, so you know what's genuinely claimable before anyone spends time on it.</p>
+      </details>
+
+      <details>
+        <summary>How is this different from Zluri, Torii, Zylo or Spendflo?</summary>
+        <p>Those platforms show you what you're spending and where it's concentrated. Useful work, and if you want app discovery, license reclamation and procurement workflow, they're better at it than we are. But none of them checks whether the amount charged was contractually permitted, and none of them recovers anything.</p>
+        <p>That gap shows up in the data: industry research puts recovery of identified software waste at only 5–15%, because finding a problem and fixing it are separate jobs requiring separate effort. We only do the second one.</p>
+      </details>
+
+      <details>
+        <summary>What exactly do you need from us?</summary>
+        <p>Two things. An export of 24 months of SaaS invoices from your accounting system, and the signed contracts or order forms that go with them — a shared Drive folder is the usual route. Most teams assemble both in about 30 minutes. Where a contract is missing, we flag the vendor rather than assume terms.</p>
+      </details>
+
+      <details>
+        <summary>What happens to our contracts and invoices?</summary>
+        <p>They stay yours. We work from a folder you control and you can revoke access at any point. We don't require an integration, an agent, or a browser extension, and we don't need admin access to any of your systems. If you ever want out, you take the folder and the ledger with you.</p>
+      </details>
+
+      <details>
+        <summary>Why only eight audits a month?</summary>
+        <p>Because a human reads every contract. Clause extraction gets us most of the way, but the judgment call about whether a charge is actually a breach — and whether it's worth disputing — isn't something we're willing to automate yet. When that changes, the number goes up.</p>
+      </details>
+
+      <details>
+        <summary>Do you still do renewal tracking?</summary>
+        <p>Yes, and it's free. Upload your contracts and we'll extract the auto-renew clause, calculate the notice deadline, and alert you before the cancellation window closes — unlimited vendors, no charge. It's how most people meet us. The audit is what we charge for.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FINAL ========== -->
+<section class="rule final">
+  <div class="wrap">
+    <span class="eyebrow charge">Last thing</span>
+    <h2>You've already paid these invoices.</h2>
+    <p class="lede">The only question is how much of it you were contractually obliged to pay. Find out for nothing, and pay us only out of what comes back.</p>
+    <div class="btn-row">
+      <a href="mailto:audit@saasspendtrack.com?subject=Audit%20slot%20request" class="btn btn-primary">Claim an audit slot →</a>
+      <a href="https://contractiq.whizzlead.com" class="btn btn-ghost">Or start free renewal tracking</a>
+    </div>
+    <p class="fineprint">Find $10,000 or pay nothing · 25% of recovered funds · 8 slots a month</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="/" class="brand">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none" aria-hidden="true">
+            <rect width="26" height="26" rx="7" fill="#0C1422" stroke="#1A2740"/>
+            <rect x="6" y="14" width="3.2" height="6" rx="1" fill="#22C55E"/>
+            <rect x="11.4" y="10" width="3.2" height="10" rx="1" fill="#22C55E"/>
+            <rect x="16.8" y="6" width="3.2" height="14" rx="1" fill="#22C55E"/>
+          </svg>
+          SaaSSpendTrack
+        </a>
+        <p class="foot-blurb">We check what your software vendors charged against what your contracts allow, and recover the difference.</p>
+      </div>
+      <div>
+        <h4>Service</h4>
+        <ul>
+          <li><a href="#offer">The audit</a></li>
+          <li><a href="#how">How it works</a></li>
+          <li><a href="#fit">Who it's for</a></li>
+          <li><a href="https://contractiq.whizzlead.com">Free renewal tracking</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/privacy">Privacy policy</a></li>
+          <li><a href="/terms">Terms of service</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:audit@saasspendtrack.com">audit@saasspendtrack.com</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>© 2026 SaaSSpendTrack</span>
+      <span>Find $10,000 or pay nothing.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="cookie" id="cookie" hidden>
+  <p>We use cookies and visitor identification — including <a href="https://www.rb2b.com/privacy-policy">RB2B</a> — to understand who's reading. See our <a href="/privacy">privacy policy</a> or <a href="https://app.retention.com/optout">opt out</a>.</p>
+  <button id="cookieOk" type="button">Accept</button>
+</div>
+
+<script>
+(function () {
+  var bar = document.getElementById('cookie');
+  var ok = document.getElementById('cookieOk');
+  try {
+    if (!window.localStorage.getItem('sst_cookie_ack')) bar.hidden = false;
+  } catch (e) { bar.hidden = false; }
+  ok.addEventListener('click', function () {
+    bar.hidden = true;
+    try { window.localStorage.setItem('sst_cookie_ack', '1'); } catch (e) {}
+  });
+})();
+</script>
+
+<!-- RB2B: paste your existing snippet here (site key 0NW1GHJ823O4) -->
+
 </body>
 </html>
