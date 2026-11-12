@@ -645,3 +645,10 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
   .lp-url { font-size: 10px; margin-left: 10px; }
   .lp-head h2 { font-size: 26px; }
 }
+
+/* Price card: INR-primary with GST + live USD below */
+.plan-single-price .inr-gst { display: block; font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 10px; }
+.plan-single-price .inr-live { display: block; font-size: 14px; font-weight: 600; margin-top: 4px; color: #ffd54a; }
+.plan-single-price .inr-note { display: inline; font-size: 11px; color: rgba(255,255,255,0.55); }
+/* Keep the rupee glyph nicely sized against the big number */
+.plan-single-price .price-dollar { font-size: 28px; }
