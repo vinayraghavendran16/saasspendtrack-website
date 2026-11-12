@@ -560,3 +560,88 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
   .plan-single-price .price-dollar { font-size: 24px; }
   .plan-single-cta .btn { min-width: 100%; }
 }
+
+/* ===== Live INR label ===== */
+.plan-single-price .inr-live { display: block; font-size: 15px; font-weight: 600; margin-top: 10px; color: rgba(255,255,255,0.95); }
+.plan-single-price .inr-note { display: block; font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+/* ===== Live dashboard preview ===== */
+.live-preview { padding: 80px 0 60px; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
+.lp-head { text-align: center; margin-bottom: 36px; }
+.lp-head h2 { font-size: 36px; font-weight: 700; margin: 10px 0 8px; letter-spacing: -0.02em; }
+.lp-head .sh-sub { color: #64748b; font-size: 15px; }
+
+.lp-browser { max-width: 900px; margin: 0 auto; background: #0f1829; border-radius: 16px; overflow: hidden; box-shadow: 0 32px 80px rgba(15, 24, 41, 0.3); }
+.lp-chrome { display: flex; align-items: center; gap: 8px; padding: 14px 18px; background: #0a111f; border-bottom: 1px solid #1e2a3f; }
+.lp-dot { width: 10px; height: 10px; border-radius: 50%; }
+.lp-dot-r { background: #ff5f57; }
+.lp-dot-y { background: #ffbd2e; }
+.lp-dot-g { background: #28ca42; }
+.lp-url { margin-left: 16px; background: #1e2a3f; color: #94a3b8; padding: 5px 14px; border-radius: 6px; font-size: 12px; display: flex; align-items: center; gap: 6px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; }
+
+.lp-stage { position: relative; min-height: 380px; padding: 36px 28px; color: #fff; }
+.lp-scene { position: absolute; inset: 36px 28px; opacity: 0; transform: translateY(8px); transition: opacity 0.4s ease, transform 0.4s ease; pointer-events: none; }
+.lp-scene.lp-active { opacity: 1; transform: translateY(0); pointer-events: auto; }
+.lp-scene-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.55); margin-bottom: 18px; font-weight: 600; }
+
+/* KPIs */
+.lp-kpis { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.lp-kpi { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 14px; }
+.lp-kpi-label { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.5); margin-bottom: 8px; }
+.lp-kpi-value { font-size: 26px; font-weight: 700; letter-spacing: -0.01em; }
+.lp-kpi-sub { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+/* Ask Track scene */
+.lp-ask { display: flex; flex-direction: column; gap: 16px; }
+.lp-ask-bar { background: #1e2a3f; border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; padding: 14px 16px; display: flex; align-items: center; gap: 10px; font-size: 15px; color: #fff; }
+.lp-ask-text { flex: 1; font-family: ui-monospace, monospace; }
+.lp-ask-text::after { content: '|'; margin-left: 2px; animation: lp-cursor 1s steps(1) infinite; color: rgba(255,255,255,0.6); }
+@keyframes lp-cursor { 50% { opacity: 0; } }
+.lp-ask-kbd { background: rgba(255,255,255,0.08); padding: 2px 8px; border-radius: 4px; font-size: 11px; color: rgba(255,255,255,0.7); }
+.lp-answer { background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.3); border-radius: 10px; padding: 14px 16px; opacity: 0; transform: translateY(8px); transition: opacity 0.3s ease, transform 0.3s ease; }
+.lp-answer.lp-answer-in { opacity: 1; transform: translateY(0); }
+.lp-answer-headline { font-size: 14px; margin-bottom: 10px; }
+.lp-answer-headline b { color: #22c55e; }
+.lp-answer-rows > div { display: flex; justify-content: space-between; font-size: 12.5px; padding: 3px 0; border-bottom: 1px dashed rgba(255,255,255,0.1); }
+.lp-answer-rows > div:last-child { border: 0; }
+.lp-answer .dim { color: rgba(255,255,255,0.5); font-size: 11.5px; margin-left: 6px; }
+
+/* Lanes */
+.lp-lanes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.lp-lane { background: rgba(255,255,255,0.03); border-radius: 10px; padding: 12px; border: 1px solid rgba(255,255,255,0.08); }
+.lp-lane-head { font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); margin-bottom: 10px; font-weight: 600; }
+.lp-lane-crit .lp-lane-head { color: #fca5a5; }
+.lp-card { background: rgba(255,255,255,0.05); border-radius: 8px; padding: 10px 12px; margin-bottom: 6px; font-size: 12.5px; }
+.lp-card b { display: block; margin-bottom: 4px; }
+.lp-card-row { display: flex; justify-content: space-between; font-size: 11.5px; color: rgba(255,255,255,0.7); padding: 2px 0; }
+.lp-tag { padding: 1px 7px; border-radius: 8px; font-size: 10px; font-weight: 700; }
+.lp-tag-red { background: #ef4444; color: #fff; }
+.lp-tag-amber { background: #f59e0b; color: #fff; }
+
+/* Chart */
+.lp-chart { width: 100%; height: auto; max-height: 240px; }
+.lp-note { text-align: center; font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px; }
+.lp-note b { color: #fff; }
+
+/* Risk grid */
+.lp-risk-grid { display: flex; flex-direction: column; gap: 6px; }
+.lp-risk-row { display: grid; grid-template-columns: 110px 1fr 36px; gap: 10px; align-items: center; font-size: 12.5px; }
+.lp-risk-bar { background: rgba(255,255,255,0.08); height: 8px; border-radius: 4px; overflow: hidden; }
+.lp-risk-bar > div { height: 100%; border-radius: 4px; transition: width 1s ease; }
+.lp-risk-row b { text-align: right; }
+
+/* Footer */
+.lp-footer { display: flex; align-items: center; gap: 8px; padding: 12px 18px; background: #0a111f; border-top: 1px solid #1e2a3f; font-size: 12px; color: rgba(255,255,255,0.7); }
+.lp-live-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: lp-pulse 1.4s infinite; }
+@keyframes lp-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.3; } }
+.lp-open { margin-left: auto; color: #22c55e; text-decoration: none; font-weight: 600; }
+.lp-open:hover { text-decoration: underline; }
+
+@media (max-width: 760px) {
+  .lp-kpis { grid-template-columns: 1fr 1fr; }
+  .lp-lanes { grid-template-columns: 1fr; }
+  .lp-stage { min-height: 440px; padding: 24px 16px; }
+  .lp-scene { inset: 24px 16px; }
+  .lp-url { font-size: 10px; margin-left: 10px; }
+  .lp-head h2 { font-size: 26px; }
+}
