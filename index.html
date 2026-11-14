@@ -495,22 +495,11 @@
           </div>
 
           <div class="plan-single-price">
-            <div class="price-toggle" role="group" aria-label="Pricing currency">
-              <button type="button" class="pt-btn" data-geo="global" title="Show in USD">🌐 Global</button>
-              <button type="button" class="pt-btn" data-geo="india" title="Show in INR">🇮🇳 India</button>
-            </div>
-            <!-- Global view (default) -->
-            <div class="price-view price-view-global">
+            <div class="price-view">
               <div class="price-main"><span class="price-dollar">$</span><span class="price-val">3,499</span><span class="price-yr">/year</span></div>
               <div class="price-sub">
-                <span class="price-sub-line">Billed annually via credit card, bank transfer or Razorpay</span>
-              </div>
-            </div>
-            <!-- India view (toggled on for IN visitors) -->
-            <div class="price-view price-view-india" hidden>
-              <div class="price-main"><span class="price-dollar">₹</span><span class="price-val">3,00,000</span><span class="price-yr">/year</span></div>
-              <div class="price-sub">
-                <span class="price-sub-line">+ 18% GST, invoiced separately</span>
+                <span class="price-sub-line">Billed annually</span>
+                <span class="price-sub-line dim">Indian customers: 18% GST added at checkout</span>
               </div>
             </div>
           </div>
@@ -565,7 +554,7 @@
 
           <div class="plan-single-cta">
             <a href="https://app.saasspendtrack.com" class="btn btn-primary btn-lg" data-plg="pricing-try">Try it live, free →</a>
-            <a href="https://rzp.io/rzp/NCGW9GyD" target="_blank" rel="noopener" class="btn btn-outline-dark btn-lg" data-plg="pricing-pay">Pay &amp; activate →</a>
+            <a href="https://rzp.io/rzp/NCGW9GyD" target="_blank" rel="noopener" class="btn btn-outline-dark btn-lg" data-plg="pricing-pay" data-pay-india="https://rzp.io/rzp/NCGW9GyD" data-pay-global="https://rzp.io/rzp/INTERNATIONAL-PLACEHOLDER">Pay &amp; activate →</a>
             <a href="mailto:vinayraghavendran16@gmail.com?subject=SaaS%20Spend%20Track%20demo" class="btn btn-link btn-lg" data-plg="pricing-demo">or book a demo</a>
           </div>
 
@@ -735,51 +724,43 @@
       });
     });
 
-    // Geo-switched pricing display.
+    // Geo-routed Pay button.
     //
-    // Default view: Global (USD only). Indian visitors: India view (INR + GST only).
-    // Each view shows one currency cleanly; the toggle at the top of the
-    // pricing card acknowledges the other option exists.
+    // Pricing display is USD-only (one currency to look at). The Pay button
+    // routes to the right Razorpay page based on the visitor's country:
+    //   Indian IP  → data-pay-india URL (INR + GST on the page)
+    //   Non-Indian → data-pay-global URL (USD International)
     //
-    // Detection: user override in localStorage 'sst-geo' first, then browser
-    // Accept-Language, then ipapi.co country lookup. Preference is shared
-    // with the tool at app.saasspendtrack.com via the same localStorage key.
-    (function geoAndFx(){
-      // Geo view switch
-      function applyGeo(geo) {
-        document.body.dataset.geo = geo;
-        document.querySelectorAll('.price-view-global').forEach(el => el.hidden = (geo === 'india'));
-        document.querySelectorAll('.price-view-india').forEach(el => el.hidden = (geo !== 'india'));
-        document.querySelectorAll('.pt-btn').forEach(b => b.classList.toggle('active', b.dataset.geo === geo));
-      }
+    // Detection: user override in localStorage 'sst-geo' first, then
+    // browser Accept-Language, then ipapi.co country lookup.
+    // The localStorage key is shared with the tool so if someone picks
+    // a country in one place, the other remembers it too.
+    (function geoRoutePayButton(){
       function savedGeo() { try { return localStorage.getItem('sst-geo'); } catch { return null; } }
       function saveGeo(g) { try { localStorage.setItem('sst-geo', g); } catch {} }
-
-      // Wire toggle buttons (both views have their own set)
-      document.querySelectorAll('.pt-btn').forEach(b => b.addEventListener('click', () => {
-        const g = b.dataset.geo;
-        saveGeo(g);
-        applyGeo(g);
-      }));
-
-      // Initial: user override → saved → IP lookup → fallback global
+      function applyGeo(geo) {
+        document.body.dataset.geo = geo;
+        document.querySelectorAll('[data-pay-india][data-pay-global]').forEach(a => {
+          a.href = (geo === 'india') ? a.dataset.payIndia : a.dataset.payGlobal;
+        });
+      }
       const user = savedGeo();
       if (user === 'india' || user === 'global') {
         applyGeo(user);
       } else {
-        // Default to global immediately; upgrade to India if ipapi says so
+        // Default to global; upgrade to India if browser or IP says so
         applyGeo('global');
-        // Browser hint first (free, instant, approximate)
         const lang = (navigator.language || '').toLowerCase();
-        if (lang.includes('-in') || lang === 'hi' || lang.startsWith('hi-') || lang.startsWith('ta-') || lang.startsWith('te-') || lang.startsWith('bn-') || lang.startsWith('mr-') || lang.startsWith('gu-') || lang.startsWith('kn-') || lang.startsWith('ml-') || lang.startsWith('pa-')) {
+        if (lang.includes('-in') || lang.startsWith('hi') || lang.startsWith('ta') || lang.startsWith('te') || lang.startsWith('bn') || lang.startsWith('mr') || lang.startsWith('gu') || lang.startsWith('kn') || lang.startsWith('ml') || lang.startsWith('pa')) {
           applyGeo('india');
         }
-        // Then confirm with IP lookup
         fetch('https://ipapi.co/json/')
           .then(r => r.ok ? r.json() : Promise.reject(r.status))
           .then(d => {
-            if (d && d.country_code === 'IN' && savedGeo() === null) applyGeo('india');
-            else if (d && d.country_code && d.country_code !== 'IN' && savedGeo() === null) applyGeo('global');
+            if (!savedGeo() && d && d.country_code) {
+              applyGeo(d.country_code === 'IN' ? 'india' : 'global');
+              saveGeo(d.country_code === 'IN' ? 'india' : 'global');
+            }
           })
           .catch(e => console.warn('geo lookup failed, keeping default', e));
       }

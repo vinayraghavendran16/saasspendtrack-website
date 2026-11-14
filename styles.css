@@ -669,3 +669,8 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
 
 /* Hide old helper classes in case any still render */
 .inr-gst, .inr-live { display: none; }
+
+/* Clean sub-line under USD price (replaces removed toggle/India view) */
+.price-sub-line.dim { color: rgba(255,255,255,0.6); font-size: 12.5px; }
+/* Hide any legacy toggle/India view markup if it ever re-appears from cache */
+.price-toggle, .price-view-india { display: none !important; }
