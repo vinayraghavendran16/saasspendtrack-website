@@ -652,3 +652,20 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
 .plan-single-price .inr-note { display: inline; font-size: 11px; color: rgba(255,255,255,0.55); }
 /* Keep the rupee glyph nicely sized against the big number */
 .plan-single-price .price-dollar { font-size: 28px; }
+
+/* Geo toggle on pricing card */
+.price-toggle { display: flex; gap: 4px; background: rgba(255,255,255,0.08); border-radius: 20px; padding: 3px; margin: 0 auto 18px; width: fit-content; }
+.pt-btn { background: transparent; border: 0; color: rgba(255,255,255,0.7); padding: 6px 14px; border-radius: 16px; font-size: 12px; font-weight: 600; cursor: pointer; transition: background .15s, color .15s; }
+.pt-btn:hover { color: #fff; }
+.pt-btn.active { background: #fff; color: #0f1829; }
+
+/* Price views */
+.price-view { text-align: center; }
+.price-sub { margin-top: 10px; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: rgba(255,255,255,0.9); }
+.price-sub-line { display: block; line-height: 1.5; }
+.price-sub-line.dim { color: rgba(255,255,255,0.55); font-size: 12px; }
+.price-sub-line b { color: rgba(255,255,255,0.9); font-weight: 600; }
+.price-sub .inr-note { font-size: 10.5px; color: rgba(255,255,255,0.4); }
+
+/* Hide old helper classes in case any still render */
+.inr-gst, .inr-live { display: none; }

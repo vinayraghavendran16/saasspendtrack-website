@@ -6,7 +6,7 @@
 
   <!-- ═══ SEO ═══ -->
   <title>SaaS Spend Track — SaaS spend management &amp; contract intelligence for global teams</title>
-  <meta name="description" content="Every SaaS subscription and contract in one place. Spend tracking, 8-dimension risk scoring, renewal centre, approvals, licence forecasting and natural-language search. ₹3,00,000/year excl GST, 250 contracts included. On-prem available for regulated industries.">
+  <meta name="description" content="Every SaaS subscription and contract in one place. Spend tracking, 8-dimension risk scoring, renewal centre, approvals, licence forecasting and natural-language search. $3,499/year (₹3,00,000 for India), 250 contracts included. On-prem available for regulated industries.">
   <meta name="keywords" content="SaaS spend management, contract management software, SaaS renewal tracking, SaaS cost optimization, on-prem SaaS management, global SaaS spend tools, mid-market SaaS management, on-prem SaaS management">
   <meta name="author" content="SaaSSpendTrack">
   <link rel="canonical" href="https://saasspendtrack.com/">
@@ -15,7 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saasspendtrack.com/">
   <meta property="og:title" content="SaaS Spend Track — Every SaaS subscription and contract, in one place">
-  <meta property="og:description" content="Spend, renewals, risk, approvals, licence forecasting and natural-language search built for global teams. ₹3,00,000/year excl GST (approx $3,600 USD), 250 contracts, everything included. On-prem available.">
+  <meta property="og:description" content="Spend, renewals, risk, approvals, licence forecasting and natural-language search built for global teams. $3,499/year (or ₹3,00,000 for India, GST extra), 250 contracts, everything included. On-prem available.">
   <meta property="og:image" content="https://saasspendtrack.com/og-image.png">
   <meta property="og:site_name" content="SaaS Spend Track">
   <meta property="og:locale" content="en_IN">
@@ -40,8 +40,8 @@
     "offers": {
       "@type": "Offer",
       "name": "SaaS Spend Track",
-      "price": "300000",
-      "priceCurrency": "INR",
+      "price": "3499",
+      "priceCurrency": "USD",
       "billingDuration": "P1Y",
       "description": "Full platform, every feature, unlimited users. Includes 250 active contracts; $100/year per 50 additional contracts above 250."
     },
@@ -79,7 +79,7 @@
         "name": "How much does SaaS Spend Track cost?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "One plan at ₹3,00,000 per year. For Indian customers 18% GST is added at invoice time. For global customers this is approximately $3,600 USD at today's rate, billed in INR. Includes up to 250 active contracts, unlimited users, every feature. Additional contracts at $100 per year per 50 contracts above 250. No sales calls, no tiering, no add-ons. On-prem deployment available at the same price for regulated industries."
+          "text": "One plan at $3,499 per year for global customers, or ₹3,00,000 per year for Indian customers (18% GST added at invoice time). Billed in INR via Razorpay in both cases. Includes up to 250 active contracts, unlimited users, every feature. Additional contracts at $100 per year per 50 contracts above 250. No sales calls, no tiering, no add-ons. On-prem deployment available at the same price for regulated industries."
         }
       },
       {
@@ -466,7 +466,7 @@
         <div class="compare-card us">
           <div class="compare-best">Your pick</div>
           <div class="compare-label">SaaS Spend Track</div>
-          <div class="compare-price">₹3,00,000<span>/yr</span></div>
+          <div class="compare-price">$3,499<span>/yr</span></div>
           <ul>
             <li class="pos">On-prem option for BFSI &amp; regulated</li>
             <li class="pos">Live in minutes, no implementation</li>
@@ -495,11 +495,25 @@
           </div>
 
           <div class="plan-single-price">
-            <div class="price-main"><span class="price-dollar">₹</span><span class="price-val">3,00,000</span><span class="price-yr">/year</span></div>
-            <div class="price-inr">
-              <span class="inr-gst">GST extra for India, invoice provided</span>
-              <span class="inr-live">≈ $3,600 USD at today's rate</span>
-              <small class="inr-note">· live USD/INR rate</small>
+            <div class="price-toggle" role="group" aria-label="Pricing currency">
+              <button type="button" class="pt-btn" data-geo="global" title="Show in USD">🌐 Global</button>
+              <button type="button" class="pt-btn" data-geo="india" title="Show in INR">🇮🇳 India</button>
+            </div>
+            <!-- Global view (default) -->
+            <div class="price-view price-view-global">
+              <div class="price-main"><span class="price-dollar">$</span><span class="price-val">3,499</span><span class="price-yr">/year</span></div>
+              <div class="price-sub">
+                <span class="price-sub-line">Billed annually via credit card or bank transfer</span>
+                <span class="price-sub-line dim">or <b>₹3,00,000/year</b> for Indian customers (GST extra, invoice provided)</span>
+              </div>
+            </div>
+            <!-- India view (toggled on for IN visitors) -->
+            <div class="price-view price-view-india" hidden>
+              <div class="price-main"><span class="price-dollar">₹</span><span class="price-val">3,00,000</span><span class="price-yr">/year</span></div>
+              <div class="price-sub">
+                <span class="price-sub-line">GST extra for India, invoice provided</span>
+                <span class="price-sub-line dim">or approximately <b class="inr-live-plain">$3,499 USD</b> for global customers <small class="inr-note">· live rate</small></span>
+              </div>
             </div>
           </div>
 
@@ -583,11 +597,11 @@
         </details>
         <details class="faq-item">
           <summary>How much does SaaSSpendTrack cost?</summary>
-          <p>One plan at ₹3,00,000/year. For Indian customers, 18% GST is added at invoice time. For global customers this is approximately <span class="inr-live-plain">$3,600 USD</span> at today's rate, billed in INR. Includes 250 active contracts, unlimited users, and every feature. $100/year per 50 additional contracts above 250. On-prem deployment available at the same price for BFSI, healthcare and other regulated industries.</p>
+          <p>One plan: <b>$3,499/year</b> for global customers, or <b>₹3,00,000/year</b> for Indian customers (18% GST added at invoice time). Both billed in INR via Razorpay at today's exchange rate. Includes 250 active contracts, unlimited users, and every feature. $100/year per 50 additional contracts above 250. On-prem deployment available at the same price for BFSI, healthcare and other regulated industries.</p>
         </details>
         <details class="faq-item">
           <summary>How is SaaSSpendTrack different from Zluri or Spendflo?</summary>
-          <p>Zluri and Spendflo cost $30,000-$60,000/year and target US enterprises. SaaS Spend Track is at ₹3,00,000/year flat, goes live in minutes, and supports on-prem for regulated industries (BFSI, healthcare, public sector) that cannot send contracts to a US cloud.</p>
+          <p>Zluri and Spendflo cost $30,000-$60,000/year and target US enterprises. SaaS Spend Track is $3,499/year flat for global customers (₹3,00,000 for India), goes live in minutes, and supports on-prem for regulated industries (BFSI, healthcare, public sector) that cannot send contracts to a US cloud.</p>
         </details>
         <details class="faq-item">
           <summary>How long does onboarding take?</summary>
@@ -595,7 +609,7 @@
         </details>
         <details class="faq-item">
           <summary>Does SaaS Spend Track offer on-prem deployment?</summary>
-          <p>Yes. BFSI, healthcare, public sector and other regulated industries can run SaaS Spend Track entirely on their own infrastructure. Same ₹3,00,000/year price, same features. The on-prem system requirements guide is available on request — contact us.</p>
+          <p>Yes. BFSI, healthcare, public sector and other regulated industries can run SaaS Spend Track entirely on their own infrastructure. Same price ($3,499/year, or ₹3,00,000 for India), same features. The on-prem system requirements guide is available on request. Contact us.</p>
         </details>
         <details class="faq-item">
           <summary>Is there a free trial?</summary>
@@ -723,36 +737,78 @@
       });
     });
 
-    // Live FX conversion. The anchor is ₹3,00,000 per year (GST exclusive).
-    // The USD figure shown to global visitors is computed live from that
-    // anchor using the current USD/INR rate from frankfurter.app
-    // (free, ECB daily rate, no auth, CORS-enabled).
-    (function liveFx(){
-      const INR_BASE = 300000;        // GST-exclusive anchor
-      const fallbackRate = 83.5;      // USD → INR fallback if API fails
+    // Geo-switched pricing display with live FX.
+    //
+    // Default view: Global (USD headline, INR shown as secondary for India).
+    // Indian visitors: India view (INR headline, USD shown as secondary).
+    //
+    // Geo-detection via ipapi.co (free, no key, CORS-enabled, 1000 req/day).
+    // User override persists in localStorage ('sst-geo' = 'india' | 'global').
+    //
+    // The INR anchor is ₹3,00,000. USD derived live from frankfurter.app
+    // (free, ECB daily rate, no auth) only for the "approx" line shown in
+    // India view. The USD headline stays at the stable $3,499 anchor so
+    // it doesn't drift with daily FX moves.
+    (function geoAndFx(){
+      const INR_BASE = 300000;
+      const USD_ANCHOR = 3499;       // Stable headline, chosen to map near ₹3,00,000 at normal rates
+      const fallbackRate = 83.5;
       function fmtUSD(n) {
-        const rounded = Math.round(n/10)*10;  // round to $10
+        const rounded = Math.round(n/10)*10;
         return '$' + rounded.toLocaleString('en-US');
       }
-      function render(rate, isLive) {
-        const usd = INR_BASE / rate;
-        const label = `≈ ${fmtUSD(usd)} USD at today's rate`;
+      function renderFx(rate, isLive) {
+        const usdEquiv = INR_BASE / rate;
         const note = isLive
-          ? ` · USD/INR ${rate.toFixed(2)} as of ${new Date().toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}`
+          ? ` · live rate · USD/INR ${rate.toFixed(2)}, ${new Date().toLocaleDateString('en-IN',{day:'numeric',month:'short',year:'numeric'})}`
           : ` · approx USD/INR ${rate.toFixed(2)}`;
-        document.querySelectorAll('.inr-live').forEach(el => el.textContent = label);
         document.querySelectorAll('.inr-note').forEach(el => el.textContent = note);
-        document.querySelectorAll('.inr-live-plain').forEach(el => el.textContent = fmtUSD(usd) + ' USD');
+        document.querySelectorAll('.inr-live-plain').forEach(el => el.textContent = fmtUSD(usdEquiv) + ' USD');
       }
-      // First paint with fallback so the number is never missing
-      render(fallbackRate, false);
-      // Then upgrade to live
+      renderFx(fallbackRate, false);
       fetch('https://api.frankfurter.app/latest?from=USD&to=INR')
         .then(r => r.ok ? r.json() : Promise.reject(r.status))
-        .then(d => {
-          if (d && d.rates && d.rates.INR) render(d.rates.INR, true);
-        })
-        .catch(e => { /* keep fallback */ console.warn('FX fetch failed, using fallback', e); });
+        .then(d => { if (d && d.rates && d.rates.INR) renderFx(d.rates.INR, true); })
+        .catch(e => console.warn('FX fetch failed, using fallback', e));
+
+      // Geo view switch
+      function applyGeo(geo) {
+        document.body.dataset.geo = geo;
+        document.querySelectorAll('.price-view-global').forEach(el => el.hidden = (geo === 'india'));
+        document.querySelectorAll('.price-view-india').forEach(el => el.hidden = (geo !== 'india'));
+        document.querySelectorAll('.pt-btn').forEach(b => b.classList.toggle('active', b.dataset.geo === geo));
+      }
+      function savedGeo() { try { return localStorage.getItem('sst-geo'); } catch { return null; } }
+      function saveGeo(g) { try { localStorage.setItem('sst-geo', g); } catch {} }
+
+      // Wire toggle buttons (both views have their own set)
+      document.querySelectorAll('.pt-btn').forEach(b => b.addEventListener('click', () => {
+        const g = b.dataset.geo;
+        saveGeo(g);
+        applyGeo(g);
+      }));
+
+      // Initial: user override → saved → IP lookup → fallback global
+      const user = savedGeo();
+      if (user === 'india' || user === 'global') {
+        applyGeo(user);
+      } else {
+        // Default to global immediately; upgrade to India if ipapi says so
+        applyGeo('global');
+        // Browser hint first (free, instant, approximate)
+        const lang = (navigator.language || '').toLowerCase();
+        if (lang.includes('-in') || lang === 'hi' || lang.startsWith('hi-') || lang.startsWith('ta-') || lang.startsWith('te-') || lang.startsWith('bn-') || lang.startsWith('mr-') || lang.startsWith('gu-') || lang.startsWith('kn-') || lang.startsWith('ml-') || lang.startsWith('pa-')) {
+          applyGeo('india');
+        }
+        // Then confirm with IP lookup
+        fetch('https://ipapi.co/json/')
+          .then(r => r.ok ? r.json() : Promise.reject(r.status))
+          .then(d => {
+            if (d && d.country_code === 'IN' && savedGeo() === null) applyGeo('india');
+            else if (d && d.country_code && d.country_code !== 'IN' && savedGeo() === null) applyGeo('global');
+          })
+          .catch(e => console.warn('geo lookup failed, keeping default', e));
+      }
     })();
 
     // Animated dashboard preview — rotating scenes
