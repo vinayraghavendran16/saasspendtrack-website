@@ -45,9 +45,15 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 - Live tool: https://app.saasspendtrack.com/
 - Marketing site: https://saasspendtrack.com/
 - Pricing: https://saasspendtrack.com/pricing/
-- About: https://saasspendtrack.com/about/
+- About + founder bio: https://saasspendtrack.com/about/
 - FAQ: https://saasspendtrack.com/faq/
-- Compare vs incumbents: https://saasspendtrack.com/compare/
+- Compare hub: https://saasspendtrack.com/compare/
+- vs Vendr: https://saasspendtrack.com/compare/vendr-alternative/
+- vs Zylo: https://saasspendtrack.com/compare/zylo-alternative/
+- vs Spendesk: https://saasspendtrack.com/compare/spendesk-alternative/
+- vs Spendflo: https://saasspendtrack.com/compare/spendflo-alternative/
+- vs Torii: https://saasspendtrack.com/compare/torii-alternative/
+- vs Zluri: https://saasspendtrack.com/compare/zluri-alternative/
 - Blog: https://saasspendtrack.com/blog/
 - Contact: vinayraghavendran16@gmail.com, +91 91684 81989
 
