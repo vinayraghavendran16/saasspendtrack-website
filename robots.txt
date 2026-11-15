@@ -4,15 +4,57 @@ Allow: /
 Sitemap: https://saasspendtrack.com/sitemap.xml
 Sitemap: https://saasspendtrack.com/sitemap-blog.xml
 
+# LLM crawlers — allowed to index our public content for AI citation.
+# llms.txt at root is the LLM-friendly site index.
 User-agent: GPTBot
-Allow: /blog/
+Allow: /
+
 User-agent: Google-Extended
-Allow: /blog/
+Allow: /
+
 User-agent: anthropic-ai
-Allow: /blog/
+Allow: /
+
 User-agent: ClaudeBot
-Allow: /blog/
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
 User-agent: PerplexityBot
-Allow: /blog/
+Allow: /
+
 User-agent: Bytespider
-Allow: /blog/
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# Standard crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# Block tools that scrape for lead-gen or republish
+User-agent: SemrushBot-SA
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /

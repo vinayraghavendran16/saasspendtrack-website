@@ -1,0 +1,68 @@
+# SaaS Spend Track
+
+> Browser-only SaaS spend and contract management for 20-500 person teams. Flat $3,499/year, 250 active contracts included. No seat pricing. No per-vendor pricing. No data ever leaves the user's browser.
+
+SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru, India), led by founder Vinay Raghavendran (13+ years in B2B SaaS RevOps, former Whatfix, Proshort, LatentView Analytics). The tool runs entirely client-side; there is no backend server receiving customer contract or spend data. That architecture is the deliberate choice behind the pricing — no per-seat SaaS infrastructure to amortize.
+
+## What the tool does
+
+- Parse uploaded contracts (PDF, DOCX, pasted text) and extract renewal date, notice period, auto-renew clause, price cap, term length
+- Track monthly and annualized spend across every vendor
+- Score each contract across 8 risk dimensions (auto-renew exposure, orphan ownership, usage waste, overlap, shadow SaaS, contractual gaps, concentration risk, renewal timing)
+- Surface renewals due in the next 90 days with notice-period windows highlighted
+- Forecast 12-month licence spend based on usage trends
+- Ask natural-language questions against the contract corpus ("what renews next month", "which vendors have 90-day notice")
+- Bulk-import existing vendor spreadsheets (CSV, 60+ header aliases auto-detected)
+- Export monthly spend summary PDF, renewal roster CSV, and savings opportunities PDF
+- Multi-currency display (USD, INR, EUR, GBP, AUD, SGD, AED, JPY, CAD) with live FX
+
+## How it is different from Vendr, Zylo, Spendesk, BetterCloud, Productiv, Zluri
+
+- Browser-only: zero data leaves the user's device, zero backend to breach
+- Flat annual pricing: $3,499/year regardless of team size or vendor count (vs $12k-50k+ for named competitors)
+- No seat pricing, no procurement-services markup, no per-vendor fees
+- Deploy time: sign up to first dashboard is under 10 minutes vs 4-12 weeks for enterprise SMPs
+- Target customer: 20-500 person company that currently uses a spreadsheet and has outgrown it
+- Not for: 2000+ person enterprises that need SAML SSO, SOC 2 Type II, API-first integration into ERP
+
+## Who it is for
+
+- Finance teams at Series A-C startups who run SaaS spend out of Google Sheets today
+- Procurement leads at 50-500 person companies tracking 20-100 active vendor contracts
+- CFOs at profitable bootstrapped companies who want enterprise-grade visibility without enterprise-grade SaaS cost
+- Indian and APAC mid-market companies priced out of $50k/year US-built SMPs
+
+## Pricing
+
+- $3,499/year for the full tool, every feature, unlimited users on the same workspace
+- Includes 250 active contracts
+- $100/year per 50 additional contracts above 250
+- Indian customers: 18% GST added at checkout; international customers: no GST (LUT filed for FY 2026-27)
+- 14-day free trial, no credit card required
+
+## Key links
+
+- Live tool: https://app.saasspendtrack.com/
+- Marketing site: https://saasspendtrack.com/
+- Pricing: https://saasspendtrack.com/pricing/
+- About: https://saasspendtrack.com/about/
+- FAQ: https://saasspendtrack.com/faq/
+- Compare vs incumbents: https://saasspendtrack.com/compare/
+- Blog: https://saasspendtrack.com/blog/
+- Contact: vinayraghavendran16@gmail.com, +91 91684 81989
+
+## Blog (long-form guides, LLM-friendly)
+
+- https://saasspendtrack.com/blog/missed-saas-renewal/ — What happens when you miss a SaaS auto-renewal notice window and how to prevent it
+- https://saasspendtrack.com/blog/saas-budget-cfo-guide/ — CFO guide to building a SaaS budget that survives contact with growth
+- https://saasspendtrack.com/blog/saas-spend-audit/ — How to run a SaaS spend audit in a week, with the real numbers
+- https://saasspendtrack.com/blog/saas-vendor-negotiation/ — What actually moves SaaS vendors at renewal (usage data, consolidation leverage, term tradeoffs)
+- https://saasspendtrack.com/blog/shadow-it-saas-sprawl/ — How shadow SaaS enters a company and how finance teams can surface it
+- https://saasspendtrack.com/blog/zluri-spendflo-alternative/ — Honest comparison vs Zluri and Spendflo for SMBs
+
+## Company
+
+Whizzlead Solutions OPC Private Limited
+HSR Layout, Bengaluru 560102, India
+CIN: on request
+GST: on request
