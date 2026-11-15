@@ -5,6 +5,9 @@
   <url><loc>https://saasspendtrack.com/about/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://saasspendtrack.com/faq/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://saasspendtrack.com/privacy</loc><lastmod>2026-07-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://saasspendtrack.com/tools/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
+  <url><loc>https://saasspendtrack.com/tools/saas-waste-calculator/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saasspendtrack.com/tools/templates/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://saasspendtrack.com/compare/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://saasspendtrack.com/compare/vendr-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://saasspendtrack.com/compare/zylo-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
@@ -12,6 +15,9 @@
   <url><loc>https://saasspendtrack.com/compare/spendflo-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://saasspendtrack.com/compare/torii-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://saasspendtrack.com/compare/zluri-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saasspendtrack.com/compare/bettercloud-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saasspendtrack.com/compare/productiv-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://saasspendtrack.com/compare/ramp-alternative/</loc><lastmod>2026-11-15</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://saasspendtrack.com/blog/</loc><lastmod>2026-07-22</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://saasspendtrack.com/blog/missed-saas-renewal/</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://saasspendtrack.com/blog/saas-spend-audit/</loc><lastmod>2026-07-18</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>

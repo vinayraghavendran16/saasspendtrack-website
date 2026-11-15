@@ -1,0 +1,21 @@
+Vendor,Category,Annual cost,Owner assigned,Contract on file,Renewal date captured,Notice window diary'd,Seats purchased,Seats active,Utilization %,Overlap flag,Action,Priority,Notes
+Salesforce,CRM,54000,Y,Y,Y,Y,45,43,96,,Keep,Low,
+Zoom,Meetings,5988,Y,Y,Y,Y,60,58,97,Overlaps with Google Meet,Keep,Low,Lean on Zoom
+Slack,Communication,29250,Y,Y,Y,Y,195,188,96,,Keep,Low,
+Figma,Design,2700,Y,N,N,N,36,22,61,,Renegotiate seats,High,Need contract from vendor
+GitHub Enterprise,Development,27720,Y,Y,Y,Y,110,105,95,,Keep,Low,
+Google Workspace,Productivity,34560,Y,N,N,N,200,196,98,Overlaps with Microsoft 365,Consolidate,High,Pick one
+Microsoft 365,Productivity,22500,Y,N,N,N,75,60,80,Overlaps with Google Workspace,Cancel or consolidate,High,See above
+AWS,Infrastructure,220800,Y,Y,Y,Y,,,,,Keep,Low,Savings plan due
+Datadog,Observability,86400,Y,Y,Y,Y,120,96,80,,Right-size commit,Medium,Drop to 100 hosts
+Snowflake,Data,128000,Y,Y,Y,Y,,,,,Keep,Low,Multi-year contract
+Okta,Security,19440,Y,Y,Y,Y,180,176,98,,Keep,Low,
+1Password,Security,1536,Y,Y,Y,Y,160,152,95,,Keep,Low,
+Zendesk,Support,52800,Y,Y,Y,Y,40,38,95,Overlaps with Intercom,Pick one,High,Decide live chat
+Intercom,Support,35400,Y,Y,Y,Y,25,22,88,Overlaps with Zendesk,Cancel or consolidate,High,See above
+Gong,Sales Intelligence,38400,Y,Y,Y,Y,30,30,100,,Keep,Low,
+Apollo.io,Sales Intelligence,14256,Y,Y,Y,Y,12,12,100,Overlaps with LinkedIn Sales Nav,Consolidate,Medium,
+LinkedIn Sales Navigator,Sales Intelligence,21593,Y,Y,Y,Y,18,18,100,Overlaps with Apollo,Consider cutting,Medium,Half SDR seats idle
+DocuSign,Legal,4800,Y,Y,Y,Y,15,15,100,,Keep,Low,
+Rippling,HR,36000,Y,Y,Y,Y,200,200,100,,Keep,Low,
+Greenhouse,HR,14000,Y,Y,Y,Y,20,18,90,,Review,Medium,Hiring freeze
