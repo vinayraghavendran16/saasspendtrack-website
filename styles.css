@@ -676,61 +676,150 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
 .price-toggle, .price-view-india { display: none !important; }
 
 /* ============================================================
-   Light-surface heading safety net (bugfix 2026-11-16)
-   Sub-pages (pricing, calculator, about, faq, tools, compare)
-   use ad-hoc light-background sections. Without explicit color,
-   the h1/h2/h3 inherit the dark-theme near-white body color and
-   become invisible on white. Lock them to the dark text ramp.
+   Sub-page light-theme + nav/footer isolation (bugfix 2026-11-16)
+
+   Problem: sub-pages (pricing, compare/*, about, faq, tools,
+   tools/templates, tools/saas-waste-calculator) were authored
+   assuming a white body background, but the site body is dark
+   navy (--bg). Their body text (#344054 etc.) was rendering
+   invisible on dark navy, and their inline .top-nav / .site-foot
+   wrappers had no background so they picked up the same dark.
+
+   Fix: detect sub-pages via :has() on their known hero classes,
+   flip body to white with dark text, and give .top-nav / .site-foot
+   explicit dark backgrounds so they stay dark even on light pages.
    ============================================================ */
-.calc-hero, .calc-hero *,
-.pricing-hero, .pricing-hero h1, .pricing-hero h2, .pricing-hero h3,
-.about-hero, .about-hero h1, .about-hero h2, .about-hero h3,
-.faq-hero, .faq-hero h1, .faq-hero h2, .faq-hero h3,
-.compare-hero, .compare-hero h1, .compare-hero h2, .compare-hero h3,
-.tools-hero, .tools-hero h1, .tools-hero h2, .tools-hero h3,
-.templates-hero, .templates-hero h1, .templates-hero h2, .templates-hero h3 {
+
+/* 1. Give the sub-page nav + footer their own dark backgrounds so
+      they render consistently no matter what body color is behind. */
+.top-nav {
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text);
+}
+.top-nav .brand {
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+.top-nav .nav-links {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  font-size: 14px;
+}
+.top-nav .nav-links a {
+  color: var(--text-mid);
+  padding: 7px 14px;
+  border-radius: 8px;
+  transition: all .15s;
+}
+.top-nav .nav-links a:hover,
+.top-nav .nav-links a.is-active { color: var(--text); background: var(--bg-2); }
+.top-nav .nav-links a.nav-cta {
+  background: #2563eb; color: #fff; font-weight: 600;
+}
+.top-nav .nav-links a.nav-cta:hover { background: #1d4ed8; color: #fff; }
+
+.site-foot {
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 32px 24px;
+  text-align: center;
+  color: var(--text-mid);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.site-foot a { color: var(--text-mid); text-decoration: underline; }
+.site-foot a:hover { color: var(--text); }
+
+/* 2. Sub-pages: flip body to a light theme using :has() to detect
+      the characteristic hero/content classes those pages ship with. */
+body:has(.cmp-hero),
+body:has(.pricing-hero),
+body:has(.calc-hero),
+body:has(.about-hero),
+body:has(.faq-hero),
+body:has(.tools-hero),
+body:has(.templates-hero),
+body:has(.tl-hero),
+body:has(.tpl-hero) {
+  background: #ffffff;
   color: #0f1829;
 }
-.calc-hero .sub,
-.pricing-hero .sub,
-.about-hero .sub,
-.faq-hero .sub,
-.compare-hero .sub,
-.tools-hero .sub,
-.templates-hero .sub { color: #475467; }
+/* And lock their default heading color to dark so nothing inherits
+   the site-wide near-white from the dark theme root. */
+body:has(.cmp-hero) h1, body:has(.cmp-hero) h2, body:has(.cmp-hero) h3,
+body:has(.pricing-hero) h1, body:has(.pricing-hero) h2, body:has(.pricing-hero) h3,
+body:has(.calc-hero) h1, body:has(.calc-hero) h2, body:has(.calc-hero) h3,
+body:has(.about-hero) h1, body:has(.about-hero) h2, body:has(.about-hero) h3,
+body:has(.faq-hero) h1, body:has(.faq-hero) h2, body:has(.faq-hero) h3,
+body:has(.tools-hero) h1, body:has(.tools-hero) h2, body:has(.tools-hero) h3,
+body:has(.templates-hero) h1, body:has(.templates-hero) h2, body:has(.templates-hero) h3,
+body:has(.tl-hero) h1, body:has(.tl-hero) h2, body:has(.tl-hero) h3,
+body:has(.tpl-hero) h1, body:has(.tpl-hero) h2, body:has(.tpl-hero) h3 {
+  color: #0f1829;
+}
 
-.pricing-faq-section h1,
-.pricing-faq-section h2,
-.pricing-faq-section h3,
-.faq-section h1,
-.faq-section h2,
-.faq-section h3,
-.about-section h1,
-.about-section h2,
-.about-section h3,
-.compare-section h1,
-.compare-section h2,
-.compare-section h3,
-.tools-section h1,
-.tools-section h2,
-.tools-section h3,
-.templates-section h1,
-.templates-section h2,
-.templates-section h3 { color: #0f1829; }
+/* 3. Preserve the intentionally-dark CTA / output panels inside these
+      sub-pages. Use !important because the body:has(...) h1/h2/h3 rule
+      above beats .cmp-cta * on specificity, and these panels have dark
+      backgrounds where dark text would vanish. */
+/* Dark CTA panels across sub-pages. Scoped to BLOCK-LEVEL elements
+   so the inline <span class="cmp-cta">Read comparison →</span> inside
+   the /compare/ hub keeps its own blue color. */
+div.cmp-cta, div.cmp-cta *,
+section.cmp-cta, section.cmp-cta *,
+div.calc-output, div.calc-output *,
+section.calc-output, section.calc-output *,
+div.tpl-cta, div.tpl-cta *,
+section.tpl-cta, section.tpl-cta *,
+div.about-cta, div.about-cta *,
+section.about-cta, section.about-cta *,
+div.faq-cta, div.faq-cta *,
+section.faq-cta, section.faq-cta *,
+.cta-dark, .cta-dark * { color: #ffffff !important; }
+/* But keep button text controlled by the button's own class */
+.cmp-cta a.btn, .calc-output a.btn, .tpl-cta a.btn,
+.about-cta a.btn, .faq-cta a.btn, .cta-dark a.btn {
+  color: inherit !important;
+}
+/* /compare/ hub: span.cmp-cta inside white card — keep blue */
+.cmp-card span.cmp-cta { color: #2563eb !important; }
+/* And the dark CTA strip on the landing page, if it ever reuses cmp-cta */
 
-/* Live-preview panel on landing page (white gradient background) */
+/* 4. Landing page "dashboard in motion" lives on its own light
+      gradient inside the dark body — pin its headings dark. */
 .live-preview .lp-head h1,
 .live-preview .lp-head h2,
 .live-preview .lp-head h3 { color: #0f1829; }
 .live-preview .lp-head .sh-sub { color: #64748b; }
 
-/* Calculator inner cards keep dark text on white */
-.calc-inputs, .calc-inputs h1, .calc-inputs h2, .calc-inputs h3,
-.calc-inputs label, .calc-inputs p { color: #0f1829; }
-/* Calculator output panel is dark on purpose — keep its light text */
-.calc-output, .calc-output h1, .calc-output h2, .calc-output h3,
-.calc-output p, .calc-output span { color: #ffffff; }
+/* 5. Muted-text accessibility: bump --text-muted from #5C7499
+      (3.8:1 on --bg) to #A1B5D1 (4.7:1 on --bg) so footer links
+      and small labels clear WCAG AA. */
+:root { --text-muted: #A1B5D1; }
 
-/* Pricing inner columns on white background */
-.pricing-card h1, .pricing-card h2, .pricing-card h3,
-.pricing-col h1, .pricing-col h2, .pricing-col h3 { color: #0f1829; }
+
+/* 6. Comparison-table cell colors on light pages: raise contrast.
+      - td.ok (emerald #059669 at 3.77:1) → #047857 (5.5:1 on white)
+      - td.no (slate #94A3B8 at 2.56:1) → #64748B (4.5:1 on white) */
+body:has(.cmp-hero) td.ok { color: #047857; }
+body:has(.cmp-hero) td.no { color: #64748B; }
+
+/* 7. Hero-trust inline link color: #2563eb on dark navy = 3.76:1.
+      Bump to #60A5FA for 5.2:1. */
+.hero-trust a { color: #60A5FA; }
+
+/* 8. Template card metadata colors (templates page). */
+.tpl-fmt { color: #047857 !important; }      /* emerald on pale green */
+.tpl-meta { color: #475467 !important; }     /* slate on white */
+
+/* 9. Hero-trust inline link color override wins with !important
+      since the earlier plain-color rule loses to the inline <a style="color:..."> */
+.hero-trust a[style*="color"], .hero-trust a { color: #60A5FA !important; }
