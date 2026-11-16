@@ -156,10 +156,11 @@
         <span>SaaSSpendTrack</span>
       </a>
       <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#changelog">What's new</a>
         <a href="/pricing/">Pricing</a>
         <a href="/compare/">Compare</a>
         <a href="/tools/">Free tools</a>
-        <a href="/blog/">Blog</a>
         <a href="/about/">About</a>
         <a href="https://app.saasspendtrack.com" class="btn btn-sm btn-ghost">Log in</a>
         <a href="https://app.saasspendtrack.com" class="btn btn-sm btn-primary" data-plg="nav-cta">Try it live →</a>
@@ -413,38 +414,248 @@
     </div>
   </section>
 
+  <!-- Ask Track spotlight — the standout feature -->
+  <section class="spotlight" id="ask-track" aria-labelledby="ask-track-head">
+    <div class="container">
+      <div class="spot-grid">
+        <div class="spot-copy">
+          <span class="sh-badge green">Ask Track</span>
+          <h2 id="ask-track-head">Ask a question. Get an answer. Or an action.</h2>
+          <p class="spot-sub">Ask Track is a built-in NLP assistant that understands 20+ intents: what renews this month, which licences are unused, what does Slack cost us, show me all contracts over $10k, flag anything auto-renewing in 30 days. No SQL, no filters, no dashboard hunting.</p>
+          <ul class="spot-bullets">
+            <li><b>Natural language in, action out.</b> Queries return filtered views you can act on, not just read.</li>
+            <li><b>20+ intents shipping today.</b> Renewals, spend, utilization, contracts, invoices, risk — covered.</li>
+            <li><b>Zero training data leaves your browser.</b> The NLP runs locally. Your questions stay with you.</li>
+          </ul>
+          <div class="spot-ex">Try: <code>"what renews in the next 30 days"</code> · <code>"show licences under 50% used"</code> · <code>"total spend by department"</code></div>
+        </div>
+        <div class="spot-visual">
+          <div class="spot-chat">
+            <div class="spot-q">
+              <span class="spot-dot">You</span>
+              <span class="spot-text">what renews in the next 30 days over $2k</span>
+            </div>
+            <div class="spot-a">
+              <span class="spot-dot spot-dot-a">Track</span>
+              <span class="spot-text">4 renewals, $11,800 total. Opening filtered view.</span>
+            </div>
+            <div class="spot-list">
+              <div class="spot-row"><span>Slack Business+</span><span>$4,200 · Dec 3</span></div>
+              <div class="spot-row"><span>Figma Pro</span><span>$3,100 · Dec 11</span></div>
+              <div class="spot-row"><span>Linear Business</span><span>$2,500 · Dec 18</span></div>
+              <div class="spot-row"><span>Notion Business</span><span>$2,000 · Dec 24</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full feature grid -->
+  <section class="features" aria-labelledby="features-head">
+    <div class="container">
+      <div class="section-header">
+        <span class="sh-badge">Every feature</span>
+        <h2 id="features-head">Built for the way teams actually work</h2>
+        <p class="sh-sub">Everything on this list is live today. Not roadmap. Not "coming soon." Deployed to <a href="https://app.saasspendtrack.com" style="color:#60A5FA">app.saasspendtrack.com</a> and shipping updates most weeks.</p>
+      </div>
+
       <div class="features-grid">
         <article class="fcard reveal">
           <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg></div>
           <h3>Contract ingestion</h3>
-          <p>Upload from Google Drive, your CLM, or add manually. We extract every term, date, and amount automatically.</p>
+          <p>Upload PDFs, extract renewal dates, amounts, auto-renew clauses and notice windows. Works from a Drive link, a scan, or a drop-in file.</p>
         </article>
         <article class="fcard reveal">
           <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg></div>
           <h3>Renewal alerts</h3>
-          <p>Email and Slack notifications before renewals hit-  days, weeks, or months in advance. Nothing auto-renews by accident.</p>
+          <p>Email alerts at 90/60/30/7 days. Escalation paths so the right person sees it. Nothing auto-renews behind your back.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.35-4.35"/></svg></div>
+          <h3>Tool discovery &amp; bulk import</h3>
+          <p>Paste your vendor list from any source — a spreadsheet, a CSV export, a bank statement, your IT inventory. Auto-maps columns, fuzzy-matches duplicates, flags unknowns before anything is committed. Discover what you're paying for in minutes.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M8 7h8M8 12h8M8 17h5"/></svg></div>
+          <h3>Multi-currency (9 currencies)</h3>
+          <p>USD, INR, EUR, GBP, AUD, SGD, AED, JPY, CAD. Per-subscription currency on bulk import. Live FX cached daily. Dashboard totals in your workspace default.</p>
         </article>
         <article class="fcard reveal">
           <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="22" height="16" rx="2"/><line x1="1" y1="10" x2="23" y2="10"/></svg></div>
           <h3>Invoice tracking</h3>
-          <p>Pending, paid, overdue-  every invoice across every vendor in a single view. No more chasing down finance for status.</p>
+          <p>Pending, paid, overdue — every invoice, every vendor, one view. Mark paid manually or auto-detect from Razorpay/Stripe return.</p>
         </article>
         <article class="fcard reveal">
           <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20V10M18 20V4M6 20v-4"/></svg></div>
-          <h3>Spend analytics</h3>
-          <p>Per-user costs, department breakdowns, adoption rates. Forecast next year's SaaS spend with real usage data.</p>
+          <h3>Spend analytics &amp; forecast</h3>
+          <p>Per-user cost, department breakdowns, 12-month forward forecast. Spot spikes before the budget review.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg></div>
+          <h3>Reports: PDF &amp; CSV exports</h3>
+          <p>Monthly Spend Summary (PDF), Renewal Roster (CSV), Savings Opportunities (PDF). Ready to email finance or drop into a board deck.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 10l2 2 4-4"/><path d="M8 16h8"/></svg></div>
+          <h3>Command palette (⌘K)</h3>
+          <p>Hit ⌘K to jump to any view, run any report, or fire Ask Track. 33 indexed actions. Power-user speed from day one.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <h3>Installable PWA (phone &amp; desktop)</h3>
+          <p>Install from the browser on iOS, Android, Windows, macOS, Linux. Icon on your home screen. Opens like a native app. No app store needed, no update process to manage.</p>
         </article>
         <article class="fcard reveal">
           <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 01-4 4H3"/></svg></div>
           <h3>Workflow automation</h3>
-          <p>Build escalation paths so the right people act at the right time. Customize every alert, trigger, and approval flow.</p>
+          <p>Escalation paths, custom alert thresholds, approval routing. Set it up once and the next renewal cycle runs itself.</p>
         </article>
-        <article class="fcard reveal">
-          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <h3>Integrations</h3>
-          <p>Connects with Slack, Google Drive, CLM tools, and ERP systems. One source of truth across your entire stack.</p>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+          <h3>Guided onboarding</h3>
+          <p>Checklist, spotlight tour, beacons on new features. Smart tips for the first two weeks. You don't need a success manager to learn the product.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+          <h3>Diagnostics &amp; health check</h3>
+          <p>Built-in page that shows module health, patches applied, state size, and runs the test suite inline. Export a diagnostic report when something looks off.</p>
         </article>
       </div>
+    </div>
+  </section>
+
+  <!-- Portability & control: your data is yours -->
+  <section class="portability" id="portability" aria-labelledby="port-head">
+    <div class="container">
+      <div class="section-header">
+        <span class="sh-badge green">Your data, your rules</span>
+        <h2 id="port-head">Portable by design. No lock-in by default.</h2>
+        <p class="sh-sub">Most SaaS management tools trap your data inside their backend. We built the opposite: your workspace lives in your browser, exports clean, and travels with you.</p>
+      </div>
+      <div class="port-grid">
+        <div class="port-card">
+          <div class="port-ic" aria-hidden="true">💾</div>
+          <h3>Browser-only state</h3>
+          <p>Your entire workspace — vendors, contracts, invoices, settings — lives in your browser's local storage. No server copy. Clear it, back it up, or move it any time.</p>
+        </div>
+        <div class="port-card">
+          <div class="port-ic" aria-hidden="true">📤</div>
+          <h3>One-click exports</h3>
+          <p>Full workspace JSON. Per-view CSVs. Monthly PDF reports. Renewal roster, savings report, every chart. Take it to Excel, Sheets, or wherever you want.</p>
+        </div>
+        <div class="port-card">
+          <div class="port-ic" aria-hidden="true">📥</div>
+          <h3>Import from anywhere</h3>
+          <p>CSV from any source — spreadsheet, bank statement, your old SaaS management tool. Auto-column mapping, fuzzy dedup, per-row currency detection.</p>
+        </div>
+        <div class="port-card">
+          <div class="port-ic" aria-hidden="true">📱</div>
+          <h3>Install on any device</h3>
+          <p>Progressive web app — installable on iOS, Android, Windows, macOS, Linux. Home-screen icon, works offline for views you've opened. Take your dashboard anywhere.</p>
+        </div>
+        <div class="port-card">
+          <div class="port-ic" aria-hidden="true">🔌</div>
+          <h3>Zero backend, zero vendor lock</h3>
+          <p>There is no proprietary database holding your data hostage. Cancel any time and keep your exports. Nothing to migrate out of because nothing was ever locked in.</p>
+        </div>
+        <div class="port-card">
+          <div class="port-ic" aria-hidden="true">🔐</div>
+          <h3>GDPR / DPDPA simple</h3>
+          <p>Right to erasure is a button in Settings. Data residency is "wherever your laptop is." Compliance questions answer themselves when there's nothing collected server-side.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What's new: dated changelog of recent ships -->
+  <section class="changelog" id="changelog" aria-labelledby="changelog-head">
+    <div class="container">
+      <div class="section-header">
+        <span class="sh-badge">Recently shipped</span>
+        <h2 id="changelog-head">What landed in the last 30 days</h2>
+        <p class="sh-sub">Updates ship most weeks. Here's what's new since mid-October 2026.</p>
+      </div>
+      <div class="cl-list">
+        <div class="cl-row">
+          <div class="cl-date">Nov 15, 2026</div>
+          <div class="cl-body">
+            <h4>Installable PWA · Mobile layout rescue</h4>
+            <p>Install SaaS Spend Track on iOS, Android, or desktop with a single prompt. Topbar, urgency strip and modals all rebuilt for phones. No app store round-trip.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 14, 2026</div>
+          <div class="cl-body">
+            <h4>Diagnostics panel · 141 tests passing</h4>
+            <p>Settings → Diagnostics shows module health, applied patches, state size, and runs the full test suite inline. Export a diagnostic report for support.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 13, 2026</div>
+          <div class="cl-body">
+            <h4>Per-subscription currency</h4>
+            <p>Every subscription can hold its own currency. Dashboard totals normalise through live FX. Bulk imports auto-detect currency symbols per row.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 12, 2026</div>
+          <div class="cl-body">
+            <h4>Command palette (⌘K)</h4>
+            <p>33 indexed actions. Fuzzy search. Direct Ask Track via the <code>ask:</code> prefix. Keyboard-first for power users.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 11, 2026</div>
+          <div class="cl-body">
+            <h4>Auto-detect Razorpay payment</h4>
+            <p>Return from a successful Razorpay checkout and the workspace flips to Pro automatically. Manual override in Settings if you paid out-of-band.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 10, 2026</div>
+          <div class="cl-body">
+            <h4>Multi-currency · 9 currencies, live FX</h4>
+            <p>USD, INR, EUR, GBP, AUD, SGD, AED, JPY, CAD. Workspace default + per-subscription override. FX from frankfurter.app, cached 24h.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 9, 2026</div>
+          <div class="cl-body">
+            <h4>Reports · PDF &amp; CSV exports</h4>
+            <p>Monthly Spend Summary PDF. Renewal Roster CSV. Savings Opportunities PDF. All generated client-side, ready to attach or share.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 8, 2026</div>
+          <div class="cl-body">
+            <h4>Bulk CSV import with fuzzy dedup</h4>
+            <p>Paste any CSV, auto-map 60+ column aliases, fuzzy-match duplicates, preview every row before commit. Discover your SaaS stack in minutes.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 7, 2026</div>
+          <div class="cl-body">
+            <h4>Guided onboarding · Whatfix-style</h4>
+            <p>Checklist widget, spotlight tour, beacons on new features, smart contextual tips. Zero-touch activation for new workspaces.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 5, 2026</div>
+          <div class="cl-body">
+            <h4>Trial drip email sequence</h4>
+            <p>5-email onboarding sequence over 14 days, with gating so people only get the next email when they're ready for it.</p>
+          </div>
+        </div>
+      </div>
+      <p class="cl-foot">Updates driven by real usage and feedback. Something missing? <a href="mailto:vinayraghavendran16@gmail.com">Email the founder</a>.</p>
     </div>
   </section>
 
