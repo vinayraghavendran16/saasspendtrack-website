@@ -674,3 +674,63 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
 .price-sub-line.dim { color: rgba(255,255,255,0.6); font-size: 12.5px; }
 /* Hide any legacy toggle/India view markup if it ever re-appears from cache */
 .price-toggle, .price-view-india { display: none !important; }
+
+/* ============================================================
+   Light-surface heading safety net (bugfix 2026-11-16)
+   Sub-pages (pricing, calculator, about, faq, tools, compare)
+   use ad-hoc light-background sections. Without explicit color,
+   the h1/h2/h3 inherit the dark-theme near-white body color and
+   become invisible on white. Lock them to the dark text ramp.
+   ============================================================ */
+.calc-hero, .calc-hero *,
+.pricing-hero, .pricing-hero h1, .pricing-hero h2, .pricing-hero h3,
+.about-hero, .about-hero h1, .about-hero h2, .about-hero h3,
+.faq-hero, .faq-hero h1, .faq-hero h2, .faq-hero h3,
+.compare-hero, .compare-hero h1, .compare-hero h2, .compare-hero h3,
+.tools-hero, .tools-hero h1, .tools-hero h2, .tools-hero h3,
+.templates-hero, .templates-hero h1, .templates-hero h2, .templates-hero h3 {
+  color: #0f1829;
+}
+.calc-hero .sub,
+.pricing-hero .sub,
+.about-hero .sub,
+.faq-hero .sub,
+.compare-hero .sub,
+.tools-hero .sub,
+.templates-hero .sub { color: #475467; }
+
+.pricing-faq-section h1,
+.pricing-faq-section h2,
+.pricing-faq-section h3,
+.faq-section h1,
+.faq-section h2,
+.faq-section h3,
+.about-section h1,
+.about-section h2,
+.about-section h3,
+.compare-section h1,
+.compare-section h2,
+.compare-section h3,
+.tools-section h1,
+.tools-section h2,
+.tools-section h3,
+.templates-section h1,
+.templates-section h2,
+.templates-section h3 { color: #0f1829; }
+
+/* Live-preview panel on landing page (white gradient background) */
+.live-preview .lp-head h1,
+.live-preview .lp-head h2,
+.live-preview .lp-head h3 { color: #0f1829; }
+.live-preview .lp-head .sh-sub { color: #64748b; }
+
+/* Calculator inner cards keep dark text on white */
+.calc-inputs, .calc-inputs h1, .calc-inputs h2, .calc-inputs h3,
+.calc-inputs label, .calc-inputs p { color: #0f1829; }
+/* Calculator output panel is dark on purpose — keep its light text */
+.calc-output, .calc-output h1, .calc-output h2, .calc-output h3,
+.calc-output p, .calc-output span { color: #ffffff; }
+
+/* Pricing inner columns on white background */
+.pricing-card h1, .pricing-card h2, .pricing-card h3,
+.pricing-col h1, .pricing-col h2, .pricing-col h3 { color: #0f1829; }
