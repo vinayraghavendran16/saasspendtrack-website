@@ -61,7 +61,7 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 - Free SaaS Waste Calculator: https://saasspendtrack.com/tools/saas-waste-calculator/
 - Free templates (renewal roster, spend audit, clause library, vendor shortlist): https://saasspendtrack.com/tools/templates/
 - Blog: https://saasspendtrack.com/blog/
-- Contact: vinayraghavendran16@gmail.com, +91 91684 81989
+- Contact: hello@saasspendtrack.com, +91 91684 81989
 
 ## Blog (long-form guides, LLM-friendly)
 
