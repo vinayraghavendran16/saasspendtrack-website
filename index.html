@@ -57,10 +57,14 @@
       "Clause playbook with deviation scoring",
       "Renewal Command Center",
       "Approval chains and clause commenting",
+      "Vendors governance register with InfoSec / Legal / Procurement / Finance approvals",
+      "Per-vendor InfoSec review module with onboarding checklist and GRC connectors",
+      "Cross-functional reporting pivot (CFO / CRO / IT / Procurement / InfoSec) with CSV export",
+      "CLM, accounting, SSO and vendor-risk connectors (SpotDraft, Ironclad, QuickBooks, Xero, Okta, Vanta and more)",
+      "Source-grounded vendor renewal and cancellation guides",
       "Scenario planner (cancel / downgrade / renegotiate)",
       "Licence forecasting with capacity planning",
       "Ask Track — natural-language Q&A with voice input",
-      "44 data-source connectors across SSO, APIs, finance, unified APIs, Chrome extension",
       "On-prem deployment for BFSI, healthcare, regulated industries"
     ]
   }
@@ -457,6 +461,78 @@
     </div>
   </section>
 
+  <!-- Governance spotlight: vendors register with approvals -->
+  <section class="spotlight" id="governance" aria-labelledby="gov-head" style="border-top:1px solid rgba(255,255,255,.06)">
+    <div class="container">
+      <div class="spot-grid">
+        <div class="spot-visual">
+          <div class="gov-card" style="background:#0f1620;border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;box-shadow:0 20px 50px rgba(0,0,0,.35)">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+              <span style="font-weight:700;color:#e6edf6;font-size:14px">Vendors</span>
+              <span style="font-size:11px;color:#8b98a9">4 approvals pending · 2 reviews due</span>
+            </div>
+            <div style="display:grid;grid-template-columns:1.4fr .9fr repeat(4,auto) .8fr;gap:8px 10px;font-size:11px;color:#6b7686;margin-bottom:6px">
+              <span>Vendor</span><span>Dept</span><span>Sec</span><span>Leg</span><span>Proc</span><span>Fin</span><span>Review</span>
+            </div>
+            <div class="gov-rows" style="display:flex;flex-direction:column;gap:8px">
+              <!-- rows -->
+              <div style="display:grid;grid-template-columns:1.4fr .9fr repeat(4,auto) .8fr;gap:8px 10px;align-items:center;font-size:12px;color:#d6dee8">
+                <b style="color:#fff">Salesforce</b><span style="color:#8b98a9">Sales</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#f59e0b22;color:#fbbf24;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">●</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span style="color:#8b98a9;font-size:11px">Mar 1</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1.4fr .9fr repeat(4,auto) .8fr;gap:8px 10px;align-items:center;font-size:12px;color:#d6dee8">
+                <b style="color:#fff">Datadog</b><span style="color:#8b98a9">Eng</span>
+                <span class="gov-pill" style="background:#f59e0b22;color:#fbbf24;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">●</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#f59e0b22;color:#fbbf24;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">●</span>
+                <span style="color:#fca5a5;font-size:11px">12d</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1.4fr .9fr repeat(4,auto) .8fr;gap:8px 10px;align-items:center;font-size:12px;color:#d6dee8">
+                <b style="color:#fff">Figma</b><span style="color:#8b98a9">Design</span>
+                <span class="gov-pill" style="background:#64748b22;color:#94a3b8;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">–</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span style="color:#8b98a9;font-size:11px">Feb 15</span>
+              </div>
+              <div style="display:grid;grid-template-columns:1.4fr .9fr repeat(4,auto) .8fr;gap:8px 10px;align-items:center;font-size:12px;color:#d6dee8">
+                <b style="color:#fff">Vanta</b><span style="color:#8b98a9">Security</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span class="gov-pill" style="background:#16a34a22;color:#4ade80;border-radius:20px;padding:2px 8px;font-size:10px;text-align:center">✓</span>
+                <span style="color:#fca5a5;font-size:11px">20d</span>
+              </div>
+            </div>
+            <div style="margin-top:12px;font-size:10.5px;color:#6b7686;display:flex;gap:12px">
+              <span><span style="color:#4ade80">✓</span> approved</span>
+              <span><span style="color:#fbbf24">●</span> pending</span>
+              <span><span style="color:#94a3b8">–</span> not started</span>
+            </div>
+          </div>
+        </div>
+        <div class="spot-copy">
+          <span class="sh-badge green">Governance</span>
+          <h2 id="gov-head">Every vendor, every approval, one register.</h2>
+          <p class="spot-sub">Procurement, Finance, Legal and InfoSec stop living in four different spreadsheets. See which tools cleared each gate, why and when each was bought, and which security reviews are coming due — before the auto-renewal does.</p>
+          <ul class="spot-bullets">
+            <li><b>Four-function approval trail.</b> InfoSec, Legal, Procurement and Finance status on every vendor, at a glance.</li>
+            <li><b>Security built in.</b> A 10-point onboarding checklist, data classification and annual re-review dates per vendor, syncable from Vanta, Drata or OneTrust.</li>
+            <li><b>Internal owners mapped.</b> The InfoSec, Legal and Procurement contact for each tool, pulled from your team directory.</li>
+          </ul>
+          <div class="hero-actions" style="margin-top:20px">
+            <a href="https://app.saasspendtrack.com" class="btn btn-primary" data-plg="governance-cta">Start free — build your register →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Full feature grid -->
   <section class="features" aria-labelledby="features-head">
     <div class="container">
@@ -534,6 +610,36 @@
           <h3>Diagnostics &amp; health check</h3>
           <p>Built-in page that shows module health, patches applied, state size, and runs the test suite inline. Export a diagnostic report when something looks off.</p>
         </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M4 9v11h16V9"/><path d="M9 20v-6h6v6"/></svg></div>
+          <h3>Vendors governance register</h3>
+          <p>Every vendor in one register: department, why and when it was procured, and approval status from InfoSec, Legal, Procurement and Finance — with the next review date surfaced. One row opens the full-screen vendor editor.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+          <h3>InfoSec reviews &amp; vendor risk</h3>
+          <p>A 10-item security onboarding checklist per vendor — DPA, SOC 2, pen test, data classification, SSO/MFA — plus status, owner and annual re-review dates. Connect Vanta, Drata, Secureframe, OneTrust and more.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="10" width="3" height="7"/><rect x="12" y="6" width="3" height="11"/><rect x="17" y="13" width="3" height="4"/></svg></div>
+          <h3>Cross-functional reporting</h3>
+          <p>One pivot for CFO, CRO, IT, Procurement and InfoSec: any metric (spend, invoices, renewals, licences, reviews) split by department, team, function, tool, owner or quarter, over any date range. Nine persona presets, CSV export.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007 0l3-3a5 5 0 00-7-7l-1 1"/><path d="M14 11a5 5 0 00-7 0l-3 3a5 5 0 007 7l1-1"/></svg></div>
+          <h3>CLM &amp; system connectors</h3>
+          <p>Pull contracts straight from SpotDraft, Ironclad, Juro, LinkSquares and 8 more; spend from QuickBooks, Xero and NetSuite; apps from Okta, Google Workspace and Entra ID. CSV export for all, direct API sync where available.</p>
+        </article>
+        <article class="fcard reveal fcard-new">
+          <span class="fcard-tag">New</span>
+          <div class="fcard-icon" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg></div>
+          <h3>Vendor renewal guides</h3>
+          <p>Curated cancellation and renewal playbooks for the vendors prospects ask about most — built from each vendor's public terms with every fact sourced and anything unverifiable flagged, not guessed. Know the notice window before it's too late.</p>
+        </article>
       </div>
     </div>
   </section>
@@ -590,6 +696,27 @@
         <p class="sh-sub">Updates ship most weeks. Here's what's new since mid-October 2026.</p>
       </div>
       <div class="cl-list">
+        <div class="cl-row">
+          <div class="cl-date">Nov 18, 2026</div>
+          <div class="cl-body">
+            <h4>Governance stack · Vendors, InfoSec, Reporting</h4>
+            <p>New Vendors register with InfoSec/Legal/Procurement/Finance approvals and next-review dates; a per-vendor InfoSec review module with a 10-item checklist; and a cross-functional reporting pivot with nine persona presets and CSV export. Full-screen vendor editor with internal stakeholders and procurement history.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 18, 2026</div>
+          <div class="cl-body">
+            <h4>Connectors · CLM, accounting &amp; identity</h4>
+            <p>Pull contracts from SpotDraft, Ironclad, Juro, LinkSquares and 8 more; spend from QuickBooks, Xero, NetSuite; apps from Okta, Google Workspace, Entra ID; vendor risk from Vanta, Drata, OneTrust. CSV export for all, direct API sync where available.</p>
+          </div>
+        </div>
+        <div class="cl-row">
+          <div class="cl-date">Nov 18, 2026</div>
+          <div class="cl-body">
+            <h4>Renewal guides · Command Centre · PDF garble-repair</h4>
+            <p>Source-grounded cancellation playbooks for the vendors prospects ask about most. A Command Centre that guides new workspaces through 13 ingestion paths. And automatic repair of scrambled PDF text layers so clause extraction works even on awkward vendor contracts.</p>
+          </div>
+        </div>
         <div class="cl-row">
           <div class="cl-date">Nov 15, 2026</div>
           <div class="cl-body">
@@ -774,7 +901,7 @@
 
           <div class="plan-single-cta">
             <a href="https://app.saasspendtrack.com" class="btn btn-primary btn-lg" data-plg="pricing-try">Try it live, free →</a>
-            <a href="https://rzp.io/rzp/NCGW9GyD" target="_blank" rel="noopener" class="btn btn-outline-dark btn-lg" data-plg="pricing-pay" data-pay-india="https://rzp.io/rzp/NCGW9GyD" data-pay-global="https://rzp.io/rzp/INTERNATIONAL-PLACEHOLDER">Pay &amp; activate →</a>
+            <a href="https://rzp.io/rzp/NCGW9GyD" target="_blank" rel="noopener" class="btn btn-outline-dark btn-lg" data-plg="pricing-pay" data-pay-india="https://rzp.io/rzp/NCGW9GyD" data-pay-global="https://rzp.io/rzp/MhqdtN2a">Pay &amp; activate →</a>
             <a href="mailto:hello@saasspendtrack.com?subject=SaaS%20Spend%20Track%20demo" class="btn btn-link btn-lg" data-plg="pricing-demo">or book a demo</a>
           </div>
 
