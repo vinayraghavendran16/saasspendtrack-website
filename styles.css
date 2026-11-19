@@ -913,3 +913,101 @@ body:has(.cmp-hero) td.no { color: #64748B; }
   .cl-row { grid-template-columns: 1fr; gap: 6px; padding: 16px 0; }
   .cl-date { padding-top: 0; }
 }
+
+/* ============================================================
+   HOMEPAGE — clean, data-led LIGHT theme (2026-11-19 redesign)
+   Scoped to body.home-light. Overriding the design tokens here
+   re-themes every token-based homepage section in one place.
+   The dark product-preview window (.lp-*) is hard-coded dark and
+   is intentionally left untouched — it reads premium on light.
+   Accessible by construction: body text ≥4.5:1, green actions use
+   #15803d/#047857 (AA on white), large accents use #16a34a.
+   ============================================================ */
+body.home-light{
+  --bg:#ffffff;
+  --bg-1:#f7f9fc;
+  --bg-2:#eef2f7;
+  --bg-card:#ffffff;
+  --bg-card2:#f7f9fc;
+  --border:#e6ebf2;
+  --border-hi:#d6deea;
+  --text:#0b1220;
+  --text-mid:#475569;
+  --text-muted:#5b6b82;
+  --green:#15803d;
+  --green-dim:#ecfdf5;
+  --green-glow:rgba(21,128,61,.16);
+  --green-dark:#166534;
+  --shadow-sm:0 1px 2px rgba(16,24,40,.04),0 1px 3px rgba(16,24,40,.07);
+  --shadow:0 6px 16px -4px rgba(16,24,40,.10),0 2px 6px rgba(16,24,40,.05);
+  --shadow-lg:0 28px 56px -16px rgba(16,24,40,.18);
+  background:#ffffff;
+  color:var(--text);
+}
+/* Nav — light, glassy */
+body.home-light .nav{ background:rgba(255,255,255,.82); border-bottom:1px solid var(--border); }
+body.home-light .nav-links a:not(.btn):hover{ background:var(--bg-2); color:var(--text); }
+/* Buttons */
+body.home-light .btn-primary{ background:#15803d; color:#fff; box-shadow:var(--shadow-sm); }
+body.home-light .btn-primary:hover{ background:#166534; box-shadow:0 10px 22px -6px rgba(21,128,61,.35); }
+body.home-light .btn-dark-outline{ background:#fff; border:1.5px solid var(--border-hi); color:var(--text); }
+body.home-light .btn-dark-outline:hover{ border-color:#0b1220; background:var(--bg-1); }
+body.home-light .btn-ghost{ color:var(--text-mid); }
+body.home-light .btn-ghost:hover{ color:var(--text); background:var(--bg-2); }
+/* Hero — soft light grid + faint green wash */
+body.home-light .hero-grid-bg{ background-image:linear-gradient(#eef2f7 1px,transparent 1px),linear-gradient(90deg,#eef2f7 1px,transparent 1px); }
+body.home-light .hero::after{ background:radial-gradient(circle,rgba(21,128,61,.07) 0%,transparent 65%); }
+body.home-light .hero-badge{ background:#fff; border:1px solid var(--border-hi); color:var(--text-mid); box-shadow:var(--shadow-sm); }
+body.home-light .hero-accent{ color:#16a34a; }
+body.home-light .hero-trust a[style*="color"], body.home-light .hero-trust a{ color:#047857 !important; text-decoration:underline; }
+/* Stats */
+body.home-light .stats-bar{ background:var(--bg-1); border-color:var(--border); }
+body.home-light .stat-num,body.home-light .stat-suffix,body.home-light .stat-dollar{ color:#16a34a; }
+body.home-light .stat-divider{ background:var(--border); }
+/* Section headers */
+body.home-light .sh-badge.green{ color:#047857; }
+body.home-light .green-text,body.home-light .green-text *{ color:#047857; }
+/* Cards → white + soft shadow */
+body.home-light .fcard,
+body.home-light .ladder-step,
+body.home-light .port-card,
+body.home-light .plan,
+body.home-light .compare-card.them{ background:#fff; border:1px solid var(--border); box-shadow:var(--shadow-sm); }
+body.home-light .fcard:hover,
+body.home-light .ladder-step:hover,
+body.home-light .port-card:hover{ border-color:#bbf7d0; box-shadow:var(--shadow); transform:translateY(-3px); }
+body.home-light .fcard-icon,
+body.home-light .ladder-icon{ background:var(--green-dim); color:#15803d; }
+body.home-light .fcard-tag{ color:#047857; background:var(--green-dim); }
+/* Compare */
+body.home-light .compare-section{ background:#fff; }
+body.home-light .compare-card.us{ background:#fff; border:2px solid #16a34a; box-shadow:0 22px 44px -16px rgba(21,128,61,.22); }
+body.home-light .compare-card.us .compare-label{ color:#047857; }
+body.home-light .compare-best,body.home-light .plan-popular{ background:#16a34a; color:#fff; }
+/* Spotlights — light gradient */
+body.home-light .spotlight{ background:linear-gradient(180deg,#ffffff 0%,#f7f9fc 100%); }
+body.home-light .spot-copy .sh-badge{ background:var(--green-dim); color:#047857; }
+body.home-light .spot-chat{ background:#fff; border:1px solid var(--border); box-shadow:var(--shadow-lg); }
+body.home-light .spot-dot{ background:var(--bg-2); color:var(--text-mid); }
+body.home-light .spot-dot-a{ background:var(--green-dim); color:#047857; }
+body.home-light .spot-ex code,
+body.home-light .cl-body code,
+body.home-light .spot-row + .spot-row{ background:initial; }
+body.home-light .spot-ex code,body.home-light .cl-body code{ background:var(--bg-2); color:var(--text); }
+body.home-light .spot-row{ border-bottom:1px solid var(--border); }
+/* Pricing */
+body.home-light .pricing{ background:var(--bg-1); }
+body.home-light .plan.featured{ border:2px solid #16a34a; box-shadow:0 22px 44px -16px rgba(21,128,61,.22); }
+body.home-light .plan-limit{ color:#047857; }
+/* FAQ / final CTA / footer */
+body.home-light .faq{ background:#fff; }
+body.home-light .faq-item summary:hover{ color:#166534; }
+body.home-light .final-cta{ background:var(--bg-1); }
+body.home-light .footer{ background:#fff; border-top:1px solid var(--border); }
+body.home-light .footer-col a:hover{ color:var(--text); }
+body.home-light .cl-foot a{ color:#047857; }
+/* Cookie banner */
+body.home-light #cookie-banner{ background:#fff; border:1px solid var(--border-hi); box-shadow:var(--shadow-lg); }
+body.home-light .cookie-inner a{ color:#047857; }
+/* Keyboard focus visibility */
+body.home-light a:focus-visible,body.home-light .btn:focus-visible,body.home-light summary:focus-visible{ outline:2px solid #16a34a; outline-offset:2px; }
