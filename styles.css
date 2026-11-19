@@ -983,7 +983,7 @@ body.home-light .fcard-tag{ color:#047857; background:var(--green-dim); }
 body.home-light .compare-section{ background:#fff; }
 body.home-light .compare-card.us{ background:#fff; border:2px solid #16a34a; box-shadow:0 22px 44px -16px rgba(21,128,61,.22); }
 body.home-light .compare-card.us .compare-label{ color:#047857; }
-body.home-light .compare-best,body.home-light .plan-popular{ background:#16a34a; color:#fff; }
+body.home-light .compare-best,body.home-light .plan-popular{ background:#166534; color:#fff; }
 /* Spotlights — light gradient */
 body.home-light .spotlight{ background:linear-gradient(180deg,#ffffff 0%,#f7f9fc 100%); }
 body.home-light .spot-copy .sh-badge{ background:var(--green-dim); color:#047857; }
@@ -999,6 +999,11 @@ body.home-light .spot-row{ border-bottom:1px solid var(--border); }
 body.home-light .pricing{ background:var(--bg-1); }
 body.home-light .plan.featured{ border:2px solid #16a34a; box-shadow:0 22px 44px -16px rgba(21,128,61,.22); }
 body.home-light .plan-limit{ color:#047857; }
+/* Single-plan card: its internals are built white-on-dark, so render it as a
+   dark premium card on the light page (fixes the white-on-light "white space"). */
+body.home-light .plan-single{ background:linear-gradient(135deg,#0b1220 0%,#1b2436 100%); border:1px solid #0b1220; color:#fff; box-shadow:0 28px 56px -16px rgba(16,24,40,.30); }
+body.home-light .plan-single .btn-outline-dark{ border-color:rgba(255,255,255,.3); color:#fff; background:transparent; }
+body.home-light .plan-single .btn-outline-dark:hover{ background:rgba(255,255,255,.1); border-color:rgba(255,255,255,.5); }
 /* FAQ / final CTA / footer */
 body.home-light .faq{ background:#fff; }
 body.home-light .faq-item summary:hover{ color:#166534; }
@@ -1011,3 +1016,6 @@ body.home-light #cookie-banner{ background:#fff; border:1px solid var(--border-h
 body.home-light .cookie-inner a{ color:#047857; }
 /* Keyboard focus visibility */
 body.home-light a:focus-visible,body.home-light .btn:focus-visible,body.home-light summary:focus-visible{ outline:2px solid #16a34a; outline-offset:2px; }
+
+/* Reveal safety: never hide content for reduced-motion users or if JS is slow. */
+@media (prefers-reduced-motion: reduce){ .reveal{ opacity:1 !important; transform:none !important; } }

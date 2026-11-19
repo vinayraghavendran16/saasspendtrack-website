@@ -539,7 +539,7 @@
       <div class="section-header">
         <span class="sh-badge">Every feature</span>
         <h2 id="features-head">Built for the way teams actually work</h2>
-        <p class="sh-sub">Everything on this list is live today. Not roadmap. Not "coming soon." Deployed to <a href="https://app.saasspendtrack.com" style="color:#60A5FA">app.saasspendtrack.com</a> and shipping updates most weeks.</p>
+        <p class="sh-sub">Everything on this list is live today. Not roadmap. Not "coming soon." Deployed to <a href="https://app.saasspendtrack.com" style="color:#047857">app.saasspendtrack.com</a> and shipping updates most weeks.</p>
       </div>
 
       <div class="features-grid">
@@ -1037,6 +1037,8 @@
     // Scroll reveal
     const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.12});
     document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // Safety net: never leave reveal content invisible if the observer misfires.
+    setTimeout(function(){document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){el.classList.add('visible');});},1400);
 
     // Counter animation
     const cio=new IntersectionObserver(entries=>entries.forEach(e=>{
