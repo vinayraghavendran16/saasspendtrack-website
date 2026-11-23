@@ -15,19 +15,19 @@
   <meta property="og:url" content="https://saasspendtrack.com/">
   <meta property="og:title" content="SaaS Renewal Tracking &amp; Spend Management | SaaS Spend Track">
   <meta property="og:description" content="Track SaaS renewals, cancellation deadlines, and software spend in one workspace. Start your 7-day free trial with a work email. No credit card required.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/vinayraghavendran16/saasspendtrack-website/main/og-v1.png">
-  <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/vinayraghavendran16/saasspendtrack-website/main/og-v1.png">
+  <meta property="og:image" content="https://saasspendtrack.com/og-v1.png">
+  <meta property="og:image:secure_url" content="https://saasspendtrack.com/og-v1.png">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="628">
   <meta property="og:image:alt" content="SaaS Spend Track: SaaS spend tracking at $3,499/yr flat">
-  <meta itemprop="image" content="https://raw.githubusercontent.com/vinayraghavendran16/saasspendtrack-website/main/og-v1.png">
+  <meta itemprop="image" content="https://saasspendtrack.com/og-v1.png">
   <meta property="og:site_name" content="SaaS Spend Track">
   <meta property="og:locale" content="en_US">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="SaaS Renewal Tracking &amp; Spend Management | SaaS Spend Track">
   <meta name="twitter:description" content="Track SaaS renewals, cancellation deadlines, and software spend in one workspace. Start your 7-day free trial with a work email. No credit card required.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/vinayraghavendran16/saasspendtrack-website/main/og-v1.png">
+  <meta name="twitter:image" content="https://saasspendtrack.com/og-v1.png">
 
   <!-- ═══ GEO-  AI Engine Visibility ═══ -->
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
@@ -132,6 +132,7 @@
     </div>
   </nav>
 
+  <div class="reading-progress" aria-hidden="true"></div>
   <main>
   <!-- Product-led hero -->
   <section class="hero" aria-labelledby="hero-headline">
@@ -287,9 +288,34 @@
         <h2 id="features-head">From vendor list to renewal decisions.</h2>
       </div>
       <div class="feature-summary">
-        <article class="fcard reveal"><h3><a href="/data-import-export/">Import your vendors</a></h3><p>Start with a CSV or add contracts as you go.</p></article>
-        <article class="fcard reveal"><h3><a href="/saas-spend-reporting/">See what you spend</a></h3><p>Review software costs by vendor and department.</p></article>
-        <article class="fcard reveal"><h3><a href="/saas-renewal-tracking/">Catch notice deadlines</a></h3><p>See what renews next and when you need to act.</p></article>
+        <article class="fcard reveal">
+          <div class="workflow-art import-art" aria-hidden="true">
+            <span class="workflow-file">vendors.csv</span>
+            <div><span>Vendor</span><span>Owner</span><span>Renewal</span></div>
+            <div><span>Figma</span><span>Design</span><span>May 20</span></div>
+            <div><span>Zoom</span><span>IT</span><span>Jun 12</span></div>
+          </div>
+          <h3><a href="/data-import-export/">Import your vendors</a></h3>
+          <p>Start with a CSV or add contracts as you go.</p>
+        </article>
+        <article class="fcard reveal">
+          <div class="workflow-art spend-art" aria-hidden="true">
+            <span>Annual software spend</span><strong>$126,400</strong>
+            <div class="workflow-bars"><i></i><i></i><i></i></div>
+            <div class="workflow-legend"><span>Sales</span><span>IT</span><span>Design</span></div>
+          </div>
+          <h3><a href="/saas-spend-reporting/">See what you spend</a></h3>
+          <p>Review software costs by vendor and department.</p>
+        </article>
+        <article class="fcard reveal">
+          <div class="workflow-art notice-art" aria-hidden="true">
+            <span>Cancellation notice</span>
+            <strong>May <b>01</b></strong>
+            <span class="demo-status upcoming">Decision due</span>
+          </div>
+          <h3><a href="/saas-renewal-tracking/">Catch notice deadlines</a></h3>
+          <p>See what renews next and when you need to act.</p>
+        </article>
       </div>
       <p class="product-link"><a href="/features/">Explore all product features →</a></p>
     </div>
@@ -298,13 +324,24 @@
 
 
   <section class="renewal-story container" aria-labelledby="renewal-story-heading">
-    <picture class="reveal">
-      <img src="/images/renewal-review.webp" alt="Two finance colleagues reviewing software renewals together" width="900" height="600" loading="lazy" decoding="async">
-    </picture>
     <div class="reveal">
       <h2 id="renewal-story-heading">A renewal date is only half the story.</h2>
-      <p>A contract with 60 days’ notice can lock you in long before renewal. See the notice deadline alongside the spend so your team can decide in time.</p>
-      <a href="https://app.saasspendtrack.com/" class="btn btn-primary" data-plg="renewal-story">Start your 7-day free trial →</a>
+      <p>A contract with 60 days’ notice can lock you in long before renewal. Try changing the notice period to see when you’d need to act.</p>
+      <a href="/saas-renewal-tracking/" class="story-link">Explore renewal tracking</a>
+    </div>
+    <div class="notice-example reveal">
+      <div class="notice-dates">
+        <div><span>Notice due</span><time id="notice-example-result" datetime="2027-05-01" aria-live="polite">May 1</time></div>
+        <span class="notice-connector" aria-hidden="true"></span>
+        <div><span>Contract renews</span><time datetime="2027-06-30">Jun 30</time></div>
+      </div>
+      <fieldset class="notice-controls" hidden>
+        <legend>Notice period</legend>
+        <label><input type="radio" name="notice-period" value="30">30 days</label>
+        <label><input type="radio" name="notice-period" value="60" checked>60 days</label>
+        <label><input type="radio" name="notice-period" value="90">90 days</label>
+      </fieldset>
+      <p>Example uses calendar days. Verify the deadline in the signed contract.</p>
     </div>
   </section>
 
@@ -402,17 +439,41 @@
     if ('IntersectionObserver' in window && !reducedMotion.matches) {
       const revealObserver = new IntersectionObserver(entries => {
         entries.forEach(({ target, isIntersecting }) => {
-          if (isIntersecting) {
-            target.classList.remove('reveal-pending');
-            revealObserver.unobserve(target);
-          }
+          if (!isIntersecting) return;
+          target.classList.add('reveal-enter');
+          revealObserver.unobserve(target);
         });
-      }, { threshold: 0.08 });
-      document.querySelectorAll('.reveal').forEach(element => {
-        element.classList.add('reveal-pending');
-        revealObserver.observe(element);
-      });
+      }, { threshold: 0.16 });
+      document.querySelectorAll('.reveal, .final-cta .container').forEach(element => revealObserver.observe(element));
     }
+
+    const progress = document.querySelector('.reading-progress');
+    let progressFrame = null;
+    function updateProgress() {
+      const distance = document.documentElement.scrollHeight - window.innerHeight;
+      const fraction = distance > 0 ? Math.min(1, Math.max(0, window.scrollY / distance)) : 0;
+      progress.style.transform = 'scaleX(' + fraction + ')';
+      progressFrame = null;
+    }
+    function scheduleProgress() {
+      if (progressFrame === null) progressFrame = requestAnimationFrame(updateProgress);
+    }
+    window.addEventListener('scroll', scheduleProgress, { passive: true });
+    window.addEventListener('resize', scheduleProgress);
+    scheduleProgress();
+
+    const noticeControls = document.querySelector('.notice-controls');
+    const noticeDate = document.querySelector('#notice-example-result');
+    const noticeFormat = new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+    noticeControls.hidden = false;
+    noticeControls.addEventListener('change', event => {
+      const deadline = new Date(Date.UTC(2027, 5, 30 - Number(event.target.value)));
+      noticeDate.dateTime = deadline.toISOString().slice(0, 10);
+      noticeDate.textContent = noticeFormat.format(deadline);
+      if (!reducedMotion.matches && noticeDate.animate) {
+        noticeDate.animate([{ opacity: 0.55, transform: 'translateY(5px)' }, { opacity: 1, transform: 'none' }], { duration: 220 });
+      }
+    });
 
     const hooks = new Map([
       ['renewals', ['Know your SaaS', 'cancel-by dates.', 'See what renews next, what it costs, and when notice is due.']],
@@ -441,7 +502,7 @@
       (window.dataLayer ||= []).push({ event, assigned_hook: assignedHook, hero_hook: activeHook, ...detail });
     };
     const trialLinks = [...document.querySelectorAll('a[href^="https://app.saasspendtrack.com"]')]
-      .filter(link => ['nav-cta', 'mobile-cta', 'hero-primary', 'ladder-step1', 'governance-cta', 'renewal-story', 'pricing-try', 'final-cta'].includes(link.dataset.plg));
+      .filter(link => ['nav-cta', 'mobile-cta', 'hero-primary', 'ladder-step1', 'governance-cta', 'pricing-try', 'final-cta'].includes(link.dataset.plg));
     function showHook(name) {
       activeHook = name;
       const [first, second, body] = hooks.get(name);

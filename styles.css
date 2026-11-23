@@ -1164,3 +1164,70 @@ body.home-light a:focus-visible,body.home-light .btn:focus-visible,body.home-lig
   .product-demo :is(.lp-scene,.lp-answer,.lp-risk-bar > div) { transition:none; }
   .product-demo .lp-ask-text::after { animation:none; }
 }
+
+/* Motion and product illustrations on the marketing homepage */
+.reading-progress {
+  position:fixed; inset:0 0 auto; height:3px; z-index:1500;
+  background:linear-gradient(90deg,#166534,#4ade80);
+  transform:scaleX(0); transform-origin:left; pointer-events:none;
+}
+.product-home .hero {
+  background:radial-gradient(ellipse at 91% 30%,#cfe9d8,transparent 56%),linear-gradient(140deg,#fbfdfa,#e8f4ec);
+}
+.product-home .hero::after {
+  content:""; inset:0; width:auto; height:auto; transform:none;
+  background-image:radial-gradient(#16653440 1px,transparent 1px);
+  background-size:18px 18px; mask-image:linear-gradient(110deg,transparent 40%,black);
+}
+.product-home .reveal-enter { animation:product-arrive .66s cubic-bezier(.2,.7,.2,1) backwards; }
+.product-home .feature-summary .reveal-enter:nth-child(2) { animation-delay:85ms; }
+.product-home .feature-summary .reveal-enter:nth-child(3) { animation-delay:170ms; }
+@keyframes product-arrive {
+  from { opacity:.35; transform:translateY(28px); }
+  to { opacity:1; transform:translateY(0); }
+}
+.product-home .product-demo .lp-active { animation:product-arrive .3s ease-out; }
+.product-home .feature-summary .fcard { overflow:hidden; padding:14px 14px 20px; }
+.product-home .feature-summary .fcard h3 { margin:14px 6px 5px; }
+.product-home .feature-summary .fcard p { margin:0 6px; }
+.workflow-art {
+  display:grid; align-content:center; gap:6px; min-height:147px; border-radius:9px;
+  padding:14px; overflow:hidden; font-size:.75rem; color:#28463b; background:#eaf5ed;
+}
+.import-art { background:#eaf1f2; }
+.workflow-file { font-family:ui-monospace,monospace; font-weight:700; }
+.import-art > div { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:4px; padding:3px 0; border-bottom:1px solid #d1e0e0; }
+.spend-art strong { font-size:1.55rem; line-height:1; color:#10382a; }
+.workflow-bars { display:grid; grid-template-columns:5fr 3fr 2fr; gap:3px; margin-top:6px; }
+.workflow-bars i { background:#1a6045; border-radius:3px; height:9px; }
+.workflow-bars i:nth-child(2) { background:#62a882; }
+.workflow-bars i:nth-child(3) { background:#9bcab0; }
+.workflow-legend { display:flex; gap:12px; }
+.notice-art { background:#fbf0d7; color:#684416; justify-items:start; }
+.notice-art strong { font-size:1.65rem; line-height:1; }
+.notice-art b { background:#fff9ec; padding:0 6px; border-radius:4px; }
+.product-home .renewal-story { grid-template-columns:minmax(0,1fr) minmax(0,1.15fr); }
+.story-link { color:#166534; text-decoration:underline; text-underline-offset:4px; font-weight:700; }
+.notice-example {
+  display:grid; gap:24px; min-width:0; padding:clamp(20px,4vw,40px); border-radius:18px;
+  background:radial-gradient(ellipse at 90% 0%,#25624d,#102a23 70%);
+  color:#f3fbf5; box-shadow:0 22px 42px -25px #102a23;
+}
+.notice-dates { display:grid; grid-template-columns:minmax(0,1fr) 26px minmax(0,1fr); gap:12px; align-items:center; }
+.notice-dates span { display:block; font-size:.79rem; color:#c5e2d1; }
+.notice-dates time { display:block; line-height:1.14; font-size:clamp(1.55rem,4vw,2.6rem); font-weight:800; }
+#notice-example-result { color:#b9f4cc; }
+.notice-connector { height:1px; background:#83b29a; position:relative; }
+.notice-connector::after { content:""; position:absolute; right:0; top:-3px; width:7px; height:7px; border-top:1px solid #83b29a; border-right:1px solid #83b29a; transform:rotate(45deg); }
+.notice-controls { display:flex; flex-wrap:wrap; gap:8px; padding:0; border:0; min-width:0; }
+.notice-controls[hidden] { display:none; }
+.notice-controls legend { margin-bottom:8px; color:#c5e2d1; font-size:.82rem; }
+.notice-controls label { display:flex; align-items:center; gap:5px; padding:6px 9px; min-height:40px; border:1px solid #7baa93; border-radius:7px; cursor:pointer; font-size:.83rem; }
+.notice-controls label:has(input:checked) { background:#c7efd5; border-color:#c7efd5; color:#123023; }
+.notice-controls input { accent-color:#166534; }
+.product-home .notice-example p { margin:0; color:#c5e2d1; font-size:.77rem; }
+.product-home .founding-offer { border-top:4px solid #166534; }
+@media (max-width:760px) { .product-home .renewal-story { grid-template-columns:minmax(0,1fr); } }
+@media (prefers-reduced-motion:reduce) {
+  .product-home .reveal-enter,.product-home .product-demo .lp-active { animation:none; }
+}
