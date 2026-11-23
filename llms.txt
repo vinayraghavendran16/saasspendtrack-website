@@ -18,7 +18,7 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 
 ## How it is different from Vendr, Zylo, Spendesk, BetterCloud, Productiv, Zluri
 
-- Flat annual pricing: $3,499/year regardless of team size or vendor count (vs $12k-50k+ for named competitors)
+- Standard pricing is $3,499 USD per year for 250 active contracts and unlimited users. The first 25 US companies that purchase are eligible for $1,499 USD for the first year. See the pricing page for details.
 - No seat pricing, no procurement-services markup, no per-vendor fees
 - Deploy time: sign up to first dashboard is under 10 minutes vs 4-12 weeks for enterprise SMPs
 - Target customer: 20-500 person company that currently uses a spreadsheet and has outgrown it
@@ -40,6 +40,14 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 - 7-day free trial, no credit card required
 
 ## Key links
+
+- [SaaS Spend Management Features](https://saasspendtrack.com/features/): Track software spend, contract terms, renewal deadlines, approvals, and reports in one workspace.
+- [SaaS Renewal Tracking](https://saasspendtrack.com/saas-renewal-tracking/): Track renewal dates, cancellation notice periods, and contract owners before software subscriptions auto-renew.
+- [SaaS Contract Management](https://saasspendtrack.com/contract-management/): Organize software agreements and review renewal clauses, notice periods, and vendor risk before committing to another term.
+- [SaaS Spend Reporting](https://saasspendtrack.com/saas-spend-reporting/): See software costs by vendor and department, track invoices, and plan for upcoming renewals.
+- [SaaS Vendor Governance](https://saasspendtrack.com/vendor-governance/): Give finance, IT, procurement, and legal a shared vendor register for owners, approvals, and review dates.
+- [SaaS Data Import & Export](https://saasspendtrack.com/data-import-export/): Move your software inventory into SaaS Spend Track from a spreadsheet and export data for reporting or backup.
+- [Product Updates](https://saasspendtrack.com/product-updates/): See recent SaaS Spend Track updates to renewals, vendor approvals, reporting, and workspace setup.
 
 - Live tool: https://app.saasspendtrack.com/
 - Marketing site: https://saasspendtrack.com/
