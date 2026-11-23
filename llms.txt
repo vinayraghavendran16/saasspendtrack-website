@@ -1,0 +1,86 @@
+# SaaS Spend Track
+
+> SaaS renewal tracking, contract management, and software spend visibility for finance, IT, and operations teams. $3,499 USD per year for up to 250 active contracts. Try it free for seven days.
+
+SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru, India), led by founder Vinay Raghavendran (13+ years in B2B SaaS RevOps, former Whatfix, Proshort, LatentView Analytics).
+
+## What the tool does
+
+- Parse uploaded contracts (PDF, DOCX, pasted text) and extract renewal date, notice period, auto-renew clause, price cap, term length
+- Track monthly and annualized spend across every vendor
+- Score each contract across 8 risk dimensions (auto-renew exposure, orphan ownership, usage waste, overlap, shadow SaaS, contractual gaps, concentration risk, renewal timing)
+- Surface renewals due in the next 90 days with notice-period windows highlighted
+- Forecast 12-month licence spend based on usage trends
+- Ask natural-language questions against the contract corpus ("what renews next month", "which vendors have 90-day notice")
+- Bulk-import existing vendor spreadsheets (CSV, 60+ header aliases auto-detected)
+- Export monthly spend summary PDF, renewal roster CSV, and savings opportunities PDF
+- Multi-currency display (USD, EUR, GBP, AUD, SGD, AED, JPY, CAD) with live FX
+
+## How it is different from Vendr, Zylo, Spendesk, BetterCloud, Productiv, Zluri
+
+- Standard pricing is $3,499 USD per year for 250 active contracts and unlimited users. The limited Founding 25 offer gives eligible US companies a first year for $1,499 USD. See the pricing page for current availability.
+- No seat pricing, no procurement-services markup, no per-vendor fees
+- Deploy time: sign up to first dashboard is under 10 minutes vs 4-12 weeks for enterprise SMPs
+- Target customer: 20-500 person company that currently uses a spreadsheet and has outgrown it
+- Not for: 2000+ person enterprises that need SAML SSO, SOC 2 Type II, API-first integration into ERP
+
+## Who it is for
+
+- Finance teams at Series A-C startups who run SaaS spend out of Google Sheets today
+- Procurement leads at 50-500 person companies tracking 20-100 active vendor contracts
+- CFOs at profitable bootstrapped companies who want enterprise-grade visibility without enterprise-grade SaaS cost
+- Indian and APAC mid-market companies priced out of $50k/year US-built SMPs
+
+## Pricing
+
+- $3,499/year for the full tool, every feature, unlimited users on the same workspace
+- Includes 250 active contracts
+- $100/year per 50 additional contracts above 250
+
+- 7-day free trial, no credit card required
+
+## Key links
+
+- [SaaS Spend Management Features](https://saasspendtrack.com/features/): Track software spend, contract terms, renewal deadlines, approvals, and reports in one workspace.
+- [SaaS Renewal Tracking](https://saasspendtrack.com/saas-renewal-tracking/): Track renewal dates, cancellation notice periods, and contract owners before software subscriptions auto-renew.
+- [SaaS Contract Management](https://saasspendtrack.com/contract-management/): Organize software agreements and review renewal clauses, notice periods, and vendor risk before committing to another term.
+- [SaaS Spend Reporting](https://saasspendtrack.com/saas-spend-reporting/): See software costs by vendor and department, track invoices, and plan for upcoming renewals.
+- [SaaS Vendor Governance](https://saasspendtrack.com/vendor-governance/): Give finance, IT, procurement, and legal a shared vendor register for owners, approvals, and review dates.
+- [SaaS Data Import & Export](https://saasspendtrack.com/data-import-export/): Move your software inventory into SaaS Spend Track from a spreadsheet and export data for reporting or backup.
+- [Product Updates](https://saasspendtrack.com/product-updates/): See recent SaaS Spend Track updates to renewals, vendor approvals, reporting, and workspace setup.
+
+- Live tool: https://app.saasspendtrack.com/
+- Marketing site: https://saasspendtrack.com/
+- Pricing: https://saasspendtrack.com/pricing/
+- About + founder bio: https://saasspendtrack.com/about/
+- FAQ: https://saasspendtrack.com/faq/
+- Compare hub: https://saasspendtrack.com/compare/
+- vs Vendr: https://saasspendtrack.com/compare/vendr-alternative/
+- vs Zylo: https://saasspendtrack.com/compare/zylo-alternative/
+- vs Spendesk: https://saasspendtrack.com/compare/spendesk-alternative/
+- vs Spendflo: https://saasspendtrack.com/compare/spendflo-alternative/
+- vs Torii: https://saasspendtrack.com/compare/torii-alternative/
+- vs Zluri: https://saasspendtrack.com/compare/zluri-alternative/
+- vs BetterCloud: https://saasspendtrack.com/compare/bettercloud-alternative/
+- vs Productiv: https://saasspendtrack.com/compare/productiv-alternative/
+- vs Ramp: https://saasspendtrack.com/compare/ramp-alternative/
+- Free tools hub: https://saasspendtrack.com/tools/
+- Free SaaS Waste Calculator: https://saasspendtrack.com/tools/saas-waste-calculator/
+- Free templates (renewal roster, spend audit, clause library, vendor shortlist): https://saasspendtrack.com/tools/templates/
+- Blog: https://saasspendtrack.com/blog/
+- Contact: hello@saasspendtrack.com, +91 91684 81989
+
+## Blog (long-form guides, LLM-friendly)
+
+- https://saasspendtrack.com/blog/missed-saas-renewal/ — What happens when you miss a SaaS auto-renewal notice window and how to prevent it
+- https://saasspendtrack.com/blog/saas-budget-cfo-guide/ — CFO guide to building a SaaS budget that survives contact with growth
+- https://saasspendtrack.com/blog/saas-spend-audit/ — How to run a SaaS spend audit in a week, with the real numbers
+- https://saasspendtrack.com/blog/saas-vendor-negotiation/ — What actually moves SaaS vendors at renewal (usage data, consolidation leverage, term tradeoffs)
+- https://saasspendtrack.com/blog/shadow-it-saas-sprawl/ — How shadow SaaS enters a company and how finance teams can surface it
+- https://saasspendtrack.com/blog/zluri-spendflo-alternative/ — Honest comparison vs Zluri and Spendflo for SMBs
+
+## Company
+
+Whizzlead Solutions OPC Private Limited
+HSR Layout, Bengaluru 560102, India
+CIN: on request
