@@ -1286,3 +1286,50 @@ body.product-home .final-cta .btn-primary:hover { background:#bce9cd; }
   .product-home .nav-inner { padding-inline:10px; gap:4px; }
   .product-home .logo { gap:5px; }
 }
+
+/* Scroll-linked product tour with a compact stacked layout on small screens. */
+.product-tour { padding:clamp(54px,8vw,104px) 0; scroll-margin-top:76px; background:#f3f7f3; }
+.tour-heading { margin-bottom:26px; }
+.tour-heading h2 { max-width:22ch; color:#112f26; font-size:clamp(2rem,4.6vw,3.5rem); line-height:1.08; letter-spacing:-.048em; }
+.tour-heading p,.tour-step p { color:#475c54; margin-top:12px; max-width:46ch; }
+.tour-board { display:none; }
+.tour-steps { display:grid; gap:18px; }
+.tour-step { padding:24px; background:#fff; border:1px solid #d4e0d7; border-radius:16px; scroll-margin-top:100px; }
+.tour-step h3 { color:#17382d; font-size:clamp(1.4rem,3vw,2.15rem); line-height:1.16; letter-spacing:-.03em; }
+.tour-step a { display:inline-block; margin:16px 0 20px; color:#166044; font-weight:700; text-decoration:underline; text-underline-offset:4px; }
+.tour-step .workflow-art { min-height:160px; }
+@media (min-width:960px) and (min-height:650px) {
+  .tour-ready .tour-grid { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,3fr); gap:clamp(32px,6vw,80px); align-items:start; }
+  .tour-ready .tour-board {
+    display:grid; grid-column:2; grid-row:1; position:sticky; top:104px;
+    padding:16px; gap:16px; border:1px solid #466959; border-radius:22px;
+    background:radial-gradient(ellipse at 90% 0%,#315e4f,#112f27 78%); color:#fff;
+    box-shadow:0 22px 44px -26px #12362b80;
+  }
+  .tour-ready .tour-steps { grid-column:1; grid-row:1; gap:0; }
+  .tour-ready .tour-step { display:flex; flex-direction:column; align-items:flex-start; justify-content:center; min-height:clamp(330px,52vh,440px); padding:20px 0; background:transparent; border:0; scroll-margin-top:calc(48vh - 22px); }
+  .tour-ready .tour-step .workflow-art { display:none; }
+  .tour-ready .tour-step a { margin-bottom:0; }
+  .tour-nav { display:flex; flex-wrap:wrap; gap:6px; }
+  .tour-nav a { display:inline-flex; align-items:center; min-height:38px; padding:4px 14px; border-radius:7px; font-weight:650; color:#d9eee1; }
+  .tour-nav a:hover { background:#235344; }
+  .tour-sample { align-self:center; margin-left:auto; color:#d9eee1; font-size:.75rem; }
+  .tour-nav a[aria-current] { color:#123c2d; background:#d4f1df; }
+  .tour-stage { display:grid; min-height:260px; isolation:isolate; }
+  .tour-stage .workflow-art {
+    grid-area:1/1; min-height:260px; padding:clamp(20px,4vw,38px); border-radius:12px;
+    opacity:0; transform:translateY(9px); transition:opacity 360ms ease,transform 420ms cubic-bezier(.2,.7,.2,1);
+    pointer-events:none; font-size:.94rem;
+  }
+  .tour-stage .workflow-art.tour-panel-active { opacity:1; transform:none; z-index:1; }
+  .tour-stage .workflow-file { margin-bottom:8px; }
+  .tour-stage .import-art > div { padding:7px 0; }
+  .tour-stage .spend-art strong,.tour-stage .notice-art strong { font-size:clamp(1.8rem,4vw,2.9rem); }
+  .tour-stage .workflow-bars i { height:16px; }
+  .tour-progress { height:3px; border-radius:3px; background:#406958; }
+  .tour-progress span { display:block; width:100%; height:100%; background:#a7dfbd; transform:scaleX(0); transform-origin:left; border-radius:inherit; }
+}
+@media (prefers-reduced-motion:reduce) {
+  html { scroll-behavior:auto; }
+  .tour-stage .workflow-art { transition:none; transform:none; }
+}

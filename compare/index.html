@@ -46,26 +46,26 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog/blog.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../blog/blog.css">
   <style>
    .cmp-hero { background: var(--bg-soft, #f8fafc); padding: 48px 24px; text-align: center; border-bottom: 1px solid #e4e7ec; }
    .cmp-hero h1 { font-size: 36px; margin: 0 0 12px; letter-spacing: -0.02em; }
    .cmp-hero p { font-size: 16px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-   .cmp-grid { max-width: 960px; margin: 40px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+   .cmp-grid { max-width: 960px; margin: 40px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 16px; }
    .cmp-card { background: #fff; border: 1px solid #e4e7ec; border-radius: 12px; padding: 20px 22px; text-decoration: none; color: inherit; transition: border-color.15s, transform.15s; }
    .cmp-card:hover { border-color: #15803d; transform: translateY(-2px); }
    .cmp-card h3 { margin: 0 0 6px; font-size: 16px; color: #123025; }
    .cmp-card p { margin: 0 0 10px; font-size: 13px; color: #475467; line-height: 1.5; }
-   .cmp-card.cmp-cta { color: #15803d; font-size: 12.5px; font-weight: 600; }
+   .cmp-card .cmp-cta { color: #15803d; font-size: 12.5px; font-weight: 600; }
    .cmp-qa { max-width: 760px; margin: 40px auto; padding: 24px 28px; background: #ecfdf5; border-left: 4px solid #15803d; border-radius: 8px; }
-   .cmp-qa b { display: block; font-size: 12px; color: #15803d; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+   .cmp-qa h2 { font-size: 19px; margin: 0 0 8px; color: #123025; }
    .cmp-qa p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #123025; }
   </style>
 </head>
 <body class="home-light inner-page">
 
-<nav class="site-navigation" aria-label="Main navigation"><div class="site-nav-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div class="site-nav-links"><a href="/features/">Product</a><a href="/pricing/">Pricing</a><a href="/tools/">Tools</a><a href="/compare/">Compare</a><a href="/blog/">Guides</a></div><a class="btn btn-primary btn-sm" href="https://app.saasspendtrack.com/">Start free trial</a></div></nav>
+<nav class="site-navigation" aria-label="Main navigation"><div class="site-nav-inner"><a class="site-brand" href="https://saasspendtrack.com/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div class="site-nav-links"><a href="https://saasspendtrack.com/features/">Product</a><a href="https://saasspendtrack.com/pricing/">Pricing</a><a href="https://saasspendtrack.com/tools/">Tools</a><a href="https://saasspendtrack.com/compare/">Compare</a><a href="https://saasspendtrack.com/blog/">Guides</a></div><a class="btn btn-primary btn-sm" href="https://app.saasspendtrack.com/">Start free trial</a></div></nav>
 
 <section class="cmp-hero">
   <h1>SaaS Spend Track compared</h1>
@@ -73,67 +73,66 @@
 </section>
 
 <div class="cmp-qa">
-  <b>Quick answer</b>
-  <p>If you're a 20-500 person team spending less than $500k/year on SaaS and currently using a spreadsheet, SaaS Spend Track at $3,499 flat is usually the right call. If you're a 1000+ person enterprise with a dedicated procurement team and need SSO, SOC 2 Type II, and ERP integrations, Vendr or Zylo are the better fit. Every comparison below spells out the cutoffs.</p>
+  <h2>What are you trying to solve?</h2><p>Start with the workflow your team owns. Use the comparisons below to see how a renewal workspace, a managed procurement service, and a broader spend platform approach different jobs.</p>
 </div>
 
-<section class="cmp-grid">
+<section class="cmp-grid" aria-label="Detailed product comparisons">
 
-  <a class="cmp-card" href="/compare/vendr-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/vendr-alternative/">
     <h3>vs Vendr</h3>
     <p>Vendr is procurement-as-a-service with human buyers. Expensive, slow to onboard, high ceiling for savings. Honest comparison of when each wins.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/zylo-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/zylo-alternative/">
     <h3>vs Zylo</h3>
     <p>Zylo is the enterprise SaaS management platform. Great for Fortune 1000, overkill for most. When Zylo fits and when it doesn't.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/spendesk-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/spendesk-alternative/">
     <h3>vs Spendesk</h3>
     <p>Spendesk is a spend-management-plus-corporate-cards platform. SaaS management is a module, not the main event. Honest comparison for teams that want contract depth without the card stack.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/spendflo-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/spendflo-alternative/">
     <h3>vs Spendflo</h3>
     <p>Spendflo bundles software + human buyers (procurement-as-a-service). Indian mid-market comparison with the honest math on when each wins.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/torii-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/torii-alternative/">
     <h3>vs Torii</h3>
     <p>Torii's superpower is automated SaaS discovery via SSO + browser extensions. If you already know your stack, that's the expensive part you're not using.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/zluri-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/zluri-alternative/">
     <h3>vs Zluri</h3>
     <p>Fellow Bengaluru team building the comprehensive SaaS management platform. Different scope, different price. When each fits.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/blog/zluri-spendflo-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/blog/zluri-spendflo-alternative/">
     <h3>vs Zluri + Spendflo (together)</h3>
     <p>Original blog post comparing all three Indian mid-market options side by side. Deeper on positioning differences.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/bettercloud-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/bettercloud-alternative/">
     <h3>vs BetterCloud</h3>
     <p>BetterCloud is an IT-ops platform. If your buyer is finance or procurement and you just need the contract and spend piece, pay less.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/productiv-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/productiv-alternative/">
     <h3>vs Productiv</h3>
     <p>Productiv tracks feature-level engagement for enterprise renewal negotiations. Overkill under 1,000 employees.</p>
     <span class="cmp-cta">Read comparison →</span>
   </a>
 
-  <a class="cmp-card" href="/compare/ramp-alternative/">
+  <a class="cmp-card" href="https://saasspendtrack.com/compare/ramp-alternative/">
     <h3>vs Ramp</h3>
     <p>Ramp bundles cards + expenses + bill pay + light SaaS. Specialist SaaS management vs the generalist bundle.</p>
     <span class="cmp-cta">Read comparison →</span>
@@ -141,7 +140,7 @@
 
 </section>
 
-<footer class="site-footer-shared"><div class="site-footer-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div><a href="/features/">Product</a><a href="/product-updates/">Product updates</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/privacy.html">Privacy</a><a href="mailto:hello@saasspendtrack.com">Contact</a></div></div></footer>
+<footer class="site-footer-shared"><div class="site-footer-inner"><a class="site-brand" href="https://saasspendtrack.com/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div><a href="https://saasspendtrack.com/features/">Product</a><a href="https://saasspendtrack.com/product-updates/">Product updates</a><a href="https://saasspendtrack.com/faq/">FAQ</a><a href="https://saasspendtrack.com/about/">About</a><a href="https://saasspendtrack.com/privacy.html">Privacy</a><a href="mailto:hello@saasspendtrack.com">Contact</a></div></div></footer>
 
 </body>
 </html>

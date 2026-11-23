@@ -98,7 +98,7 @@
   <!-- Nav -->
   <nav class="nav">
     <div class="nav-inner">
-      <a href="/" class="logo" aria-label="SaaSSpendTrack home">
+      <a href="https://saasspendtrack.com/" class="logo" aria-label="SaaSSpendTrack home">
         <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <rect width="32" height="32" rx="7" fill="#0F1829"/>
           <rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/>
@@ -108,12 +108,12 @@
         <span>SaaSSpendTrack</span>
       </a>
       <div class="nav-links">
-        <a href="/features/">Product</a>
-        <a href="/product-updates/">What's new</a>
+        <a href="https://saasspendtrack.com/features/">Product</a>
+        <a href="https://saasspendtrack.com/product-updates/">What's new</a>
         <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
-        <a href="/compare/">Compare</a>
-        <a href="/tools/">Free tools</a>
-        <a href="/about/">About</a>
+        <a href="https://saasspendtrack.com/compare/">Compare</a>
+        <a href="https://saasspendtrack.com/tools/">Free tools</a>
+        <a href="https://saasspendtrack.com/about/">About</a>
         <a href="https://app.saasspendtrack.com/" class="btn btn-sm btn-ghost">Log in</a>
         <a href="https://app.saasspendtrack.com/" class="btn btn-sm btn-primary" data-plg="nav-cta" data-trial-cta>Start free trial</a>
       </div>
@@ -123,13 +123,13 @@
       </button>
     </div>
     <div class="mobile-menu" id="mobile-navigation" role="navigation" aria-label="Mobile navigation">
-      <a href="/features/">Product</a>
+      <a href="https://saasspendtrack.com/features/">Product</a>
       <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
-      <a href="/compare/">Compare</a>
-      <a href="/tools/">Free tools</a>
-      <a href="/blog/">Blog</a>
-      <a href="/about/">About</a>
-      <a href="/faq/">FAQ</a>
+      <a href="https://saasspendtrack.com/compare/">Compare</a>
+      <a href="https://saasspendtrack.com/tools/">Free tools</a>
+      <a href="https://saasspendtrack.com/blog/">Blog</a>
+      <a href="https://saasspendtrack.com/about/">About</a>
+      <a href="https://saasspendtrack.com/faq/">FAQ</a>
       <a href="https://app.saasspendtrack.com/">Log in</a>
     </div>
   </nav>
@@ -278,59 +278,72 @@
         </div>
         <div class="lp-footer">
           <span>Try a view above to see what you can track.</span>
-          <a href="/saas-renewal-tracking/" class="lp-open">How renewal tracking works</a>
+          <a href="#features" class="lp-open">Take the product tour</a>
         </div>
       </div>
     </section>
     </div>
   </section>
 
-  <section class="features" id="features" aria-labelledby="features-head">
+  <section class="product-tour" id="features" aria-labelledby="features-head">
     <div class="container">
-      <div class="section-header reveal">
+      <header class="tour-heading">
         <h2 id="features-head">From vendor list to renewal decisions.</h2>
+        <p>Follow one workflow from the first import to the last day to give notice.</p>
+      </header>
+      <div class="tour-grid">
+        <div class="tour-board">
+          <nav class="tour-nav" aria-label="Product tour chapters">
+            <a href="#tour-import" aria-current="location">Import</a>
+            <a href="#tour-spend">Spend</a>
+            <a href="#tour-renewals">Renewals</a>
+            <span class="tour-sample">Sample data</span>
+          </nav>
+          <div class="tour-stage" aria-hidden="true"></div>
+          <div class="tour-progress" aria-hidden="true"><span></span></div>
+        </div>
+        <div class="tour-steps">
+          <article class="tour-step" id="tour-import">
+            <h3>Bring your vendor list with you.</h3>
+            <p>Import a spreadsheet or add contracts as you go. Give each vendor an owner and a renewal date.</p>
+            <a href="https://saasspendtrack.com/data-import-export/">See import and export options</a>
+            <div class="workflow-art import-art" aria-hidden="true">
+              <span class="workflow-file">vendors.csv</span>
+              <div><span>Vendor</span><span>Owner</span><span>Renewal</span></div>
+              <div><span>Figma</span><span>Design</span><span>May 20</span></div>
+              <div><span>Zoom</span><span>IT</span><span>Jun 12</span></div>
+            </div>
+          </article>
+          <article class="tour-step" id="tour-spend">
+            <h3>See who owns each software cost.</h3>
+            <p>Review recurring spend by vendor and department. Bring the same numbers into your next budget conversation.</p>
+            <a href="https://saasspendtrack.com/saas-spend-reporting/">Explore spend reporting</a>
+            <div class="workflow-art spend-art" aria-hidden="true">
+              <span>Annual software spend</span><strong>$126,400</strong>
+              <div class="workflow-bars"><i></i><i></i><i></i></div>
+              <div class="workflow-legend"><span>Sales</span><span>IT</span><span>Design</span></div>
+            </div>
+          </article>
+          <article class="tour-step" id="tour-renewals">
+            <h3>Decide before the notice window closes.</h3>
+            <p>See the renewal date, notice deadline, and annual cost together. Give each owner time to renew, renegotiate, or cancel.</p>
+            <a href="https://saasspendtrack.com/saas-renewal-tracking/">Explore renewal tracking</a>
+            <div class="workflow-art notice-art" aria-hidden="true">
+              <span>Cancellation notice</span>
+              <strong>May <b>01</b></strong>
+              <span class="demo-status upcoming">Decision due</span>
+            </div>
+          </article>
+        </div>
       </div>
-      <div class="feature-summary">
-        <article class="fcard reveal">
-          <div class="workflow-art import-art" aria-hidden="true">
-            <span class="workflow-file">vendors.csv</span>
-            <div><span>Vendor</span><span>Owner</span><span>Renewal</span></div>
-            <div><span>Figma</span><span>Design</span><span>May 20</span></div>
-            <div><span>Zoom</span><span>IT</span><span>Jun 12</span></div>
-          </div>
-          <h3><a href="/data-import-export/">Import your vendors</a></h3>
-          <p>Start with a CSV or add contracts as you go.</p>
-        </article>
-        <article class="fcard reveal">
-          <div class="workflow-art spend-art" aria-hidden="true">
-            <span>Annual software spend</span><strong>$126,400</strong>
-            <div class="workflow-bars"><i></i><i></i><i></i></div>
-            <div class="workflow-legend"><span>Sales</span><span>IT</span><span>Design</span></div>
-          </div>
-          <h3><a href="/saas-spend-reporting/">See what you spend</a></h3>
-          <p>Review software costs by vendor and department.</p>
-        </article>
-        <article class="fcard reveal">
-          <div class="workflow-art notice-art" aria-hidden="true">
-            <span>Cancellation notice</span>
-            <strong>May <b>01</b></strong>
-            <span class="demo-status upcoming">Decision due</span>
-          </div>
-          <h3><a href="/saas-renewal-tracking/">Catch notice deadlines</a></h3>
-          <p>See what renews next and when you need to act.</p>
-        </article>
-      </div>
-      <p class="product-link"><a href="/features/">Explore all product features →</a></p>
     </div>
   </section>
-
-
 
   <section class="renewal-story container" aria-labelledby="renewal-story-heading">
     <div class="reveal">
       <h2 id="renewal-story-heading">A renewal date is only half the story.</h2>
       <p>A contract with 60 days’ notice can lock you in long before renewal. Try changing the notice period to see when you’d need to act.</p>
-      <a href="/saas-renewal-tracking/" class="story-link">Explore renewal tracking</a>
+      <a href="https://saasspendtrack.com/saas-renewal-tracking/" class="story-link">Explore renewal tracking</a>
     </div>
     <div class="notice-example reveal">
       <div class="notice-dates">
@@ -380,7 +393,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <a href="/" class="logo" aria-label="SaaSSpendTrack home">
+          <a href="https://saasspendtrack.com/" class="logo" aria-label="SaaSSpendTrack home">
             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
             <span>SaaSSpendTrack</span>
           </a>
@@ -388,22 +401,22 @@
         </div>
         <div class="footer-col">
           <h4>Product</h4>
-          <a href="/features/">Product</a>
+          <a href="https://saasspendtrack.com/features/">Product</a>
           <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
           <a href="https://app.saasspendtrack.com/">Dashboard</a>
-          <a href="/compare/">Compare alternatives</a>
+          <a href="https://saasspendtrack.com/compare/">Compare alternatives</a>
         </div>
         <div class="footer-col">
           <h4>Free tools</h4>
-          <a href="/tools/saas-waste-calculator/">SaaS Waste Calculator</a>
-          <a href="/tools/templates/">Templates (renewal, audit, clauses)</a>
-          <a href="/blog/">Blog</a>
+          <a href="https://saasspendtrack.com/tools/saas-waste-calculator/">SaaS Waste Calculator</a>
+          <a href="https://saasspendtrack.com/tools/templates/">Templates (renewal, audit, clauses)</a>
+          <a href="https://saasspendtrack.com/blog/">Blog</a>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
-          <a href="/about/">About</a>
-          <a href="/faq/">FAQ</a>
-          <a href="/privacy">Privacy policy</a>
+          <a href="https://saasspendtrack.com/about/">About</a>
+          <a href="https://saasspendtrack.com/faq/">FAQ</a>
+          <a href="https://saasspendtrack.com/privacy">Privacy policy</a>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
@@ -421,7 +434,7 @@
   <!-- Cookie Banner (RB2B compliance) -->
   <div id="cookie-banner" role="dialog" aria-label="Cookie consent" style="display:none;">
     <div class="cookie-inner">
-      <p>We use cookies and tracking technologies-  including <a href="https://www.rb2b.com/privacy-policy" target="_blank" rel="noopener">RB2B</a>-  to identify website visitors and improve our service. By continuing, you agree to our <a href="/privacy">Privacy Policy</a>. You can <a href="https://app.retention.com/optout" target="_blank" rel="noopener">opt out of visitor tracking</a> at any time.</p>
+      <p>We use cookies and tracking technologies-  including <a href="https://www.rb2b.com/privacy-policy" target="_blank" rel="noopener">RB2B</a>-  to identify website visitors and improve our service. By continuing, you agree to our <a href="https://saasspendtrack.com/privacy">Privacy Policy</a>. You can <a href="https://app.retention.com/optout" target="_blank" rel="noopener">opt out of visitor tracking</a> at any time.</p>
       <div class="cookie-actions">
         <button id="cookie-accept" class="btn btn-sm btn-primary">Accept</button>
         <a href="https://app.retention.com/optout" target="_blank" rel="noopener" class="cookie-optout">Opt out of tracking</a>
@@ -430,6 +443,7 @@
   </div>
 
   <script src="campaign-links.js"></script>
+  <script src="product-tour.js" defer></script>
   <script>
     // Mobile menu
     const toggle=document.querySelector('.mobile-toggle'),menu=document.querySelector('.mobile-menu');

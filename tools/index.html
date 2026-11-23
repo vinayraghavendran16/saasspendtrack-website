@@ -27,12 +27,12 @@
   }
   </script>
 
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="../styles.css">
   <style>
    .tl-hero { background: #f8fafc; padding: 48px 24px 32px; text-align: center; border-bottom: 1px solid #e4e7ec; }
    .tl-hero h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: -0.02em; }
-   .tl-hero.sub { font-size: 15.5px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-   .tl-grid { max-width: 920px; margin: 40px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+   .tl-hero .sub { font-size: 15.5px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+   .tl-grid { max-width: 920px; margin: 40px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 16px; }
    .tl-card {
       background: #fff; border: 1px solid #e4e7ec; border-radius: 12px;
       padding: 24px; text-decoration: none; color: inherit;
@@ -47,7 +47,7 @@
 </head>
 <body class="home-light inner-page">
 
-<nav class="site-navigation" aria-label="Main navigation"><div class="site-nav-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div class="site-nav-links"><a href="/features/">Product</a><a href="/pricing/">Pricing</a><a href="/tools/">Tools</a><a href="/compare/">Compare</a><a href="/blog/">Guides</a></div><a class="btn btn-primary btn-sm" href="https://app.saasspendtrack.com/">Start free trial</a></div></nav>
+<nav class="site-navigation" aria-label="Main navigation"><div class="site-nav-inner"><a class="site-brand" href="https://saasspendtrack.com/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div class="site-nav-links"><a href="https://saasspendtrack.com/features/">Product</a><a href="https://saasspendtrack.com/pricing/">Pricing</a><a href="https://saasspendtrack.com/tools/">Tools</a><a href="https://saasspendtrack.com/compare/">Compare</a><a href="https://saasspendtrack.com/blog/">Guides</a></div><a class="btn btn-primary btn-sm" href="https://app.saasspendtrack.com/">Start free trial</a></div></nav>
 
 <section class="tl-hero">
   <h1>Free SaaS management tools</h1>
@@ -55,19 +55,27 @@
 </section>
 
 <section class="tl-grid">
-  <a class="tl-card" href="/tools/saas-waste-calculator/">
+  <a class="tl-card" href="https://saasspendtrack.com/tools/saas-waste-calculator/">
     <h3>SaaS Waste Calculator</h3>
-    <p>Four inputs, 60 seconds. Estimate how much your current stack is wasting annually across unused licenses, overlapping tools, and missed auto-renewals. Shareable link preserves your inputs.</p>
+    <p>Estimate annual waste from underused licenses, tool overlap, and missed renewals. The estimate updates as you enter your data and you can share the result with your team.</p>
     <span class="tl-cta">Open calculator →</span>
   </a>
-  <a class="tl-card" href="/tools/templates/">
+  <a class="tl-card" href="https://saasspendtrack.com/tools/templates/">
     <h3>Templates: renewal roster, spend audit, clause library, vendor shortlist</h3>
-    <p>Four downloadable CSVs we use ourselves. Renewal tracker with notice-window math built in. Audit workbook with the checks that actually matter. Clause library with plain-English translations and negotiating positions. Vendor evaluation matrix.</p>
+    <p>Download four CSVs for your next renewal or audit. Track notice deadlines, review spending, compare contract clauses, and shortlist vendors.</p>
     <span class="tl-cta">Browse templates →</span>
   </a>
 </section>
 
-<footer class="site-footer-shared"><div class="site-footer-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div><a href="/features/">Product</a><a href="/product-updates/">Product updates</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/privacy.html">Privacy</a><a href="mailto:hello@saasspendtrack.com">Contact</a></div></div></footer>
+<section class="product-page-body" aria-labelledby="tools-detail">
+  <h2 id="tools-detail">Choose a template for your next task</h2>
+  <section><h3>Map renewals</h3><p>Use the renewal roster to record contract dates, notice periods, costs, and owners.</p></section>
+  <section><h3>Audit software spend</h3><p>Use the spend audit workbook to collect vendor costs and flag duplicates or underused licenses.</p></section>
+  <section><h3>Review auto-renewal language</h3><p>Use the clause library to identify terms to verify with your team before the next negotiation.</p></section>
+  <section><h3>Compare vendors</h3><p>Use the shortlist matrix to score vendors against your evaluation criteria. <a class="story-link" href="https://saasspendtrack.com/tools/templates/">Browse all four templates</a>.</p></section>
+</section>
+
+<footer class="site-footer-shared"><div class="site-footer-inner"><a class="site-brand" href="https://saasspendtrack.com/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div><a href="https://saasspendtrack.com/features/">Product</a><a href="https://saasspendtrack.com/product-updates/">Product updates</a><a href="https://saasspendtrack.com/faq/">FAQ</a><a href="https://saasspendtrack.com/about/">About</a><a href="https://saasspendtrack.com/privacy.html">Privacy</a><a href="mailto:hello@saasspendtrack.com">Contact</a></div></div></footer>
 
 </body>
 </html>
