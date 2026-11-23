@@ -93,7 +93,7 @@
   <!-- ═══ RB2B Visitor Tracking ═══ -->
   <script>!function(key) {if (window.reb2b) return;window.reb2b = {loaded: true};var s = document.createElement("script");s.async = true;s.src = "https://ddwl4m2hdecbv.cloudfront.net/b/" + key + "/" + key + ".js.gz";document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.getElementsByTagName("script")[0]);}("0NW1GHJ823O4");</script>
 </head>
-<body class="home-light">
+<body class="home-light product-home">
 
   <!-- Nav -->
   <nav class="nav">
@@ -132,16 +132,17 @@
     </div>
   </nav>
 
-  <!-- Hero -->
+  <main>
+  <!-- Product-led hero -->
   <section class="hero" aria-labelledby="hero-headline">
-    <div class="hero-grid-bg" aria-hidden="true"></div>
-    <div class="container hero-content">
-      <div class="hero-badge">For finance, IT, and operations teams</div>
-      <h1 id="hero-headline">Know your SaaS<br><span class="hero-accent">cancel-by dates.</span></h1>
+    <div class="container product-hero-grid">
+    <div class="hero-content">
+      <p class="product-eyebrow">SaaS spend management</p>
+      <h1 id="hero-headline">Know your SaaS <span class="hero-accent">cancel-by dates.</span></h1>
       <p class="hero-sub" id="hero-description">See what renews next, what it costs, and when notice is due.</p>
       <div class="hero-actions">
         <a href="https://app.saasspendtrack.com" class="btn btn-lg btn-primary" data-plg="hero-primary">Start your 7-day free trial →</a>
-        <a href="#dashboard-preview" class="btn btn-lg btn-dark-outline" data-plg="hero-demo">See the dashboard</a>
+        <a href="#dashboard-preview" class="btn btn-lg btn-dark-outline" data-plg="hero-demo">Explore the demo</a>
       </div>
       <p class="hero-trust" style="margin-top:14px">Use your work email. No credit card required.</p>
       <div class="hero-options" role="group" aria-label="Explore product benefits" hidden>
@@ -149,32 +150,21 @@
         <button type="button" data-hook="spend" aria-pressed="false">Spend visibility</button>
         <button type="button" data-hook="spreadsheet" aria-pressed="false">Vendor tracking</button>
       </div>
-      <p class="hero-trust">Or try the <a href="/tools/saas-waste-calculator/" style="color:#2563eb;text-decoration:underline;font-weight:600;">free SaaS waste calculator</a> - 4 inputs, 60 seconds, see what you're probably overspending.</p>
     </div>
-  </section>
 
-  <!-- Live dashboard preview (animated snippets from the tool) -->
-  <section id="dashboard-preview" class="live-preview" aria-label="Live dashboard preview">
-    <div class="container">
-      <div class="lp-head">
-        <span class="sh-badge green">See it live</span>
-        <h2>The dashboard, in motion.</h2>
-        <p class="sh-sub">Explore the dashboard with sample data.</p>
-      </div>
-      <div class="preview-options hero-options" role="group" aria-label="Choose a dashboard view" hidden></div>
+    <section id="dashboard-preview" class="product-demo" aria-labelledby="demo-heading" tabindex="-1">
       <div class="lp-browser">
         <div class="lp-chrome">
-          <span class="lp-dot lp-dot-r"></span>
-          <span class="lp-dot lp-dot-y"></span>
-          <span class="lp-dot lp-dot-g"></span>
-          <div class="lp-url"><svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg> app.saasspendtrack.com</div>
+          <h2 id="demo-heading">Renewal workspace</h2>
+          <span class="demo-sample">Sample data</span>
         </div>
-
+        <div class="demo-layout">
+          <div class="preview-options hero-options" role="group" aria-label="Choose a dashboard view" hidden></div>
         <div class="lp-stage" id="live-preview-stage">
 
           <!-- Scene 1: Dashboard KPIs -->
-          <div class="lp-scene lp-active">
-            <div class="lp-scene-label">Dashboard</div>
+          <div class="lp-scene" data-view="Spend overview" hidden>
+            <div class="lp-scene-label">Spend overview</div>
             <div class="lp-kpis">
               <div class="lp-kpi">
                 <div class="lp-kpi-label">Annual run-rate</div>
@@ -200,8 +190,8 @@
           </div>
 
           <!-- Scene 2: Ask Track -->
-          <div class="lp-scene">
-            <div class="lp-scene-label">Ask Track · Cmd+K</div>
+          <div class="lp-scene" data-view="Ask Track" hidden>
+            <div class="lp-scene-label">Ask Track</div>
             <div class="lp-ask">
               <div class="lp-ask-bar">
                 <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -220,39 +210,25 @@
             </div>
           </div>
 
-          <!-- Scene 3: Renewal Center -->
-          <div class="lp-scene">
-            <div class="lp-scene-label">Renewal Command Center</div>
-            <div class="lp-lanes">
-              <div class="lp-lane lp-lane-crit">
-                <div class="lp-lane-head">⚠️ Critical · act by</div>
-                <div class="lp-card">
-                  <b>Salesforce Sales Cloud</b>
-                  <div class="lp-card-row"><span>Renews in 12 days</span><span class="lp-tag lp-tag-red">Decide now</span></div>
-                  <div class="lp-card-row"><span>Annual: $54,000</span><span class="dim">owner: Priya K.</span></div>
-                </div>
-                <div class="lp-card">
-                  <b>Gong</b>
-                  <div class="lp-card-row"><span>Renews in 9 days</span><span class="lp-tag lp-tag-red">Decide now</span></div>
-                </div>
-              </div>
-              <div class="lp-lane lp-lane-soon">
-                <div class="lp-lane-head">Decide soon · &lt; 45 days</div>
-                <div class="lp-card">
-                  <b>HubSpot Marketing Hub</b>
-                  <div class="lp-card-row"><span>Renews in 44 days</span><span class="lp-tag lp-tag-amber">Review</span></div>
-                </div>
-                <div class="lp-card">
-                  <b>Zoom</b>
-                  <div class="lp-card-row"><span>Renews in 32 days</span><span class="lp-tag lp-tag-amber">Review</span></div>
-                </div>
-              </div>
+          <div class="lp-scene lp-active" data-view="Renewals">
+            <div class="lp-scene-label">Upcoming decisions</div>
+            <div class="demo-renewals" role="region" aria-label="Sample renewal deadlines" tabindex="0">
+              <table>
+                <thead><tr><th scope="col">Vendor</th><th scope="col">Notice due</th><th scope="col">Renewal</th><th scope="col">Annual cost</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Salesforce</th><td><span class="demo-status urgent">Feb 12</span></td><td>Apr 13</td><td>$54,000</td></tr>
+                  <tr><th scope="row">Gong</th><td><span class="demo-status upcoming">Feb 19</span></td><td>Mar 21</td><td>$28,800</td></tr>
+                  <tr><th scope="row">HubSpot</th><td>Mar 08</td><td>Apr 07</td><td>$18,000</td></tr>
+                  <tr><th scope="row">Zoom</th><td>Mar 15</td><td>Apr 14</td><td>$7,200</td></tr>
+                </tbody>
+              </table>
             </div>
+            <p class="demo-deadline-note">Salesforce requires 60 days’ notice in this example.</p>
           </div>
 
           <!-- Scene 4: Licence Forecast chart -->
-          <div class="lp-scene">
-            <div class="lp-scene-label">Licence Forecast · Portfolio seat demand</div>
+          <div class="lp-scene" data-view="Seat forecast" hidden>
+            <div class="lp-scene-label">Licence forecast · portfolio seat demand</div>
             <svg class="lp-chart" viewBox="0 0 640 220" preserveAspectRatio="xMidYMid meet">
               <line x1="40" y1="180" x2="620" y2="180" stroke="rgba(255,255,255,0.2)"/>
               <line x1="40" y1="120" x2="620" y2="120" stroke="rgba(255,255,255,0.08)" stroke-dasharray="3,4"/>
@@ -279,8 +255,8 @@
           </div>
 
           <!-- Scene 5: Risk analytics -->
-          <div class="lp-scene">
-            <div class="lp-scene-label">Risk analytics · 8-dimension scoring</div>
+          <div class="lp-scene" data-view="Contract risk" hidden>
+            <div class="lp-scene-label">Contract risk</div>
             <div class="lp-risk-grid">
               <div class="lp-risk-row"><span>Financial</span><div class="lp-risk-bar"><div style="width:62%;background:#f59e0b"></div></div><b>62</b></div>
               <div class="lp-risk-row"><span>Legal</span><div class="lp-risk-bar"><div style="width:78%;background:#ef4444"></div></div><b>78</b></div>
@@ -296,12 +272,12 @@
 
         </div>
 
+        </div>
         <div class="lp-footer">
-          <span class="lp-live-dot"></span>
-          <span>Live · all data from the running app</span>
-          <a href="https://app.saasspendtrack.com" class="lp-open">Open the real one →</a>
+          <a href="/saas-renewal-tracking/" class="lp-open">See how renewal tracking works</a>
         </div>
       </div>
+    </section>
     </div>
   </section>
 
@@ -311,9 +287,9 @@
         <h2 id="features-head">From vendor list to renewal decisions.</h2>
       </div>
       <div class="feature-summary">
-        <article class="fcard reveal"><h3>Import your vendors</h3><p>Start with a CSV or add contracts as you go.</p></article>
-        <article class="fcard reveal"><h3>See what you spend</h3><p>Review software costs by vendor and department.</p></article>
-        <article class="fcard reveal"><h3>Catch notice deadlines</h3><p>See what renews next and when you need to act.</p></article>
+        <article class="fcard reveal"><h3><a href="/data-import-export/">Import your vendors</a></h3><p>Start with a CSV or add contracts as you go.</p></article>
+        <article class="fcard reveal"><h3><a href="/saas-spend-reporting/">See what you spend</a></h3><p>Review software costs by vendor and department.</p></article>
+        <article class="fcard reveal"><h3><a href="/saas-renewal-tracking/">Catch notice deadlines</a></h3><p>See what renews next and when you need to act.</p></article>
       </div>
       <p class="product-link"><a href="/features/">Explore all product features →</a></p>
     </div>
@@ -359,6 +335,8 @@
       <p class="cta-sub">Work email required · No credit card</p>
     </div>
   </section>
+
+  </main>
 
   <!-- Footer -->
   <footer class="footer" role="contentinfo">
@@ -470,7 +448,7 @@
       const accent = document.createElement('span');
       accent.className = 'hero-accent';
       accent.textContent = second;
-      heading.replaceChildren(first, document.createElement('br'), accent);
+      heading.replaceChildren(first + ' ', accent);
       description.textContent = body;
       hookButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.hook === name)));
       trialLinks.forEach(link => {
@@ -523,15 +501,16 @@
       const previewButtons = [...scenes].map((scene, index) => {
         const button = document.createElement('button');
         button.type = 'button';
-        button.textContent = scene.querySelector('.lp-scene-label').textContent.trim();
+        button.textContent = scene.dataset.view;
         button.addEventListener('click', () => showScene(index));
-        controls.append(button);
+        if (scene.dataset.view === 'Renewals') controls.prepend(button);
+        else controls.append(button);
         return button;
       });
       function showScene(i) {
         scenes.forEach((scene, index) => {
           scene.classList.toggle('lp-active', index === i);
-          scene.inert = index !== i;
+          scene.hidden = index !== i;
           previewButtons[index].setAttribute('aria-pressed', String(index === i));
         });
         const s = scenes[i];
@@ -581,7 +560,7 @@
           chartPath.style.strokeDashoffset = 0;
         }
       }
-      showScene(0);
+      showScene([...scenes].findIndex(scene => scene.dataset.view === 'Renewals'));
       controls.hidden = false;
     })();
   </script>
