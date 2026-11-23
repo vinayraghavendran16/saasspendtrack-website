@@ -41,3 +41,5 @@
 @media (max-width: 760px) {
   .demo-walkthrough { grid-template-columns: minmax(0, 1fr); }
 }
+#chapter-status:empty { display: none; }
+.demo-chapters a[aria-current="true"] { background: #edf6ee; }
