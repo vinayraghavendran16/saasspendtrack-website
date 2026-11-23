@@ -76,7 +76,28 @@
   <link rel="stylesheet" href="../../styles.css">
   <link rel="stylesheet" href="../blog.css">
 </head><body class="home-light inner-page">
-  <nav class="site-navigation" aria-label="Main navigation"><div class="site-nav-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div class="site-nav-links"><a href="/features/">Product</a><a href="/pricing/">Pricing</a><a href="/tools/">Tools</a><a href="/compare/">Compare</a><a href="/blog/">Guides</a></div><a class="btn btn-primary btn-sm" href="https://app.saasspendtrack.com/">Start free trial</a></div></nav>
+  <a class="site-skip" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-row">
+      <a class="site-brand" href="https://saasspendtrack.com/" aria-label="SaaS Spend Track home"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SaaS Spend Track</span></a>
+      <nav class="site-header-links" id="site-menu" aria-label="Main navigation">
+        <a href="https://saasspendtrack.com/features/">Product</a>
+        <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
+        <a href="https://saasspendtrack.com/compare/">Compare</a>
+        <a href="https://saasspendtrack.com/tools/">Free tools</a>
+        <a href="https://saasspendtrack.com/blog/" data-active>Guides</a>
+        <a href="https://saasspendtrack.com/product-updates/">What’s new</a>
+        <a href="https://saasspendtrack.com/about/">About</a>
+        <a class="site-menu-login" href="https://app.saasspendtrack.com/">Log in</a>
+      </nav>
+      <div class="site-header-actions">
+        <a class="site-login" href="https://app.saasspendtrack.com/">Log in</a>
+        <a class="btn btn-primary btn-sm site-trial" href="https://app.saasspendtrack.com/" data-plg="nav-cta" data-trial-cta>Start free trial</a>
+        <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      </div>
+    </div>
+  </header>
+<main id="main-content" tabindex="-1">
   <article class="blog-article">
   <div class="breadcrumb"><a href="https://saasspendtrack.com">Home</a> / <a href="https://saasspendtrack.com/blog">Blog</a> / SaaSSpendTrack vs Zluri vs Spendflo</div>
   <div class="blog-meta">
@@ -272,11 +293,22 @@
     <a href="/blog/saas-vendor-negotiation/">→ 5 SaaS Vendor Negotiation Tactics That Saved $127K</a>
   </div>
 </article>
-  <footer class="site-footer-shared"><div class="site-footer-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div><a href="/features/">Product</a><a href="/product-updates/">Product updates</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/privacy.html">Privacy</a><a href="mailto:hello@saasspendtrack.com">Contact</a></div></div></footer>
-  <script>
-    const toggle=document.querySelector('.mobile-toggle'),menu=document.querySelector('.mobile-menu');
-    if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});
-    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));}
-  </script>
+  </main>
+<footer class="site-footer-shared">
+  <div class="site-footer-inner">
+    <a class="site-brand" href="https://saasspendtrack.com/" aria-label="SaaS Spend Track home"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SaaS Spend Track</span></a>
+    <nav aria-label="Footer navigation" class="site-footer-links">
+      <a href="https://saasspendtrack.com/saas-renewal-tracking/">Renewal tracking</a>
+      <a href="https://saasspendtrack.com/tools/saas-waste-calculator/">Waste calculator</a>
+      <a href="https://saasspendtrack.com/tools/templates/">Templates</a>
+      <a href="https://saasspendtrack.com/product-updates/">What’s new</a>
+      <a href="https://saasspendtrack.com/faq/">FAQ</a>
+      <a href="https://saasspendtrack.com/privacy">Privacy</a>
+      <a href="mailto:hello@saasspendtrack.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../site-ui.js" defer></script>
 </body>
 </html>
