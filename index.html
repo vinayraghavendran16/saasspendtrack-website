@@ -110,7 +110,7 @@
       <div class="nav-links">
         <a href="/features/">Product</a>
         <a href="/product-updates/">What's new</a>
-        <a href="/pricing/">Pricing</a>
+        <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
         <a href="/compare/">Compare</a>
         <a href="/tools/">Free tools</a>
         <a href="/about/">About</a>
@@ -124,7 +124,7 @@
     </div>
     <div class="mobile-menu" id="mobile-navigation" role="navigation" aria-label="Mobile navigation">
       <a href="/features/">Product</a>
-      <a href="/pricing/">Pricing</a>
+      <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
       <a href="/compare/">Compare</a>
       <a href="/tools/">Free tools</a>
       <a href="/blog/">Blog</a>
@@ -357,7 +357,7 @@
         <p>Renews at <strong>$3,499 USD per year</strong>. Includes 250 active contracts and unlimited users.</p>
         <div class="hero-actions">
           <a href="https://app.saasspendtrack.com/" class="btn btn-primary" data-plg="pricing-try" data-trial-cta>Start my free trial</a>
-          <a href="/pricing/" class="price-detail-link" data-pricing-cta>View pricing details</a>
+          <a href="https://saasspendtrack.com/pricing/" class="price-detail-link" data-pricing-cta>View pricing details</a>
         </div>
       </div>
     </div>
@@ -389,7 +389,7 @@
         <div class="footer-col">
           <h4>Product</h4>
           <a href="/features/">Product</a>
-          <a href="/pricing/">Pricing</a>
+          <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
           <a href="https://app.saasspendtrack.com/">Dashboard</a>
           <a href="/compare/">Compare alternatives</a>
         </div>
@@ -403,7 +403,7 @@
           <h4>Company</h4>
           <a href="/about/">About</a>
           <a href="/faq/">FAQ</a>
-          <a href="/privacy.html">Privacy policy</a>
+          <a href="/privacy">Privacy policy</a>
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
@@ -421,7 +421,7 @@
   <!-- Cookie Banner (RB2B compliance) -->
   <div id="cookie-banner" role="dialog" aria-label="Cookie consent" style="display:none;">
     <div class="cookie-inner">
-      <p>We use cookies and tracking technologies-  including <a href="https://www.rb2b.com/privacy-policy" target="_blank" rel="noopener">RB2B</a>-  to identify website visitors and improve our service. By continuing, you agree to our <a href="/privacy.html">Privacy Policy</a>. You can <a href="https://app.retention.com/optout" target="_blank" rel="noopener">opt out of visitor tracking</a> at any time.</p>
+      <p>We use cookies and tracking technologies-  including <a href="https://www.rb2b.com/privacy-policy" target="_blank" rel="noopener">RB2B</a>-  to identify website visitors and improve our service. By continuing, you agree to our <a href="/privacy">Privacy Policy</a>. You can <a href="https://app.retention.com/optout" target="_blank" rel="noopener">opt out of visitor tracking</a> at any time.</p>
       <div class="cookie-actions">
         <button id="cookie-accept" class="btn btn-sm btn-primary">Accept</button>
         <a href="https://app.retention.com/optout" target="_blank" rel="noopener" class="cookie-optout">Opt out of tracking</a>
@@ -503,7 +503,7 @@
       (window.dataLayer ||= []).push({ event, assigned_hook: assignedHook, hero_hook: activeHook, ...detail });
     };
     const trialLinks = [...document.querySelectorAll('[data-trial-cta]')];
-    const pricingLinks = [...document.querySelectorAll('.nav a[href="/pricing/"], [data-pricing-cta]')];
+    const pricingLinks = [...document.querySelectorAll('[data-pricing-cta]')];
     function showHook(name) {
       activeHook = name;
       const [first, second, body] = hooks.get(name);
