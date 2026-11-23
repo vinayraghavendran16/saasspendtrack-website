@@ -65,10 +65,31 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/blog/blog.css">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="stylesheet" href="../blog.css">
 </head><body class="home-light inner-page">
-  <nav class="site-navigation" aria-label="Main navigation"><div class="site-nav-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div class="site-nav-links"><a href="/features/">Product</a><a href="/pricing/">Pricing</a><a href="/tools/">Tools</a><a href="/compare/">Compare</a><a href="/blog/">Guides</a></div><a class="btn btn-primary btn-sm" href="https://app.saasspendtrack.com/">Start free trial</a></div></nav>
+  <a class="site-skip" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="site-header-row">
+      <a class="site-brand" href="https://saasspendtrack.com/" aria-label="SaaS Spend Track home"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SaaS Spend Track</span></a>
+      <nav class="site-header-links" id="site-menu" aria-label="Main navigation">
+        <a href="https://saasspendtrack.com/features/">Product</a>
+        <a href="https://saasspendtrack.com/pricing/" data-pricing-cta>Pricing</a>
+        <a href="https://saasspendtrack.com/compare/">Compare</a>
+        <a href="https://saasspendtrack.com/tools/">Free tools</a>
+        <a href="https://saasspendtrack.com/blog/" data-active>Guides</a>
+        <a href="https://saasspendtrack.com/product-updates/">What’s new</a>
+        <a href="https://saasspendtrack.com/about/">About</a>
+        <a class="site-menu-login" href="https://app.saasspendtrack.com/">Log in</a>
+      </nav>
+      <div class="site-header-actions">
+        <a class="site-login" href="https://app.saasspendtrack.com/">Log in</a>
+        <a class="btn btn-primary btn-sm site-trial" href="https://app.saasspendtrack.com/" data-plg="nav-cta" data-trial-cta>Start free trial</a>
+        <button class="site-menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu">Menu</button>
+      </div>
+    </div>
+  </header>
+<main id="main-content" tabindex="-1">
   <article class="blog-article">
   <div class="breadcrumb"><a href="https://saasspendtrack.com">Home</a> / <a href="https://saasspendtrack.com/blog">Blog</a> / The CFO's Blind Spot</div>
   <div class="blog-meta">
@@ -77,7 +98,7 @@
     <span>10 min read</span>
   </div>
 
-  <div class="article-hero"><img src="/blog/images/saas-budget-cfo-guide.png" alt="CFO reviewing SaaS spend as a top operating expense" width="1440" height="720" loading="eager"></div>
+  <div class="article-hero"><img src="../images/saas-budget-cfo-guide.png" alt="CFO reviewing SaaS spend as a top operating expense" width="1440" height="720" loading="eager"></div>
 
   <h1>The CFO's Blind Spot: Why SaaS Is Now Your Third-Largest Operating Expense (and Nobody Owns It)</h1>
   <p class="blog-subtitle">Headcount. Office space. Software. For most growing companies, SaaS has quietly climbed into the top three operating expenses-  without a single person or team responsible for managing it.</p>
@@ -168,7 +189,7 @@
   <div class="callout callout-green">
     <div class="callout-title">✅ Building this doesn't require a $30K platform</div>
     <p>SaaSSpendTrack gives growing teams all three of these capabilities-  centralized dashboard, proactive renewal alerts, multi-department access-  for $3,499 USD/year. No implementation team. No month-long deployment. No per-seat pricing. You upload your contracts, configure your alerts, and the system is live in 30 minutes.</p>
-    <p>For companies under 500 employees, the question isn't whether to invest in SaaS management. It's whether to spend $30,000+ on an enterprise platform or $99 on the tool that solves the actual problem.</p>
+    <p>Choose the renewal and spend workflows your team needs, then check <a href="/pricing/">current pricing</a>.</p>
   </div>
 
   <h2>The Leadership Shift</h2>
@@ -184,7 +205,7 @@
   <div class="blog-cta-box">
     <h3>See exactly where your SaaS budget goes.</h3>
     <p>One dashboard. Every contract. Every renewal. Every invoice. Free to start.</p>
-    <a href="https://contractiq.whizzlead.com" class="btn btn-lg btn-primary">Start tracking-  free →</a>
+    <a href="https://app.saasspendtrack.com/" class="btn btn-lg btn-primary">Start free trial</a>
   </div>
 
   <div class="related">
@@ -194,11 +215,22 @@
     <a href="/blog/saas-vendor-negotiation/">→ 5 SaaS Vendor Negotiation Tactics That Saved $127K</a>
   </div>
 </article>
-  <footer class="site-footer-shared"><div class="site-footer-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div><a href="/features/">Product</a><a href="/product-updates/">Product updates</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/privacy.html">Privacy</a><a href="mailto:hello@saasspendtrack.com">Contact</a></div></div></footer>
-  <script>
-    const toggle=document.querySelector('.mobile-toggle'),menu=document.querySelector('.mobile-menu');
-    if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});
-    document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));}
-  </script>
+  </main>
+<footer class="site-footer-shared">
+  <div class="site-footer-inner">
+    <a class="site-brand" href="https://saasspendtrack.com/" aria-label="SaaS Spend Track home"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SaaS Spend Track</span></a>
+    <nav aria-label="Footer navigation" class="site-footer-links">
+      <a href="https://saasspendtrack.com/saas-renewal-tracking/">Renewal tracking</a>
+      <a href="https://saasspendtrack.com/tools/saas-waste-calculator/">Waste calculator</a>
+      <a href="https://saasspendtrack.com/tools/templates/">Templates</a>
+      <a href="https://saasspendtrack.com/product-updates/">What’s new</a>
+      <a href="https://saasspendtrack.com/faq/">FAQ</a>
+      <a href="https://saasspendtrack.com/privacy">Privacy</a>
+      <a href="mailto:hello@saasspendtrack.com">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script src="../../site-ui.js" defer></script>
 </body>
 </html>
