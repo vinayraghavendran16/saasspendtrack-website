@@ -65,27 +65,27 @@
 
   <link rel="stylesheet" href="/styles.css">
   <style>
-    .about-hero { background: #f8fafc; padding: 56px 24px 40px; text-align: center; border-bottom: 1px solid #e4e7ec; }
-    .about-hero h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: -0.02em; }
-    .about-hero .sub { font-size: 15px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-    .about-body { max-width: 760px; margin: 40px auto 48px; padding: 0 24px; }
-    .about-body h2 { font-size: 22px; margin: 32px 0 12px; letter-spacing: -0.015em; }
-    .about-body p { font-size: 15.5px; line-height: 1.75; color: #344054; margin: 0 0 16px; }
-    .about-body p b { color: #0f1829; }
-    .about-body ul { font-size: 15.5px; line-height: 1.75; color: #344054; padding-left: 22px; margin: 0 0 16px; }
-    .about-body a { color: #2563eb; }
-    .founder-card { display: grid; grid-template-columns: 110px 1fr; gap: 18px; align-items: start; background: #fff; border: 1px solid #e4e7ec; border-radius: 12px; padding: 20px; margin: 20px 0 10px; }
-    .founder-avatar { width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #0f1829); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 32px; letter-spacing: -0.02em; }
-    .founder-name { font-size: 18px; font-weight: 600; color: #0f1829; margin-bottom: 2px; }
-    .founder-title { font-size: 13px; color: #667085; margin-bottom: 10px; }
-    .founder-bio { font-size: 13.5px; color: #344054; line-height: 1.6; margin: 0; }
-    .about-cta { background: #0f1829; color: #fff; padding: 30px 32px; border-radius: 12px; margin: 40px 0 0; text-align: center; }
-    .about-cta h3 { color: #fff; margin: 0 0 8px; }
-    .about-cta p { color: rgba(255,255,255,0.75); margin: 0 0 16px; font-size: 14px; }
-    .about-cta a { background: #2563eb; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; display: inline-block; }
-    .about-cta a:hover { background: #1d4ed8; }
-    .company-block { background: #f8fafc; border-left: 4px solid #2563eb; padding: 16px 20px; border-radius: 6px; margin: 16px 0; font-size: 14px; color: #475467; line-height: 1.6; }
-    .company-block b { color: #0f1829; }
+   .about-hero { background: #f8fafc; padding: 56px 24px 40px; text-align: center; border-bottom: 1px solid #e4e7ec; }
+   .about-hero h1 { font-size: 34px; margin: 0 0 12px; letter-spacing: -0.02em; }
+   .about-hero.sub { font-size: 15px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+   .about-body { max-width: 760px; margin: 40px auto 48px; padding: 0 24px; }
+   .about-body h2 { font-size: 22px; margin: 32px 0 12px; letter-spacing: -0.015em; }
+   .about-body p { font-size: 15.5px; line-height: 1.75; color: #344054; margin: 0 0 16px; }
+   .about-body p b { color: #0f1829; }
+   .about-body ul { font-size: 15.5px; line-height: 1.75; color: #344054; padding-left: 22px; margin: 0 0 16px; }
+   .about-body a { color: #2563eb; }
+   .founder-card { display: grid; grid-template-columns: 110px 1fr; gap: 18px; align-items: start; background: #fff; border: 1px solid #e4e7ec; border-radius: 12px; padding: 20px; margin: 20px 0 10px; }
+   .founder-avatar { width: 110px; height: 110px; border-radius: 50%; background: linear-gradient(135deg, #2563eb, #0f1829); color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 32px; letter-spacing: -0.02em; }
+   .founder-name { font-size: 18px; font-weight: 600; color: #0f1829; margin-bottom: 2px; }
+   .founder-title { font-size: 13px; color: #667085; margin-bottom: 10px; }
+   .founder-bio { font-size: 13.5px; color: #344054; line-height: 1.6; margin: 0; }
+   .about-cta { background: #0f1829; color: #fff; padding: 30px 32px; border-radius: 12px; margin: 40px 0 0; text-align: center; }
+   .about-cta h3 { color: #fff; margin: 0 0 8px; }
+   .about-cta p { color: rgba(255,255,255,0.75); margin: 0 0 16px; font-size: 14px; }
+   .about-cta a { background: #2563eb; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; display: inline-block; }
+   .about-cta a:hover { background: #1d4ed8; }
+   .company-block { background: #f8fafc; border-left: 4px solid #2563eb; padding: 16px 20px; border-radius: 6px; margin: 16px 0; font-size: 14px; color: #475467; line-height: 1.6; }
+   .company-block b { color: #0f1829; }
   </style>
 </head>
 <body>
@@ -97,7 +97,7 @@
     <a href="/compare/">Compare</a>
     <a href="/blog/">Blog</a>
     <a href="/about/" class="is-active">About</a>
-    <a href="https://app.saasspendtrack.com/" class="nav-cta">Start free trial</a>
+    <a href="https://app.saasspendtrack.com/" class="nav-cta">Start your 7-day free trial</a>
   </div>
 </nav>
 
@@ -125,7 +125,7 @@
   <p>Nobody was building what we actually needed: structured enough to replace the spreadsheet, light enough to deploy in an afternoon, priced like a tool instead of a platform. So I built it.</p>
 
   <h2>The architectural bet</h2>
-  <p>SaaS Spend Track runs <b>entirely in your browser</b>. There is no backend. Every contract, vendor record, and spend number you enter stays on your device in localStorage. The only external calls are optional: a frankfurter.app currency rate fetch if you change display currency, an Apps Script endpoint that captures your signup email for the trial drip, and the Razorpay checkout page when you pay.</p>
+  <p>For information about workspace data and privacy, see our <a href="/privacy.html">Privacy Policy</a>.</p>
   <p>Three things follow from that choice:</p>
   <ul>
     <li><b>Your data never leaves your machine.</b> There is no vendor-side breach surface. Your compliance team gets a one-sentence answer to the data-residency question.</li>
@@ -141,14 +141,14 @@
     GSTIN + CIN available on request<br>
     Contact: <a href="mailto:vinay@saasspendtrack.com">vinay@saasspendtrack.com</a> · +91 91684 81989
   </div>
-  <p>Whizzlead Solutions is an OPC (One Person Company) under Indian company law, which is exactly what it sounds like: me, with proper legal and tax structure. The company holds the product, invoices customers, files GST, and files a Letter of Undertaking (LUT) annually so international customers pay no GST.</p>
+  <p>SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited.</p>
 
   <h2>What's live today</h2>
   <p>Shipping updates most weeks. Here's where the product is as of November 2026:</p>
   <ul>
     <li><b>Ask Track</b> - natural-language assistant with 20+ intents (renewals, spend, utilization, contracts, risk). No SQL, no filters, no dashboard hunting.</li>
     <li><b>Tool discovery &amp; bulk import</b> - paste a CSV from any source, auto-map 60+ column aliases, fuzzy-match duplicates. Discover your SaaS stack in minutes.</li>
-    <li><b>Multi-currency</b> - 9 currencies (USD, INR, EUR, GBP, AUD, SGD, AED, JPY, CAD) with live FX and per-subscription currency override.</li>
+    <li><b>Multi-currency</b> - Multiple currencies (USD, EUR, GBP, AUD, SGD, AED, JPY, CAD) with live FX and per-subscription currency override.</li>
     <li><b>Reports</b> - Monthly Spend PDF, Renewal Roster CSV, Savings Opportunities PDF, all generated client-side.</li>
     <li><b>Command palette</b> - ⌘K brings up 33 indexed actions. Keyboard-first for anyone who lives in their browser.</li>
     <li><b>Installable PWA</b> - one-click install on iOS, Android, Windows, macOS, Linux. Home-screen icon, no app store round-trip.</li>
@@ -159,8 +159,7 @@
 
   <h2>What I promise</h2>
   <ul>
-    <li>Your data stays in your browser. Period. There is no backend that could ever change that without you downloading new code.</li>
-    <li>Flat pricing stays flat. No "introductory" rate that renews at 3x.</li>
+        <li>Flat pricing stays flat. No "introductory" rate that renews at 3x.</li>
     <li>Email replies come from me, usually within a business day. Often same day.</li>
     <li>If the tool is wrong for your situation, I'll say so. The <a href="/compare/">compare pages</a> are deliberately honest about when Vendr, Zylo, or Spendesk is the better call. I'd rather you buy the right tool and leave a good review than buy mine and leave a bad one.</li>
     <li>If SaaS Spend Track ever shuts down, the last build you downloaded will still work in your browser indefinitely. You own your data because it's in your localStorage. Export to JSON any time.</li>
@@ -168,8 +167,8 @@
 
   <div class="about-cta">
     <h3>Try it before deciding</h3>
-    <p>14-day free trial, work email only, no credit card. Your data stays in your browser whether you pay or not.</p>
-    <a href="https://app.saasspendtrack.com/">Start free trial →</a>
+    <p>7-day free trial, work email only, no credit card. Your data stays in your browser whether you pay or not.</p>
+    <a href="https://app.saasspendtrack.com/">Start your 7-day free trial →</a>
   </div>
 
 </article>

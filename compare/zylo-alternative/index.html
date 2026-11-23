@@ -39,47 +39,59 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "What is a cheaper alternative to Zylo?", "acceptedAnswer": {"@type": "Answer", "text": "SaaS Spend Track at $3,499/year flat is a mid-market alternative to Zylo, which typically prices in the $25k-$150k/year range depending on employee count and integrations. The tradeoff is that SaaS Spend Track doesn't do automated SaaS discovery via SSO or API; you add vendors manually or via bulk CSV import."}},
-      {"@type": "Question", "name": "When is Zylo worth the price?", "acceptedAnswer": {"@type": "Answer", "text": "Zylo makes financial sense when your organization has 1,000+ employees, 100+ SaaS vendors, a dedicated IT / Finance team managing them, and regulatory needs for SOC 2 Type II, SAML SSO, and per-user audit logs. Below that threshold, the integration complexity and cost outweigh the automation benefit."}},
-      {"@type": "Question", "name": "Can SaaS Spend Track discover shadow SaaS automatically?", "acceptedAnswer": {"@type": "Answer", "text": "Not from SSO or expense data directly; the tool runs entirely in your browser so it has no API access to Okta, your accounting system, or your corporate cards. It identifies likely shadow SaaS by letting you import your invoice data via CSV and flagging vendor names that don't match your approved subscription list. This is manual-import-based discovery, not real-time."}},
-      {"@type": "Question", "name": "Does SaaS Spend Track have SSO?", "acceptedAnswer": {"@type": "Answer", "text": "Not currently. The product runs entirely in the browser with no backend, so there is nothing to SSO into. If SSO is a hard compliance requirement from your security team, Zylo is the right choice. The architectural trade-off is deliberate: no backend means no breach surface, no vendor-side data retention, and enables the flat $3,499 pricing."}}
-    ]
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a cheaper alternative to Zylo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SaaS Spend Track at $3,499/year flat is a mid-market alternative to Zylo, which typically prices in the $25k-$150k/year range depending on employee count and integrations. The tradeoff is that SaaS Spend Track doesn't do automated SaaS discovery via SSO or API; you add vendors manually or via bulk CSV import."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When is Zylo worth the price?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Zylo makes financial sense when your organization has 1,000+ employees, 100+ SaaS vendors, a dedicated IT / Finance team managing them, and regulatory needs for SOC 2 Type II, SAML SSO, and per-user audit logs. Below that threshold, the integration complexity and cost outweigh the automation benefit."
+      }
+    }
+  ]
+}
+</script>
 
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/blog/blog.css">
   <style>
-    .cmp-hero { background: #f8fafc; padding: 48px 24px 32px; text-align: center; border-bottom: 1px solid #e4e7ec; }
-    .cmp-hero h1 { font-size: 32px; margin: 0 0 12px; letter-spacing: -0.02em; max-width: 780px; margin-left: auto; margin-right: auto; }
-    .cmp-hero .sub { font-size: 15px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-    .cmp-qa { max-width: 760px; margin: 32px auto; padding: 22px 28px; background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 8px; }
-    .cmp-qa b { display: block; font-size: 12px; color: #2563eb; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
-    .cmp-qa p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #0f1829; }
-    .cmp-body { max-width: 760px; margin: 0 auto; padding: 0 24px 48px; }
-    .cmp-body h2 { font-size: 22px; margin: 36px 0 12px; letter-spacing: -0.015em; color: #0f1829; }
-    .cmp-body p, .cmp-body ul { font-size: 15px; line-height: 1.7; color: #344054; }
-    .cmp-body ul { margin: 0 0 14px; padding-left: 22px; }
-    .cmp-body p { margin: 0 0 14px; }
-    .cmp-body table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
-    .cmp-body th { text-align: left; padding: 10px 12px; background: #f8fafc; border-bottom: 2px solid #e4e7ec; color: #0f1829; font-weight: 600; }
-    .cmp-body td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; color: #344054; vertical-align: top; }
-    .cmp-body td:first-child { font-weight: 500; color: #0f1829; width: 34%; }
-    .cmp-body td.ok { color: #059669; font-weight: 500; }
-    .cmp-body td.no { color: #94a3b8; }
-    .cmp-cta { background: #0f1829; color: #fff; padding: 30px 32px; border-radius: 12px; margin: 36px 0 0; text-align: center; }
-    .cmp-cta h3 { color: #fff; margin: 0 0 8px; }
-    .cmp-cta p { color: rgba(255,255,255,0.75); margin: 0 0 16px; font-size: 14px; }
-    .cmp-cta a { background: #2563eb; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; display: inline-block; }
-    .cmp-cta a:hover { background: #1d4ed8; }
-    .faq details { border: 1px solid #e4e7ec; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; background: #fff; }
-    .faq summary { font-weight: 600; cursor: pointer; font-size: 14.5px; color: #0f1829; }
-    .faq details[open] summary { margin-bottom: 8px; }
-    .faq p { font-size: 14px; color: #344054; margin: 0; line-height: 1.6; }
+   .cmp-hero { background: #f8fafc; padding: 48px 24px 32px; text-align: center; border-bottom: 1px solid #e4e7ec; }
+   .cmp-hero h1 { font-size: 32px; margin: 0 0 12px; letter-spacing: -0.02em; max-width: 780px; margin-left: auto; margin-right: auto; }
+   .cmp-hero.sub { font-size: 15px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+   .cmp-qa { max-width: 760px; margin: 32px auto; padding: 22px 28px; background: #eff6ff; border-left: 4px solid #2563eb; border-radius: 8px; }
+   .cmp-qa b { display: block; font-size: 12px; color: #2563eb; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px; }
+   .cmp-qa p { margin: 0; font-size: 14.5px; line-height: 1.6; color: #0f1829; }
+   .cmp-body { max-width: 760px; margin: 0 auto; padding: 0 24px 48px; }
+   .cmp-body h2 { font-size: 22px; margin: 36px 0 12px; letter-spacing: -0.015em; color: #0f1829; }
+   .cmp-body p,.cmp-body ul { font-size: 15px; line-height: 1.7; color: #344054; }
+   .cmp-body ul { margin: 0 0 14px; padding-left: 22px; }
+   .cmp-body p { margin: 0 0 14px; }
+   .cmp-body table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14px; }
+   .cmp-body th { text-align: left; padding: 10px 12px; background: #f8fafc; border-bottom: 2px solid #e4e7ec; color: #0f1829; font-weight: 600; }
+   .cmp-body td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; color: #344054; vertical-align: top; }
+   .cmp-body td:first-child { font-weight: 500; color: #0f1829; width: 34%; }
+   .cmp-body td.ok { color: #059669; font-weight: 500; }
+   .cmp-body td.no { color: #94a3b8; }
+   .cmp-cta { background: #0f1829; color: #fff; padding: 30px 32px; border-radius: 12px; margin: 36px 0 0; text-align: center; }
+   .cmp-cta h3 { color: #fff; margin: 0 0 8px; }
+   .cmp-cta p { color: rgba(255,255,255,0.75); margin: 0 0 16px; font-size: 14px; }
+   .cmp-cta a { background: #2563eb; color: #fff; text-decoration: none; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; display: inline-block; }
+   .cmp-cta a:hover { background: #1d4ed8; }
+   .faq details { border: 1px solid #e4e7ec; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; background: #fff; }
+   .faq summary { font-weight: 600; cursor: pointer; font-size: 14.5px; color: #0f1829; }
+   .faq details[open] summary { margin-bottom: 8px; }
+   .faq p { font-size: 14px; color: #344054; margin: 0; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -91,7 +103,7 @@
     <a href="/compare/" class="is-active">Compare</a>
     <a href="/blog/">Blog</a>
     <a href="/about/">About</a>
-    <a href="https://app.saasspendtrack.com/" class="nav-cta">Start free trial</a>
+    <a href="https://app.saasspendtrack.com/" class="nav-cta">Start your 7-day free trial</a>
   </div>
 </nav>
 
@@ -127,10 +139,9 @@
       <tr><td>Renewal calendar + notice alerts</td><td class="ok">Yes</td><td class="ok">Yes</td></tr>
       <tr><td>Negotiation benchmarking (Zylo Discovery)</td><td class="no">No</td><td class="ok">Yes, large benchmark DB</td></tr>
       <tr><td>SSO / SAML</td><td class="no">No backend to SSO into</td><td class="ok">Yes</td></tr>
-      <tr><td>SOC 2 Type II</td><td class="no">N/A (no backend)</td><td class="ok">Yes</td></tr>
+      <tr><td>SOC 2 Type II</td><td class="no">N/A</td><td class="ok">Yes</td></tr>
       <tr><td>Deploy time</td><td class="ok">Under 10 min</td><td>6-12 weeks</td></tr>
-      <tr><td>Data location</td><td class="ok">Your browser only</td><td>Zylo cloud (AWS)</td></tr>
-    </tbody>
+          </tbody>
   </table>
 
   <h2>When Zylo is the right call</h2>
@@ -153,9 +164,8 @@
 
   <h2>Who should NOT pick SaaS Spend Track</h2>
   <ul>
-    <li>Companies with 2,000+ employees. The browser-only architecture doesn't scale to that use case.</li>
-    <li>Teams where discovering unknown-unknown SaaS is the primary problem. Zylo and BetterCloud are better here.</li>
-    <li>Compliance-first environments that require SOC 2 Type II of every vendor. There is no backend to certify.</li>
+        <li>Teams where discovering unknown-unknown SaaS is the primary problem. Zylo and BetterCloud are better here.</li>
+    <li>Compliance-first environments that require SOC 2 Type II of every vendor. </li>
     <li>Companies that want a vendor to negotiate contracts on their behalf. See <a href="/compare/vendr-alternative/">Vendr</a> for that.</li>
   </ul>
 
@@ -175,14 +185,14 @@
     </details>
     <details>
       <summary>Does SaaS Spend Track have SSO?</summary>
-      <p>Not currently. The product runs entirely in the browser with no backend, so there is nothing to SSO into. If SSO is a hard compliance requirement from your security team, Zylo is the right choice. The architectural trade-off is deliberate: no backend means no breach surface, no vendor-side data retention, and enables the flat $3,499 pricing.</p>
+      <p>Contact us to confirm the sign-in options supported for your workspace.</p>
     </details>
   </div>
 
   <div class="cmp-cta">
     <h3>See if the tool fits before you commit</h3>
-    <p>14-day free trial. Work email, no credit card. Import your existing spreadsheet in five minutes.</p>
-    <a href="https://app.saasspendtrack.com/">Start free trial →</a>
+    <p>Try it free for 7 days. Work email, no credit card. Import your existing spreadsheet in five minutes.</p>
+    <a href="https://app.saasspendtrack.com/">Start your 7-day free trial →</a>
   </div>
 
 </article>
