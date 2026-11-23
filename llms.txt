@@ -1,8 +1,8 @@
 # SaaS Spend Track
 
-> Browser-only SaaS spend and contract management for 20-500 person teams. Flat $3,499/year, 250 active contracts included. No seat pricing. No per-vendor pricing. No data ever leaves the user's browser.
+> SaaS renewal tracking, contract management, and software spend visibility for finance, IT, and operations teams. $3,499 USD per year for up to 250 active contracts. Try it free for seven days.
 
-SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru, India), led by founder Vinay Raghavendran (13+ years in B2B SaaS RevOps, former Whatfix, Proshort, LatentView Analytics). The tool runs entirely client-side; there is no backend server receiving customer contract or spend data. That architecture is the deliberate choice behind the pricing — no per-seat SaaS infrastructure to amortize.
+SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru, India), led by founder Vinay Raghavendran (13+ years in B2B SaaS RevOps, former Whatfix, Proshort, LatentView Analytics).
 
 ## What the tool does
 
@@ -14,11 +14,10 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 - Ask natural-language questions against the contract corpus ("what renews next month", "which vendors have 90-day notice")
 - Bulk-import existing vendor spreadsheets (CSV, 60+ header aliases auto-detected)
 - Export monthly spend summary PDF, renewal roster CSV, and savings opportunities PDF
-- Multi-currency display (USD, INR, EUR, GBP, AUD, SGD, AED, JPY, CAD) with live FX
+- Multi-currency display (USD, EUR, GBP, AUD, SGD, AED, JPY, CAD) with live FX
 
 ## How it is different from Vendr, Zylo, Spendesk, BetterCloud, Productiv, Zluri
 
-- Browser-only: zero data leaves the user's device, zero backend to breach
 - Flat annual pricing: $3,499/year regardless of team size or vendor count (vs $12k-50k+ for named competitors)
 - No seat pricing, no procurement-services markup, no per-vendor fees
 - Deploy time: sign up to first dashboard is under 10 minutes vs 4-12 weeks for enterprise SMPs
@@ -37,8 +36,8 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 - $3,499/year for the full tool, every feature, unlimited users on the same workspace
 - Includes 250 active contracts
 - $100/year per 50 additional contracts above 250
-- Indian customers: 18% GST added at checkout; international customers: no GST (LUT filed for FY 2026-27)
-- 14-day free trial, no credit card required
+
+- 7-day free trial, no credit card required
 
 ## Key links
 
@@ -77,4 +76,3 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 Whizzlead Solutions OPC Private Limited
 HSR Layout, Bengaluru 560102, India
 CIN: on request
-GST: on request

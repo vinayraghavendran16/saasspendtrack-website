@@ -55,71 +55,70 @@
 
   <link rel="stylesheet" href="/styles.css">
   <style>
-    .calc-hero { background: #f8fafc; padding: 48px 24px 32px; text-align: center; border-bottom: 1px solid #e4e7ec; }
-    .calc-hero h1 { font-size: 36px; margin: 0 0 12px; letter-spacing: -0.02em; }
-    .calc-hero .sub { font-size: 16px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-    .calc-wrap { max-width: 920px; margin: 32px auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-    @media (max-width: 760px) { .calc-wrap { grid-template-columns: 1fr; } }
-    .calc-inputs, .calc-output { background: #fff; border: 1px solid #e4e7ec; border-radius: 12px; padding: 24px 26px; }
-    .calc-inputs h2 { margin: 0 0 16px; font-size: 16px; color: #0f1829; }
-    .calc-field { margin-bottom: 20px; }
-    .calc-field label { display: block; font-size: 13px; color: #344054; font-weight: 600; margin-bottom: 6px; }
-    .calc-field .hint { font-size: 12px; color: #667085; margin-bottom: 8px; line-height: 1.5; }
-    .calc-field input[type="number"] {
+   .calc-hero { background: #f8fafc; padding: 48px 24px 32px; text-align: center; border-bottom: 1px solid #e4e7ec; }
+   .calc-hero h1 { font-size: 36px; margin: 0 0 12px; letter-spacing: -0.02em; }
+   .calc-hero.sub { font-size: 16px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+   .calc-wrap { max-width: 920px; margin: 32px auto; padding: 0 24px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    @media (max-width: 760px) {.calc-wrap { grid-template-columns: 1fr; } }
+   .calc-inputs,.calc-output { background: #fff; border: 1px solid #e4e7ec; border-radius: 12px; padding: 24px 26px; }
+   .calc-inputs h2 { margin: 0 0 16px; font-size: 16px; color: #0f1829; }
+   .calc-field { margin-bottom: 20px; }
+   .calc-field label { display: block; font-size: 13px; color: #344054; font-weight: 600; margin-bottom: 6px; }
+   .calc-field.hint { font-size: 12px; color: #667085; margin-bottom: 8px; line-height: 1.5; }
+   .calc-field input[type="number"] {
       width: 100%; padding: 10px 12px; font-size: 15px; font-family: inherit;
       border: 1px solid #d0d5dd; border-radius: 7px; background: #fff;
     }
-    .calc-field input[type="number"]:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
-    .calc-slider-wrap { display: flex; align-items: center; gap: 12px; }
-    .calc-slider-wrap input[type="range"] { flex: 1; }
-    .calc-slider-wrap .val { font-weight: 600; color: #0f1829; font-size: 14px; min-width: 50px; text-align: right; }
+   .calc-field input[type="number"]:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,0.12); }
+   .calc-slider-wrap { display: flex; align-items: center; gap: 12px; }
+   .calc-slider-wrap input[type="range"] { flex: 1; }
+   .calc-slider-wrap.val { font-weight: 600; color: #0f1829; font-size: 14px; min-width: 50px; text-align: right; }
     select { width: 100%; padding: 10px 12px; font-size: 15px; font-family: inherit; border: 1px solid #d0d5dd; border-radius: 7px; background: #fff; }
-    .calc-output { background: #0f1829; color: #ffffff; border: 0; }
-    .calc-output h2 { margin: 0 0 16px; font-size: 14px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
-    .calc-total {
+   .calc-output { background: #0f1829; color: #ffffff; border: 0; }
+   .calc-output h2 { margin: 0 0 16px; font-size: 14px; color: rgba(255,255,255,0.7); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; }
+   .calc-total {
       font-size: 48px; font-weight: 800; letter-spacing: -0.03em;
       color: #ffffff; margin-bottom: 4px;
     }
-    .calc-total-sub { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
-    .calc-total-inr { font-size: 13px; color: #7aa3f5; margin-bottom: 24px; }
-    .calc-breakdown { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 18px; }
-    .calc-bd-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; font-size: 14px; }
-    .calc-bd-label { color: rgba(255,255,255,0.78); }
-    .calc-bd-val { color: #ffffff; font-weight: 600; font-family: 'SF Mono', Menlo, monospace; }
-    .calc-note {
+   .calc-total-sub { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 24px; }
+   .calc-breakdown { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 18px; }
+   .calc-bd-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; font-size: 14px; }
+   .calc-bd-label { color: rgba(255,255,255,0.78); }
+   .calc-bd-val { color: #ffffff; font-weight: 600; font-family: 'SF Mono', Menlo, monospace; }
+   .calc-note {
       margin-top: 18px; padding: 12px 14px; background: rgba(37,99,235,0.1);
       border-radius: 7px; font-size: 12.5px; color: rgba(255,255,255,0.85);
       border-left: 3px solid #2563eb; line-height: 1.6;
     }
-    .calc-cta {
+   .calc-cta {
       max-width: 920px; margin: 20px auto 40px; padding: 0 24px;
     }
-    .calc-cta-box {
+   .calc-cta-box {
       background: #fff; border: 2px solid #2563eb; border-radius: 12px;
       padding: 24px 28px; text-align: center;
     }
-    .calc-cta-box h3 { margin: 0 0 8px; font-size: 18px; color: #0f1829; }
-    .calc-cta-box p { margin: 0 0 16px; font-size: 14px; color: #475467; line-height: 1.6; }
-    .calc-cta-box a { background: #2563eb; color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-weight: 600; font-size: 14.5px; display: inline-block; }
-    .calc-cta-box a:hover { background: #1d4ed8; }
-    .calc-method { max-width: 760px; margin: 48px auto 24px; padding: 0 24px; }
-    .calc-method h2 { font-size: 22px; margin: 0 0 12px; letter-spacing: -0.015em; color: #0f1829; }
-    .calc-method p, .calc-method ul { font-size: 14.5px; color: #344054; line-height: 1.7; }
-    .calc-method ul { padding-left: 22px; margin: 0 0 14px; }
-    .calc-method b { color: #0f1829; }
-    .calc-share { max-width: 760px; margin: 24px auto; padding: 0 24px; text-align: center; }
-    .calc-share button {
+   .calc-cta-box h3 { margin: 0 0 8px; font-size: 18px; color: #0f1829; }
+   .calc-cta-box p { margin: 0 0 16px; font-size: 14px; color: #475467; line-height: 1.6; }
+   .calc-cta-box a { background: #2563eb; color: #fff; text-decoration: none; padding: 12px 28px; border-radius: 8px; font-weight: 600; font-size: 14.5px; display: inline-block; }
+   .calc-cta-box a:hover { background: #1d4ed8; }
+   .calc-method { max-width: 760px; margin: 48px auto 24px; padding: 0 24px; }
+   .calc-method h2 { font-size: 22px; margin: 0 0 12px; letter-spacing: -0.015em; color: #0f1829; }
+   .calc-method p,.calc-method ul { font-size: 14.5px; color: #344054; line-height: 1.7; }
+   .calc-method ul { padding-left: 22px; margin: 0 0 14px; }
+   .calc-method b { color: #0f1829; }
+   .calc-share { max-width: 760px; margin: 24px auto; padding: 0 24px; text-align: center; }
+   .calc-share button {
       background: #f1f5f9; border: 1px solid #d0d5dd; padding: 8px 14px;
       border-radius: 7px; font-size: 13px; cursor: pointer; font-family: inherit;
       margin: 0 4px;
     }
-    .calc-share button:hover { background: #e4e7ec; }
-    .calc-faq-section { max-width: 760px; margin: 0 auto 60px; padding: 0 24px; }
-    .calc-faq-section h2 { font-size: 20px; margin: 0 0 14px; }
-    .faq-item { border: 1px solid #e4e7ec; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; background: #fff; }
-    .faq-item summary { font-weight: 600; cursor: pointer; font-size: 14px; color: #0f1829; }
-    .faq-item[open] summary { margin-bottom: 8px; }
-    .faq-item p { font-size: 13.5px; color: #344054; margin: 0; line-height: 1.6; }
+   .calc-share button:hover { background: #e4e7ec; }
+   .calc-faq-section { max-width: 760px; margin: 0 auto 60px; padding: 0 24px; }
+   .calc-faq-section h2 { font-size: 20px; margin: 0 0 14px; }
+   .faq-item { border: 1px solid #e4e7ec; border-radius: 8px; padding: 12px 16px; margin-bottom: 8px; background: #fff; }
+   .faq-item summary { font-weight: 600; cursor: pointer; font-size: 14px; color: #0f1829; }
+   .faq-item[open] summary { margin-bottom: 8px; }
+   .faq-item p { font-size: 13.5px; color: #344054; margin: 0; line-height: 1.6; }
   </style>
 </head>
 <body>
@@ -132,7 +131,7 @@
     <a href="/tools/" class="is-active">Tools</a>
     <a href="/blog/">Blog</a>
     <a href="/about/">About</a>
-    <a href="https://app.saasspendtrack.com/" class="nav-cta">Start free trial</a>
+    <a href="https://app.saasspendtrack.com/" class="nav-cta">Start your 7-day free trial</a>
   </div>
 </nav>
 
@@ -193,7 +192,6 @@
     <h2>Estimated annual waste</h2>
     <div class="calc-total" id="out-total">$45,000</div>
     <div class="calc-total-sub" id="out-pct">~25% of your annual SaaS spend</div>
-    <div class="calc-total-inr" id="out-inr">~₹37,35,000 at current FX</div>
 
     <div class="calc-breakdown">
       <div class="calc-bd-row">
@@ -225,8 +223,8 @@
 <div class="calc-cta">
   <div class="calc-cta-box">
     <h3>Want the real number instead of the estimate?</h3>
-    <p>SaaS Spend Track parses your contracts, tracks utilization per vendor, and surfaces the exact waste in dollars. 14-day free trial, no credit card, your data stays in your browser.</p>
-    <a href="https://app.saasspendtrack.com/">Start free trial →</a>
+    <p>SaaS Spend Track parses your contracts, tracks utilization per vendor, and surfaces the exact waste in dollars. 7-day free trial, no credit card, your data stays in your browser.</p>
+    <a href="https://app.saasspendtrack.com/">Start your 7-day free trial →</a>
   </div>
 </div>
 
@@ -241,7 +239,7 @@
   <p>The estimate is deliberately conservative. A real audit - one that pulls actual contracts and real usage data - usually surfaces 20-40% more waste than this calculator shows, not less.</p>
 
   <h2>Who built this</h2>
-  <p>SaaS Spend Track is built by <a href="/about/">Vinay Raghavendran</a>, a 13-year B2B SaaS RevOps veteran (former Whatfix, Proshort, LatentView). The calculator is free because the product that solves this properly costs $3,499/year. If you want the real audit instead of the estimate, <a href="https://app.saasspendtrack.com/">start a free trial</a>.</p>
+  <p>SaaS Spend Track is built by <a href="/about/">Vinay Raghavendran</a>, a 13-year B2B SaaS RevOps veteran (former Whatfix, Proshort, LatentView). The calculator is free because the product that solves this properly costs $3,499/year. If you want the real audit instead of the estimate, <a href="https://app.saasspendtrack.com/">start a 7-day free trial</a>.</p>
 </section>
 
 <section class="calc-faq-section">
@@ -278,17 +276,10 @@
 (function(){
   const $ = (id) => document.getElementById(id);
   const inputs = ['in-tools','in-spend','in-util','in-overlap','in-missed'];
-  const FX_USD_INR = 83;  // fallback; could fetch live
 
   function fmtUSD(n) {
     if (n >= 1e6) return '$' + (n/1e6).toFixed(1) + 'M';
     return '$' + Math.round(n).toLocaleString('en-US');
-  }
-  function fmtINR(n) {
-    const v = n * FX_USD_INR;
-    if (v >= 1e7) return '₹' + (v/1e7).toFixed(1) + ' Cr';
-    if (v >= 1e5) return '₹' + (v/1e5).toFixed(1) + ' L';
-    return '₹' + Math.round(v).toLocaleString('en-IN');
   }
 
   function recalc() {
@@ -311,7 +302,6 @@
 
     $('out-total').textContent  = fmtUSD(total);
     $('out-pct').textContent    = '~' + pct + '% of your annual SaaS spend';
-    $('out-inr').textContent    = '~' + fmtINR(total) + ' at current FX';
     $('out-unused').textContent = fmtUSD(unused);
     $('out-overlap').textContent= fmtUSD(overlapWaste);
     $('out-renewal').textContent= fmtUSD(renewalWaste);

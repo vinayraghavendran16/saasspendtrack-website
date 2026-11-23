@@ -533,7 +533,6 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
 .plan-single-price .price-main { font-size: 56px; font-weight: 700; line-height: 1; }
 .plan-single-price .price-dollar { font-size: 32px; vertical-align: top; margin-right: 2px; }
 .plan-single-price .price-yr { font-size: 18px; color: rgba(255,255,255,0.6); margin-left: 6px; font-weight: 500; }
-.plan-single-price .price-inr { font-size: 13px; color: rgba(255,255,255,0.55); margin-top: 6px; }
 
 .plan-single-includes { text-align: center; margin: 20px 0 32px; }
 .includes-headline { font-size: 16px; font-weight: 600; }
@@ -561,9 +560,6 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
   .plan-single-cta .btn { min-width: 100%; }
 }
 
-/* ===== Live INR label ===== */
-.plan-single-price .inr-live { display: block; font-size: 15px; font-weight: 600; margin-top: 10px; color: rgba(255,255,255,0.95); }
-.plan-single-price .inr-note { display: block; font-size: 11px; color: rgba(255,255,255,0.6); margin-top: 4px; }
 
 /* ===== Live dashboard preview ===== */
 .live-preview { padding: 80px 0 60px; background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%); }
@@ -646,10 +642,6 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
   .lp-head h2 { font-size: 26px; }
 }
 
-/* Price card: INR-primary with GST + live USD below */
-.plan-single-price .inr-gst { display: block; font-size: 13px; color: rgba(255,255,255,0.75); margin-top: 10px; }
-.plan-single-price .inr-live { display: block; font-size: 14px; font-weight: 600; margin-top: 4px; color: #ffd54a; }
-.plan-single-price .inr-note { display: inline; font-size: 11px; color: rgba(255,255,255,0.55); }
 /* Keep the rupee glyph nicely sized against the big number */
 .plan-single-price .price-dollar { font-size: 28px; }
 
@@ -665,10 +657,8 @@ h1,h2,h3{font-family:'Manrope',sans-serif;}
 .price-sub-line { display: block; line-height: 1.5; }
 .price-sub-line.dim { color: rgba(255,255,255,0.55); font-size: 12px; }
 .price-sub-line b { color: rgba(255,255,255,0.9); font-weight: 600; }
-.price-sub .inr-note { font-size: 10.5px; color: rgba(255,255,255,0.4); }
 
 /* Hide old helper classes in case any still render */
-.inr-gst, .inr-live { display: none; }
 
 /* Clean sub-line under USD price (replaces removed toggle/India view) */
 .price-sub-line.dim { color: rgba(255,255,255,0.6); font-size: 12.5px; }
