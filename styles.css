@@ -1092,3 +1092,8 @@ body.home-light a:focus-visible,body.home-light .btn:focus-visible,body.home-lig
   .site-nav-inner { gap:12px; justify-content:space-between; padding-inline:16px; }
   .site-nav-links { order:1; width:100%; margin-left:0; }
 }
+
+/* Keep dense comparison tables scrollable within narrow screens. */
+.comparison-scroll { max-width:100%; overflow-x:auto; }
+.comparison-scroll table { min-width:480px; }
+.comparison-scroll:focus-visible { outline:2px solid var(--green); outline-offset:2px; }
