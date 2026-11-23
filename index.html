@@ -168,12 +168,17 @@
     <div class="container hero-content">
       <div class="hero-badge">For finance, IT, and operations teams</div>
       <h1 id="hero-headline">Know your SaaS<br><span class="hero-accent">cancel-by dates.</span></h1>
-      <p class="hero-sub">See what renews next, what it costs, and when notice is due. Give finance, IT, and operations one place to decide which subscriptions to keep, renegotiate, or cancel.</p>
+      <p class="hero-sub" id="hero-description">See what renews next, what it costs, and when notice is due. Give finance, IT, and operations one place to decide which subscriptions to keep, renegotiate, or cancel.</p>
       <div class="hero-actions">
         <a href="https://app.saasspendtrack.com" class="btn btn-lg btn-primary" data-plg="hero-primary">Start your 7-day free trial →</a>
         <a href="#dashboard-preview" class="btn btn-lg btn-dark-outline" data-plg="hero-demo">See the dashboard</a>
       </div>
       <p class="hero-trust" style="margin-top:14px">Use your work email. No credit card required.</p>
+      <div class="hero-options" role="group" aria-label="Explore product benefits" hidden>
+        <button type="button" data-hook="renewals" aria-pressed="true">Renewals</button>
+        <button type="button" data-hook="spend" aria-pressed="false">Spend visibility</button>
+        <button type="button" data-hook="spreadsheet" aria-pressed="false">Vendor tracking</button>
+      </div>
       <p class="hero-trust">Or try the <a href="/tools/saas-waste-calculator/" style="color:#2563eb;text-decoration:underline;font-weight:600;">free SaaS waste calculator</a> - 4 inputs, 60 seconds, see what you're probably overspending.</p>
     </div>
   </section>
@@ -184,8 +189,9 @@
       <div class="lp-head">
         <span class="sh-badge green">See it live</span>
         <h2>The dashboard, in motion.</h2>
-        <p class="sh-sub">Every visual below is from the live tool. Each rotates every few seconds.</p>
+        <p class="sh-sub">Explore the dashboard with sample data.</p>
       </div>
+      <div class="preview-options hero-options" role="group" aria-label="Choose a dashboard view" hidden></div>
       <div class="lp-browser">
         <div class="lp-chrome">
           <span class="lp-dot lp-dot-r"></span>
@@ -738,6 +744,17 @@
     </div>
   </section>
 
+  <section class="renewal-story container" aria-labelledby="renewal-story-heading">
+    <picture class="reveal">
+      <img src="/images/renewal-review.webp" alt="Two finance colleagues reviewing software renewals together" width="900" height="600" loading="lazy" decoding="async">
+    </picture>
+    <div class="reveal">
+      <h2 id="renewal-story-heading">A renewal date is only half the story.</h2>
+      <p>A contract with 60 days’ notice can lock you in long before renewal. See the notice deadline alongside the spend so your team can decide in time.</p>
+      <a href="https://app.saasspendtrack.com/" class="btn btn-primary" data-plg="renewal-story">Start your 7-day free trial →</a>
+    </div>
+  </section>
+
   <!-- Pricing -->
   <section class="pricing" id="pricing" aria-labelledby="pricing-heading">
     <div class="container">
@@ -938,30 +955,79 @@
     toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});
     document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>{menu.classList.remove('open');toggle.setAttribute('aria-expanded','false');}));
 
-    // Scroll reveal
-    const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);}}),{threshold:0.12});
-    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
-    // Safety net: never leave reveal content invisible if the observer misfires.
-    setTimeout(function(){document.querySelectorAll('.reveal:not(.visible)').forEach(function(el){el.classList.add('visible');});},1400);
+    const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
+    if ('IntersectionObserver' in window && !reducedMotion.matches) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(({ target, isIntersecting }) => {
+          if (isIntersecting) {
+            target.classList.remove('reveal-pending');
+            revealObserver.unobserve(target);
+          }
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.reveal').forEach(element => {
+        element.classList.add('reveal-pending');
+        revealObserver.observe(element);
+      });
+    }
 
-    // Counter animation
-    const cio=new IntersectionObserver(entries=>entries.forEach(e=>{
-      if(!e.isIntersecting)return;
-      const el=e.target,target=+el.dataset.target;
-      if(target===0){el.textContent='0';cio.unobserve(el);return;}
-      let cur=0;const step=Math.ceil(target/50);
-      const t=setInterval(()=>{cur=Math.min(cur+step,target);el.textContent=cur;if(cur>=target)clearInterval(t);},25);
-      cio.unobserve(el);
-    }),{threshold:0.5});
-    document.querySelectorAll('.stat-num').forEach(el=>cio.observe(el));
-
-    // Dashboard row hover
-    document.querySelectorAll('.dt-row').forEach(r=>{
-      r.addEventListener('mouseenter',()=>r.style.background='rgba(34,197,94,.06)');
-      r.addEventListener('mouseleave',()=>r.style.background='');
-    });
-
-    // (pricing toggle removed - single-tier pricing now)
+    const hooks = new Map([
+      ['renewals', ['Know your SaaS', 'cancel-by dates.', 'See what renews next, what it costs, and when notice is due. Give finance, IT, and operations one place to decide which subscriptions to keep, renegotiate, or cancel.']],
+      ['spend', ['Know where your', 'SaaS budget goes.', 'See software spend by vendor and department. Review what you’re paying before the next contract renews.']],
+      ['spreadsheet', ['Get renewals out of', 'the spreadsheet.', 'Import your vendor list and keep contract costs, renewal dates, and notice deadlines together.']]
+    ]);
+    const options = document.querySelector('.hero-options');
+    const hookButtons = [...options.querySelectorAll('button')];
+    const heading = document.querySelector('#hero-headline');
+    const description = document.querySelector('#hero-description');
+    const params = new URL(location.href).searchParams;
+    const requestedHook = params.get('hook');
+    let assignedHook;
+    try {
+      assignedHook = localStorage.getItem('sst-home-hook-v1');
+      if (!hooks.has(assignedHook)) {
+        assignedHook = [...hooks.keys()][Math.floor(Math.random() * hooks.size)];
+        localStorage.setItem('sst-home-hook-v1', assignedHook);
+      }
+    } catch {
+      assignedHook = 'renewals';
+    }
+    assignedHook = hooks.has(requestedHook) ? requestedHook : assignedHook;
+    let activeHook;
+    const track = (event, detail) => {
+      (window.dataLayer ||= []).push({ event, assigned_hook: assignedHook, hero_hook: activeHook, ...detail });
+    };
+    const trialLinks = [...document.querySelectorAll('a[href^="https://app.saasspendtrack.com"]')]
+      .filter(link => ['nav-cta', 'mobile-cta', 'hero-primary', 'ladder-step1', 'governance-cta', 'renewal-story', 'pricing-try', 'final-cta'].includes(link.dataset.plg));
+    function showHook(name) {
+      activeHook = name;
+      const [first, second, body] = hooks.get(name);
+      const accent = document.createElement('span');
+      accent.className = 'hero-accent';
+      accent.textContent = second;
+      heading.replaceChildren(first, document.createElement('br'), accent);
+      description.textContent = body;
+      hookButtons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.hook === name)));
+      trialLinks.forEach(link => {
+        const url = new URL(link.href);
+        params.forEach((value, key) => {
+          if (/^utm_[a-z_]+$/.test(key)) url.searchParams.set(key, value);
+        });
+        url.searchParams.set('hero_hook', name);
+        url.searchParams.set('hero_assignment', assignedHook);
+        link.href = url.href;
+      });
+    }
+    showHook(assignedHook);
+    options.hidden = false;
+    track('sst_hero_view');
+    hookButtons.forEach(button => button.addEventListener('click', () => {
+      showHook(button.dataset.hook);
+      track('sst_hero_switch');
+    }));
+    trialLinks.forEach(link => link.addEventListener('click', () => {
+      track('sst_trial_click', { placement: link.dataset.plg || 'homepage' });
+    }));
 
     // Cookie banner
     (function(){
@@ -988,9 +1054,21 @@
       const host = document.getElementById('live-preview-stage');
       if (!host) return;
       const scenes = host.querySelectorAll('.lp-scene');
-      let idx = 0;
+      const controls = document.querySelector('.preview-options');
+      const previewButtons = [...scenes].map((scene, index) => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = scene.querySelector('.lp-scene-label').textContent.trim();
+        button.addEventListener('click', () => showScene(index));
+        controls.append(button);
+        return button;
+      });
       function showScene(i) {
-        scenes.forEach((s, j) => s.classList.toggle('lp-active', j === i));
+        scenes.forEach((scene, index) => {
+          scene.classList.toggle('lp-active', index === i);
+          scene.inert = index !== i;
+          previewButtons[index].setAttribute('aria-pressed', String(index === i));
+        });
         const s = scenes[i];
         if (!s) return;
         // KPI counters
@@ -1001,17 +1079,20 @@
           const start = performance.now();
           const dur = 900;
           function tick(t){
-            const p = Math.min(1, (t - start)/dur);
+            const p = reducedMotion.matches ? 1 : Math.min(1, (t - start)/dur);
             const eased = 1 - Math.pow(1 - p, 3);
             const v = to * eased;
-            el.textContent = prefix + (to >= 1000 ? Math.round(v).toLocaleString('en-IN') : v.toFixed(1).replace(/\.0$/,'')) + suffix;
+            el.textContent = prefix + (to >= 1000 ? Math.round(v).toLocaleString('en-US') : v.toFixed(1).replace(/\.0$/,'')) + suffix;
             if (p < 1) requestAnimationFrame(tick);
           }
           requestAnimationFrame(tick);
         });
         // Typing effect in Ask Track scene
         const typer = s.querySelector('[data-type]');
-        if (typer) {
+        if (typer && reducedMotion.matches) {
+          typer.textContent = typer.dataset.type;
+          s.querySelector('.lp-answer')?.classList.add('lp-answer-in');
+        } else if (typer) {
           const txt = typer.dataset.type;
           typer.textContent = '';
           let k = 0;
@@ -1024,7 +1105,7 @@
         }
         // Chart draw
         const chartPath = s.querySelector('[data-chart-path]');
-        if (chartPath) {
+        if (chartPath && !reducedMotion.matches) {
           const len = chartPath.getTotalLength ? chartPath.getTotalLength() : 500;
           chartPath.style.strokeDasharray = len;
           chartPath.style.strokeDashoffset = len;
@@ -1036,7 +1117,7 @@
         }
       }
       showScene(0);
-      setInterval(() => { idx = (idx + 1) % scenes.length; showScene(idx); }, 5000);
+      controls.hidden = false;
     })();
   </script>
 </body>

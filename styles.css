@@ -1029,3 +1029,20 @@ body.home-light a:focus-visible,body.home-light .btn:focus-visible,body.home-lig
 
 /* Reveal safety: never hide content for reduced-motion users or if JS is slow. */
 @media (prefers-reduced-motion: reduce){ .reveal{ opacity:1 !important; transform:none !important; } }
+
+/* Homepage hook controls and renewal story */
+.hero-options { display:flex; justify-content:center; flex-wrap:wrap; gap:8px; margin:24px auto 0; }
+.hero-options[hidden] { display:none; }
+.hero-options button { font:inherit; font-size:.85rem; padding:.55rem .85rem; border-radius:100px; border:1px solid #cbd5e1; background:#fff; color:#334155; cursor:pointer; }
+.hero-options button:hover { border-color:#15803d; }
+.hero-options button[aria-pressed="true"] { background:#dcfce7; border-color:#86c79e; color:#14532d; font-weight:600; }
+.hero-options button:focus-visible { outline:2px solid #166534; outline-offset:3px; }
+.preview-options { margin:0 auto 20px; }
+.renewal-story { display:grid; grid-template-columns:1.1fr 1fr; align-items:center; gap:clamp(24px,5vw,72px); padding-block:clamp(48px,8vw,104px); }
+.renewal-story picture { display:block; overflow:hidden; border-radius:20px; background:#e9efe9; }
+.renewal-story img { display:block; width:100%; height:auto; aspect-ratio:3/2; object-fit:cover; }
+.renewal-story h2 { margin:0 0 12px; font-size:clamp(1.85rem,4vw,3.2rem); line-height:1.1; }
+.renewal-story p { margin:0 0 22px; color:var(--text-muted); }
+.home-light .reveal { opacity:1; transform:none; }
+.home-light .reveal.reveal-pending { opacity:0; transform:translateY(18px); }
+@media (max-width:700px) { .renewal-story { grid-template-columns:1fr; } }
