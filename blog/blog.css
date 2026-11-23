@@ -10,7 +10,7 @@
 .blog-tag{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1px;padding:4px 10px;border-radius:4px;}
 .tag-conversion{background:rgba(245,158,11,.15);color:var(--amber);}
 .tag-guide{background:var(--green-dim);color:var(--green);}
-.tag-leadership{background:rgba(139,92,246,.15);color:#A78BFA;}
+.tag-leadership{background:rgba(21,128,61,.15);color:#166534;}
 .tag-comparison{background:var(--green-dim);color:var(--green);}
 
 .blog-article h1{
@@ -46,7 +46,7 @@
 .callout-red{border-left:4px solid var(--red);}
 .callout-green{border-left:4px solid var(--green);}
 .callout-amber{border-left:4px solid var(--amber);}
-.callout-blue{border-left:4px solid #3B82F6;}
+.callout-blue{border-left:4px solid #15803d;}
 .callout-title{font-weight:700;color:var(--text);margin-bottom:8px;font-size:15px;}
 .callout p{font-size:15px;margin-bottom:8px;color:var(--text-mid);}
 .callout p:last-child{margin-bottom:0;}

@@ -22,34 +22,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
   <link rel="stylesheet" href="/blog/blog.css">
-</head><body>
-  <nav class="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo" aria-label="SaaSSpendTrack home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
-        <span>SaaSSpendTrack</span>
-      </a>
-      <div class="nav-links">
-        <a href="/#features">Features</a>
-        <a href="/#pricing">Pricing</a>
-        <a href="/blog/">Blog</a>
-        <a href="/#faq">FAQ</a>
-        <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-ghost">Log in</a>
-        <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-primary">Start free &rarr;</a>
-      </div>
-      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-    </div>
-    <div class="mobile-menu">
-      <a href="/#features">Features</a>
-      <a href="/#pricing">Pricing</a>
-      <a href="/blog/">Blog</a>
-      <a href="/#faq">FAQ</a>
-      <a href="https://contractiq.whizzlead.com">Log in</a>
-      <a href="https://contractiq.whizzlead.com" class="btn btn-sm btn-primary" style="width:fit-content;">Start free &rarr;</a>
-    </div>
-  </nav>
+</head><body class="home-light inner-page">
+  <nav class="site-navigation" aria-label="Main navigation"><div class="site-nav-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div class="site-nav-links"><a href="/features/">Product</a><a href="/pricing/">Pricing</a><a href="/tools/">Tools</a><a href="/compare/">Compare</a><a href="/blog/">Guides</a></div><a class="btn btn-primary btn-sm" href="https://app.saasspendtrack.com/">Start free trial</a></div></nav>
   <section class="blog-hero">
     <h1>The SaaS Spend Blog</h1>
     <p>Practical guides and hard-won insights on tracking contracts, cutting waste, and negotiating renewals-  without a $30K platform.</p>
@@ -143,41 +117,7 @@
       <a href="https://contractiq.whizzlead.com" class="btn btn-lg btn-primary">Start tracking-  free &rarr;</a>
     </div>
   </div>
-  <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a href="/" class="logo" aria-label="SaaSSpendTrack home">
-            <svg width="28" height="28" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#0F1829"/><rect x="6" y="18" width="5" height="8" rx="1.5" fill="#22C55E"/><rect x="13.5" y="12" width="5" height="14" rx="1.5" fill="#22C55E"/><rect x="21" y="6" width="5" height="20" rx="1.5" fill="#22C55E"/></svg>
-            <span>SaaSSpendTrack</span>
-          </a>
-          <p>SaaS spend management for teams that move fast. Track every dollar you spend on SaaS. Automatically.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Product</h4>
-          <a href="/#features">Features</a>
-          <a href="/#pricing">Pricing</a>
-          <a href="https://contractiq.whizzlead.com">Dashboard</a>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <a href="#">About</a>
-          <a href="/privacy">Privacy policy</a>
-          <a href="#">Terms of service</a>
-        </div>
-        <div class="footer-col">
-          <h4>Support</h4>
-          <a href="mailto:support@saasspendtrack.com">support@saasspendtrack.com</a>
-          <a href="/blog/">Blog</a>
-          <a href="/#faq">FAQ</a>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 SaaSSpendTrack. All rights reserved.</p>
-        <p class="footer-tagline">Track every dollar you spend on SaaS. Automatically.</p>
-      </div>
-    </div>
-  </footer>
+  <footer class="site-footer-shared"><div class="site-footer-inner"><a class="site-brand" href="/"><span class="site-mark" aria-hidden="true"><i></i><i></i><i></i></span>SaaS Spend Track</a><div><a href="/features/">Product</a><a href="/product-updates/">Product updates</a><a href="/faq/">FAQ</a><a href="/about/">About</a><a href="/privacy.html">Privacy</a><a href="mailto:hello@saasspendtrack.com">Contact</a></div></div></footer>
   <script>
     const toggle=document.querySelector('.mobile-toggle'),menu=document.querySelector('.mobile-menu');
     if(toggle&&menu){toggle.addEventListener('click',()=>{const open=menu.classList.toggle('open');toggle.setAttribute('aria-expanded',open);});
