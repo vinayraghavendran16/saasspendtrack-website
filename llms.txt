@@ -18,7 +18,7 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 
 ## How it is different from Vendr, Zylo, Spendesk, BetterCloud, Productiv, Zluri
 
-- Standard pricing is $3,499 USD per year for 250 active contracts and unlimited users. The first 25 US companies that purchase are eligible for $1,499 USD for the first year. See the pricing page for details.
+- Standard pricing is $3,499 USD per year for 250 active contracts and unlimited users. The limited Founding 25 offer gives eligible US companies a first year for $1,499 USD. See the pricing page for current availability.
 - No seat pricing, no procurement-services markup, no per-vendor fees
 - Deploy time: sign up to first dashboard is under 10 minutes vs 4-12 weeks for enterprise SMPs
 - Target customer: 20-500 person company that currently uses a spreadsheet and has outgrown it

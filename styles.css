@@ -1429,3 +1429,14 @@ body.inner-page { background:#fcfefc; }
   .inner-page .product-page-hero.detail-hero { padding-inline:18px; }
 }
 @media (prefers-reduced-motion:reduce) { .inner-page .site-arrive { animation:none; } }
+
+.founding-availability:not([hidden]) {
+  display:table; margin:0 auto 16px; padding:5px 11px; border-radius:7px;
+  background:#e8f4eb; color:#17583c; font-size:.85rem; font-weight:700;
+}
+[data-founding-checkout][hidden] { display:none; }
+.founding-offer .founding-checkout { min-height:44px; padding:9px 15px; border-radius:8px; }
+.pricing-page .founding-checkout-available .pricing-trial-choice {
+  background:#fff; color:#14533d; border:1px solid #c4ded0;
+}
+.pricing-page .founding-checkout-available .pricing-trial-choice:hover { background:#ecf8ef; }
