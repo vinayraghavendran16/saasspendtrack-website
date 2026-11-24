@@ -75,9 +75,7 @@ chapters.forEach((chapter) => {
 
     event.preventDefault();
     openChapter(chapter);
-    walkthrough.focus();
-    if (!window.matchMedia('(min-width: 761px)').matches) {
-      walkthrough.scrollIntoView({ block: 'center' });
-    }
+    walkthrough.focus({ preventScroll: true });
+    walkthrough.scrollIntoView({ block: 'center' });
   });
 });

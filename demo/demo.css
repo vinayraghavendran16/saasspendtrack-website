@@ -6,7 +6,7 @@
   margin: -32px auto 0;
   padding-inline: clamp(16px, 4vw, 36px);
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(245px, .36fr);
+  grid-template-columns: minmax(0, 1fr);
   align-items: start;
   gap: 16px;
 }
@@ -25,6 +25,11 @@
 }
 .demo-player p { margin: 10px 4px 0; color: #465a51; font-size: .875rem; }
 .demo-chapters h2 { margin: 4px 8px 8px; font-size: 1.125rem; }
+.demo-chapter-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px 12px;
+}
 .demo-chapters a {
   display: flex;
   gap: 10px;
@@ -36,10 +41,10 @@
   text-decoration: none;
 }
 .demo-chapters a:hover, .demo-chapters a:focus-visible { background: #edf6ee; }
-.demo-chapters a span { font-variant-numeric: tabular-nums; color: #35614d; }
+.demo-chapters a span { flex: 0 0 4ch; font-variant-numeric: tabular-nums; color: #35614d; }
 .demo-chapters small { display: block; color: #465a51; line-height: 1.4; }
 @media (max-width: 760px) {
-  .demo-walkthrough { grid-template-columns: minmax(0, 1fr); }
+  .demo-chapter-list { grid-template-columns: minmax(0, 1fr); }
 }
 #chapter-status:empty { display: none; }
 .demo-chapters a[aria-current="true"] { background: #edf6ee; }
