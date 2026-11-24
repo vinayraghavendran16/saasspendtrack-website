@@ -41,16 +41,44 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "How is SaaS waste calculated?", "acceptedAnswer": {"@type": "Answer", "text": "SaaS waste is the money spent on licenses that are not actively used, duplicate tools that overlap in function, and contracts that auto-renewed past the point of value. This calculator estimates each category using industry-average ratios: ~25% of seats are typically unused in mid-market SaaS stacks, roughly 1 in 4 tools overlaps meaningfully with another in the stack, and companies without a renewal process miss an average of 1-2 notice windows per year."}},
-      {"@type": "Question", "name": "What is an acceptable SaaS utilization rate?", "acceptedAnswer": {"@type": "Answer", "text": "For most teams, aim for 80% or higher utilization on any paid seat. Below 70% is a renegotiation signal: at renewal, present the usage data and ask for right-sizing. Below 50% is almost always a case for cancelling the seats, not the vendor."}},
-      {"@type": "Question", "name": "How often should I audit my SaaS stack?", "acceptedAnswer": {"@type": "Answer", "text": "Quarterly for fast-growing teams, twice a year for stable ones. The audit should cover active utilization (who is using what), contract status (what renews when), and overlap (which tools cover the same job)."}},
-      {"@type": "Question", "name": "What is a realistic savings target?", "acceptedAnswer": {"@type": "Answer", "text": "Mid-market teams that have never audited their SaaS stack typically find 15-25% savings in year one of structured management. That drops to 5-10% per year in steady state once the stack is right-sized."}}
-    ]
-  }
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How is SaaS waste calculated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The total estimates unused-license and overlapping-tool costs from your inputs. Missed-renewal exposure is shown separately."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is an acceptable SaaS utilization rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Use paid-seat usage over a representative period to identify subscriptions to review. Check seasonal use and contract minimums before reducing seats."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often should I audit my SaaS stack?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Quarterly for fast-growing teams, twice a year for stable ones. The audit should cover active utilization (who is using what), contract status (what renews when), and overlap (which tools cover the same job)."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a realistic savings target?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Set a target after verifying usage, redundant tools, and contract terms. Count only changes your team can make before the relevant renewal or notice deadline."
+      }
+    }
+  ]
+}
   </script>
 
   <link rel="stylesheet" href="../../styles.css">
@@ -156,7 +184,7 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
 
 <section class="calc-hero">
   <h1>SaaS Waste Calculator</h1>
-  <p class="sub">Four inputs. Sixty seconds. An honest estimate of what your current SaaS stack is wasting annually, broken down by category.</p>
+  <p class="sub">Estimate potential SaaS waste from unused licenses and overlapping tools. See missed-renewal exposure separately.</p>
 </section>
 
 <div class="calc-wrap">
@@ -178,7 +206,7 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
 
     <div class="calc-field">
       <label for="in-util">Estimated license utilization <span id="util-val" style="float:right;color:#15803d;font-weight:700">75%</span></label>
-      <div class="hint">What % of paid seats are actively used. Most mid-market stacks sit at 60-80%.</div>
+      <div class="hint">What % of paid seats are actively used.</div>
       <div class="calc-slider-wrap">
         <input type="range" id="in-util" min="30" max="100" value="75" step="1"/>
       </div>
@@ -209,8 +237,8 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
 
   <div class="calc-output">
     <h2>Estimated annual waste</h2>
-    <div class="calc-total" id="out-total">$45,000</div>
-    <div class="calc-total-sub" id="out-pct">~25% of your annual SaaS spend</div>
+    <div class="calc-total" id="out-total">$53,400</div>
+    <div class="calc-total-sub" id="out-pct">~30% of your annual SaaS spend</div>
 
     <div class="calc-breakdown">
       <div class="calc-bd-row">
@@ -219,16 +247,16 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
       </div>
       <div class="calc-bd-row">
         <span class="calc-bd-label">Overlapping tools</span>
-        <span class="calc-bd-val" id="out-overlap">$12,000</span>
+        <span class="calc-bd-val" id="out-overlap">$8,400</span>
       </div>
       <div class="calc-bd-row">
-        <span class="calc-bd-label">Auto-renewal exposure</span>
-        <span class="calc-bd-val" id="out-renewal">$6,000</span>
+        <span class="calc-bd-label">Missed-renewal exposure (separate from total)</span>
+        <span class="calc-bd-val" id="out-renewal">$2,400</span>
       </div>
     </div>
 
     <div class="calc-note">
-      These are industry-average estimates based on your inputs. Your actual waste could be ±40%. A proper audit usually surfaces more than the calculator estimates, not less.
+      These are planning estimates. Unused seats and overlapping tools can include the same spend. Verify both before combining savings opportunities.
     </div>
   </div>
 
@@ -242,34 +270,34 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
 <div class="calc-cta">
   <div class="calc-cta-box">
     <h3>Want the real number instead of the estimate?</h3>
-    <p>SaaS Spend Track parses your contracts, tracks utilization per vendor, and surfaces the exact waste in dollars. 7-day free trial, no credit card, your data stays in your browser.</p>
+    <p>Review contracts, vendor spend, and notice deadlines in SaaS Spend Track. Try it free for seven days with a work email and no credit card.</p>
     <a href="https://app.saasspendtrack.com/">Start your 7-day free trial →</a>
   </div>
 </div>
 
 <section class="calc-method">
   <h2>How this calculator works</h2>
-  <p>The number is built from three waste categories, each estimated from industry-average ratios and your own inputs:</p>
+  <p>The total combines the unused-license and overlapping-tool estimates. Missed-renewal exposure uses the count you entered for the past two years and appears separately.</p>
   <ul>
     <li><b>Unused licenses</b> - Your monthly spend × 12 × (100% minus your utilization input). If you spend $15k/month at 75% utilization, that's $45,000/year on seats nobody opens.</li>
-    <li><b>Overlapping tools</b> - Number of overlapping tools × 70% of your average cost per tool. Overlap is rarely a full duplicate - usually 70% of one tool's spend could migrate to another you already pay for.</li>
-    <li><b>Auto-renewal exposure</b> - Missed notice windows × average annual contract value × a 40% risk weight. Not every missed renewal is a total loss, but the exposure is the full contract value because you lost your leverage to renegotiate.</li>
+    <li><b>Overlapping tools</b> - Number of overlapping tools × 70% of your average cost per tool. The 70% factor is an illustrative assumption.</li>
+    <li><b>Auto-renewal exposure</b> - Missed notice windows × average annual contract value × a 40% risk weight. The 40% factor is an illustrative risk weight.</li>
   </ul>
-  <p>The estimate is deliberately conservative. A real audit - one that pulls actual contracts and real usage data - usually surfaces 20-40% more waste than this calculator shows, not less.</p>
+  <p>For a budget decision, use actual contract prices, seat usage, and signed renewal terms.</p>
 
   <h2>Who built this</h2>
-  <p>SaaS Spend Track is built by <a href="/about/">Vinay Raghavendran</a>, a 13-year B2B SaaS RevOps veteran (former Whatfix, Proshort, LatentView). The calculator is free because the product that solves this properly costs $3,499/year. If you want the real audit instead of the estimate, <a href="https://app.saasspendtrack.com/">start a 7-day free trial</a>.</p>
+  <p>SaaS Spend Track is built by <a href="/about/">Vinay Raghavendran</a>, a 13-year B2B SaaS RevOps veteran (former Whatfix, Proshort, LatentView). To review your own vendor list and deadlines, <a href="https://app.saasspendtrack.com/">start a 7-day free trial</a>.</p>
 </section>
 
 <section class="calc-faq-section">
   <h2>Frequently asked</h2>
   <details class="faq-item">
     <summary>How is SaaS waste calculated?</summary>
-    <p>SaaS waste is the money spent on licenses that are not actively used, duplicate tools that overlap in function, and contracts that auto-renewed past the point of value. This calculator estimates each category using industry-average ratios: ~25% of seats are typically unused in mid-market SaaS stacks, roughly 1 in 4 tools overlaps meaningfully with another, and companies without a renewal process miss an average of 1-2 notice windows per year.</p>
+    <p>The total estimates unused-license and overlapping-tool costs from your inputs. Missed-renewal exposure is shown separately.</p>
   </details>
   <details class="faq-item">
     <summary>What is an acceptable SaaS utilization rate?</summary>
-    <p>For most teams, aim for 80% or higher utilization on any paid seat. Below 70% is a renegotiation signal: at renewal, present the usage data and ask for right-sizing. Below 50% is almost always a case for cancelling the seats, not the vendor.</p>
+    <p>Use paid-seat usage over a representative period to identify subscriptions to review. Check seasonal use and contract minimums before reducing seats.</p>
   </details>
   <details class="faq-item">
     <summary>How often should I audit my SaaS stack?</summary>
@@ -277,7 +305,7 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
   </details>
   <details class="faq-item">
     <summary>What is a realistic savings target?</summary>
-    <p>Mid-market teams that have never audited their SaaS stack typically find 15-25% savings in year one of structured management. That drops to 5-10% per year in steady state once the stack is right-sized.</p>
+    <p>Set a target after verifying usage, redundant tools, and contract terms. Count only changes your team can make before the relevant renewal or notice deadline.</p>
   </details>
   <details class="faq-item">
     <summary>Can I embed this calculator on my own site?</summary>
@@ -326,7 +354,7 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
     const unused  = annualSpend * (1 - util/100);
     const overlapWaste = overlap * avgPerTool * 12 * 0.70;   // 70% of overlapping tool's annual spend
     const renewalWaste = missed * avgPerTool * 12 * 0.40;    // 40% risk weight per missed renewal
-    const total   = unused + overlapWaste + renewalWaste;
+    const total   = unused + overlapWaste;
     const pct     = Math.round((total / annualSpend) * 100);
 
     $('out-total').textContent  = fmtUSD(total);

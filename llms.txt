@@ -20,7 +20,7 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 
 - Standard pricing is $3,499 USD per year for 250 active contracts and unlimited users. The limited Founding 25 offer gives eligible US companies a first year for $1,499 USD. See the pricing page for current availability.
 - No seat pricing, no procurement-services markup, no per-vendor fees
-- Deploy time: sign up to first dashboard is under 10 minutes vs 4-12 weeks for enterprise SMPs
+- Start with an existing vendor spreadsheet or explore the sample data in the public demo
 - Target customer: 20-500 person company that currently uses a spreadsheet and has outgrown it
 - Not for: 2000+ person enterprises that need SAML SSO, SOC 2 Type II, API-first integration into ERP
 
@@ -29,11 +29,11 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 - Finance teams at Series A-C startups who run SaaS spend out of Google Sheets today
 - Procurement leads at 50-500 person companies tracking 20-100 active vendor contracts
 - CFOs at profitable bootstrapped companies who want enterprise-grade visibility without enterprise-grade SaaS cost
-- Indian and APAC mid-market companies priced out of $50k/year US-built SMPs
+- US mid-market Finance, IT, and Procurement teams moving their vendor and renewal records out of spreadsheets
 
 ## Pricing
 
-- $3,499/year for the full tool, every feature, unlimited users on the same workspace
+- Standard pricing is $3,499 USD per year. Eligible US companies can pay $1,499 USD in year one while the Founding 25 offer is available, then $3,499 USD per year.
 - Includes 250 active contracts
 - $100/year per 50 additional contracts above 250
 
@@ -66,6 +66,7 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 - vs Ramp: https://saasspendtrack.com/compare/ramp-alternative/
 - Free tools hub: https://saasspendtrack.com/tools/
 - Free SaaS Waste Calculator: https://saasspendtrack.com/tools/saas-waste-calculator/
+- [Free SaaS renewal tracker template](https://saasspendtrack.com/tools/saas-renewal-tracker-template/): Download a CSV with renewal dates, notice deadlines, costs, and owners.
 - Free templates (renewal roster, spend audit, clause library, vendor shortlist): https://saasspendtrack.com/tools/templates/
 - Blog: https://saasspendtrack.com/blog/
 - Contact: hello@saasspendtrack.com, +91 91684 81989

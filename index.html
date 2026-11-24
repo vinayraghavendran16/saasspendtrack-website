@@ -34,38 +34,37 @@
 
   <!-- ═══ Structured Data-  Organization ═══ -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "SaaSSpendTrack",
-    "url": "https://saasspendtrack.com",
-    "description": "SaaSSpendTrack is a SaaS spend management dashboard for growing teams. It tracks contracts, renewals, invoices, and vendor spend in one place-  replacing spreadsheets and giving 20–500 person companies enterprise-grade visibility at a fraction of the cost.",
-    "applicationCategory": "BusinessApplication",
-    "operatingSystem": "Web",
-    "offers": {
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SaaS Spend Track",
+  "url": "https://saasspendtrack.com",
+  "description": "SaaS renewal tracking, contract management, and software spend reporting for Finance, IT, and Procurement teams.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "offers": [
+    {
       "@type": "Offer",
-      "name": "SaaS Spend Track",
+      "name": "Standard annual plan",
       "price": "3499",
       "priceCurrency": "USD",
       "billingDuration": "P1Y",
-      "description": "Full platform, every feature, unlimited users. Includes 250 active contracts; $100/year per 50 additional contracts above 250."
+      "description": "Paid annually in USD. Includes 250 active contracts."
     },
-    "featureList": [
-      "Spend tracking with invoice OCR",
-      "8-dimension contract risk engine",
-      "Clause playbook with deviation scoring",
-      "Renewal Command Center",
-      "Approval chains and clause commenting",
-      "Vendors governance register with InfoSec / Legal / Procurement / Finance approvals",
-      "Per-vendor InfoSec review module with onboarding checklist and GRC connectors",
-      "Cross-functional reporting pivot (CFO / CRO / IT / Procurement / InfoSec) with CSV export",
-      "CLM, accounting, SSO and vendor-risk connectors (SpotDraft, Ironclad, QuickBooks, Xero, Okta, Vanta and more)",
-      "Source-grounded vendor renewal and cancellation guides",
-      "Scenario planner (cancel / downgrade / renegotiate)",
-      "Licence forecasting with capacity planning",
-      "Ask Track - natural-language Q&A with voice input"
-    ]
-  }
+    {
+      "@type": "Offer",
+      "name": "Founding 25 first-year offer",
+      "url": "https://saasspendtrack.com/pricing/",
+      "priceCurrency": "USD",
+      "price": "1499",
+      "eligibleRegion": {
+        "@type": "Country",
+        "name": "United States"
+      },
+      "description": "First year only for eligible US companies while the Founding 25 offer is available. Renews at $3,499 USD per year."
+    }
+  ]
+}
   </script>
 
   <!-- ═══ Structured Data-  FAQ (AEO) ═══ -->
