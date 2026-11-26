@@ -1,6 +1,6 @@
-// Add the USD annual checkout URLs here once the payment pages are ready.
-const FOUNDING_CHECKOUT_URL = '';
-const GROWTH_CHECKOUT_URL = '';
+// Razorpay USD annual checkout pages.
+const FOUNDING_CHECKOUT_URL = 'https://rzp.io/rzp/jrac5S8B';
+const GROWTH_CHECKOUT_URL = 'https://rzp.io/rzp/Il7T7ve1';
 const FOUNDING_CUSTOMER_CAP = 25;
 // Update from verified, unrefunded founding purchases, or close the offer at checkout.
 const FOUNDING_CUSTOMERS_PAID = 0;
