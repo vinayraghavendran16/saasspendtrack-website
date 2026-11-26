@@ -1,28 +1,25 @@
-/* Public sales total only. Count distinct eligible US companies with a
-   captured, unrefunded payment on the Founding 25 Razorpay page. */
-(() => {
-  const capacity = 25;
-  const heldBack = 7;
-  const verifiedSales = { paidCompanies: 0, verifiedOn: "2026-11-24" };
-  if (!verifiedSales || !Number.isInteger(verifiedSales.paidCompanies) || verifiedSales.paidCompanies < 0) return;
-  const verifiedDate = new Date(verifiedSales.verifiedOn + 'T00:00:00Z');
-  if (!Number.isFinite(verifiedDate.getTime())) return;
+// Add the USD annual checkout URLs here once the payment pages are ready.
+const FOUNDING_CHECKOUT_URL = '';
+const GROWTH_CHECKOUT_URL = '';
+const FOUNDING_CUSTOMER_CAP = 25;
+// Update from verified, unrefunded founding purchases, or close the offer at checkout.
+const FOUNDING_CUSTOMERS_PAID = 0;
 
-  const remaining = Math.max(0, capacity - heldBack - verifiedSales.paidCompanies);
-  const date = new Intl.DateTimeFormat('en-US', {
-    month: 'short', day: 'numeric', year: 'numeric', timeZone: 'UTC',
-  }).format(verifiedDate);
-  const status = remaining === 0
-    ? 'The founding offer is currently unavailable.'
-    : remaining + (remaining === 1 ? ' founding spot left' : ' founding spots left') + ' · As of ' + date;
-  for (const label of document.querySelectorAll('[data-founding-availability]')) {
-    label.textContent = status;
-    label.hidden = false;
+const foundingAvailable = FOUNDING_CUSTOMERS_PAID < FOUNDING_CUSTOMER_CAP;
+for (const label of document.querySelectorAll('[data-founding-availability]')) {
+  label.textContent = foundingAvailable
+    ? 'Limited to the first ' + FOUNDING_CUSTOMER_CAP + ' customers worldwide. After that, new customers pay the $2,000 annual Growth price.'
+    : 'The founding cohort is full. New customers can join Growth at $2,000/year.';
+}
+for (const link of document.querySelectorAll('[data-plan-checkout]')) {
+  const isFounding = link.dataset.planCheckout === 'founding';
+  const checkoutUrl = isFounding ? FOUNDING_CHECKOUT_URL : GROWTH_CHECKOUT_URL;
+  if (isFounding && !foundingAvailable) {
+    link.hidden = true;
+    continue;
   }
-  if (remaining > 0) {
-    for (const link of document.querySelectorAll('[data-founding-checkout]')) {
-      link.hidden = false;
-      link.parentElement.classList.add('founding-checkout-available');
-    }
+  if (checkoutUrl) {
+    link.href = checkoutUrl;
+    link.textContent = isFounding ? 'Buy Founding' : 'Buy Growth';
   }
-})();
+}
