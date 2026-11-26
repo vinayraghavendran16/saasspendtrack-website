@@ -4,13 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pricing | SaaS Spend Track</title>
-  <meta name="description" content="SaaS Spend Track costs $3,499 USD per year, paid upfront. Includes 250 active contracts and unlimited users. Try it free for 7 days without a credit card.">
+  <meta name="description" content="SaaS Spend Track costs $2,000 USD per year, paid upfront. Includes 250 active contracts and unlimited users. Try it free for 7 days without a credit card.">
   <link rel="canonical" href="https://saasspendtrack.com/pricing/">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saasspendtrack.com/pricing/">
   <meta property="og:title" content="Pricing | SaaS Spend Track">
-  <meta property="og:description" content="SaaS Spend Track costs $3,499 USD per year, paid upfront. Includes 250 active contracts and unlimited users. Try it free for 7 days without a credit card.">
+  <meta property="og:description" content="SaaS Spend Track costs $2,000 USD per year, paid upfront. Includes 250 active contracts and unlimited users. Try it free for 7 days without a credit card.">
   <meta property="og:image" content="https://saasspendtrack.com/og-renewal-workspace.png">
   <meta name="twitter:card" content="summary_large_image">
 
@@ -29,26 +29,21 @@
       "@type": "Offer",
       "url": "https://saasspendtrack.com/pricing/",
       "priceCurrency": "USD",
-      "price": "3499",
-      "availability": "https://schema.org/InStock",
+      "price": "2000",
       "seller": {
         "@type": "Organization",
         "name": "Whizzlead Solutions OPC Private Limited"
       },
-      "name": "Standard annual plan",
+      "name": "Growth annual plan",
       "description": "Paid annually in USD. Includes 250 active contracts."
     },
     {
       "@type": "Offer",
-      "name": "Founding 25 first-year offer",
+      "name": "Founding annual plan",
       "url": "https://saasspendtrack.com/pricing/",
       "priceCurrency": "USD",
       "price": "1499",
-      "eligibleRegion": {
-        "@type": "Country",
-        "name": "United States"
-      },
-      "description": "First year only for eligible US companies while the Founding 25 offer is available. Renews at $3,499 USD per year."
+      "description": "Annual USD price locked for life for a limited global cohort."
     }
   ]
 }
@@ -68,10 +63,15 @@
   <style>
    .pricing-hero { background: #f8fafc; padding: 56px 24px 32px; text-align: center; border-bottom: 1px solid #e4e7ec; }
    .pricing-hero h1 { font-size: 40px; margin: 0 0 12px; letter-spacing: -0.02em; }
-   .pricing-hero.sub { font-size: 16px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
-   .pricing-card { max-width: 520px; margin: 40px auto; background: #fff; border: 2px solid #15803d; border-radius: 16px; padding: 36px 36px 32px; box-shadow: 0 16px 50px rgba(21,128,61,0.1); }
+   .pricing-hero .sub { font-size: 16px; color: #475467; max-width: 640px; margin: 0 auto; line-height: 1.6; }
+   .pricing-card { display: flex; flex-direction: column; background: #fff; border: 2px solid #15803d; border-radius: 16px; padding: 24px; box-shadow: 0 16px 50px rgba(21,128,61,0.1); }
+   .pricing-card [hidden] { display: none; }
+   .pricing-card .pricing-cta { margin-top: auto; }
+   .pricing-roi, .pricing-trial { max-width: 760px; margin: 28px auto; padding: 20px 24px; text-align: center; }
+   .pricing-roi { background: #ecfdf5; border-radius: 12px; }
+   .pricing-trial .pricing-cta { max-width: 320px; margin: 0 auto 10px; }
    .pricing-tag { display: inline-block; background: #ecfdf5; color: #15803d; padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 10px; }
-   .pricing-amount { font-size: 54px; font-weight: 800; letter-spacing: -0.03em; color: #123025; margin-bottom: 4px; }
+   .pricing-amount { font-size: 42px; font-weight: 800; letter-spacing: -0.03em; color: #123025; margin-bottom: 4px; }
    .pricing-amount small { font-size: 18px; font-weight: 500; color: #475467; margin-left: 4px; }
    .pricing-sub { color: #475467; font-size: 14px; margin-bottom: 24px; }
    .pricing-features { list-style: none; padding: 0; margin: 0 0 24px; text-align: left; }
@@ -80,7 +80,7 @@
    .pricing-cta { display: block; background: #15803d; color: #fff; text-align: center; padding: 14px; border-radius: 10px; font-weight: 600; font-size: 15px; text-decoration: none; margin-bottom: 10px; }
    .pricing-cta:hover { background: #166534; }
    .pricing-fine { text-align: center; font-size: 12px; color: #667085; }
-   .pricing-cols { max-width: 920px; margin: 20px auto 60px; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+   .pricing-cols { max-width: 1140px; margin: 28px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
    .pricing-col { background: #fff; border: 1px solid #e4e7ec; border-radius: 10px; padding: 20px; }
    .pricing-col h3 { margin: 0 0 8px; font-size: 14px; color: #123025; }
    .pricing-col p { margin: 0; font-size: 13px; color: #475467; line-height: 1.6; }
@@ -127,31 +127,53 @@ document.getElementsByTagName("script")[0].parentNode.insertBefore(s, document.g
 <main id="main-content" tabindex="-1">
 
 <section class="pricing-hero">
-  <h1>One annual price for your workspace.</h1>
-  <p class="sub">Track SaaS spend, renewals, and notice deadlines with your team.</p>
+  <h1>$2,000/year to get ahead of SaaS renewals.</h1>
+  <p class="sub">Enterprise tools such as Zluri, Spendflo, Torii, and Vendr are typically quote-based. Published benchmarks for some enterprise plans run roughly $18,000 to $38,000 a year. SaaS Spend Track helps you catch renewals, spot overcharges, and understand contract terms for a fraction of that.</p>
+  <p class="pricing-fine">Sources: <a href="https://www.vendr.com/marketplace/zluri">Vendr contract data</a> and <a href="https://www.polestarsolutions.org/blog/blog/saas-management-platform-pricing-benchmark">negotiated pricing benchmarks</a>.</p>
 </section>
 
-<div class="pricing-card">
-  <span class="pricing-tag">Founding customer offer</span>
-  <div class="pricing-amount">$1,499<small> USD / first year</small></div>
-  <div class="pricing-sub">Paid upfront. Available to US companies.<br>Renews at <strong>$3,499 USD per year</strong>.</div>
-  <p class="founding-availability" data-founding-availability hidden></p>
-  <ul class="pricing-features">
-    <li>Renewal deadlines, contract terms, and spend reporting</li>
-    <li>Upload up to 250 active contracts</li>
-    <li>Unlimited users</li>
-  </ul>
-  <a href="https://rzp.io/rzp/wJnpOZkU" class="pricing-cta founding-checkout" data-founding-checkout hidden>Buy first year for $1,499</a>
+<section class="pricing-roi" aria-labelledby="renewal-example">
+  <h2 id="renewal-example">What is one renewal worth?</h2>
+  <p>If you avoid a $10,000 auto-renewal, that’s five times the annual Growth price. See what’s renewing and when you need to act so you have time to cancel, reduce seats, or renegotiate.</p>
+</section>
+
+<div class="pricing-cols">
+  <section class="pricing-card" id="founding">
+    <h2>Founding</h2>
+    <div class="pricing-amount">$1,499<small> USD / year</small></div>
+    <p>Paid annually upfront. Everything in Growth, with your $1,499 base price locked for life.</p>
+    <p data-founding-availability>Founding is limited to a worldwide founding cohort. After the cohort fills, new customers pay the $2,000 annual Growth price.</p>
+    <a class="pricing-cta" data-plan-checkout="founding" href="mailto:hello@saasspendtrack.com?subject=Founding%20plan">Ask about Founding</a>
+  </section>
+  <section class="pricing-card" id="growth">
+    <h2>Growth</h2>
+    <div class="pricing-amount">$2,000<small> USD / year</small></div>
+    <p>Paid annually upfront. The price you join at is the price you keep, forever.</p>
+    <ul class="pricing-features">
+      <li>Unlimited users and up to 250 active contracts</li>
+      <li>+$100/year per additional 50 active contracts</li>
+      <li>Renewal alerts, overcharge detection, and contract intelligence</li>
+    </ul>
+    <a class="pricing-cta" data-plan-checkout="growth" href="mailto:hello@saasspendtrack.com?subject=Growth%20plan">Ask about Growth</a>
+  </section>
+  <section class="pricing-card" id="enterprise">
+    <h2>Enterprise / On-Prem</h2>
+    <p><strong>Custom quote</strong></p>
+    <p>Budget reference around $3,499 USD. On-prem deployment for regulated teams that require contract data to stay within their own infrastructure.</p>
+    <a class="pricing-cta" href="mailto:hello@saasspendtrack.com?subject=Enterprise%20and%20On-Prem">Talk to us</a>
+  </section>
+</div>
+
+<div class="pricing-trial">
   <a href="https://app.saasspendtrack.com/" class="pricing-cta pricing-trial-choice" data-trial-cta aria-describedby="pricing-trial-terms">Start my free trial</a>
   <div class="pricing-fine" id="pricing-trial-terms">7 days free. Sign in via your work email. No credit card required.</div>
-  <p class="pricing-fine"><a href="mailto:hello@saasspendtrack.com?subject=Founding%20customer%20offer">Ask about the founding offer</a></p>
 </div>
 
 <section class="pricing-faq-section">
   <h2>Pricing questions</h2>
   <details class="faq-item">
     <summary>What happens when the founding offer ends?</summary>
-    <p>Standard pricing is $3,499 USD per year, paid upfront. Founding customers pay that price starting in year two.</p>
+    <p>New customers join Growth at $2,000 USD per year, paid upfront. Founding customers keep their $1,499 USD annual base price for life.</p>
   </details>
   <details class="faq-item">
     <summary>Can I try it before paying?</summary>

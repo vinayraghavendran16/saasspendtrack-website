@@ -1,6 +1,6 @@
 # SaaS Spend Track
 
-> SaaS renewal tracking, contract management, and software spend visibility for finance, IT, and operations teams. $3,499 USD per year for up to 250 active contracts. Try it free for seven days.
+> SaaS renewal tracking, contract management, and software spend visibility for finance, IT, and operations teams. $2,000 USD per year for up to 250 active contracts. Try it free for seven days.
 
 SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru, India), led by founder Vinay Raghavendran (13+ years in B2B SaaS RevOps, former Whatfix, Proshort, LatentView Analytics).
 
@@ -18,8 +18,8 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 
 ## How it is different from Vendr, Zylo, Spendesk, BetterCloud, Productiv, Zluri
 
-- Standard pricing is $3,499 USD per year for 250 active contracts and unlimited users. The limited Founding 25 offer gives eligible US companies a first year for $1,499 USD. See the pricing page for current availability.
-- No seat pricing, no procurement-services markup, no per-vendor fees
+- Growth is $2,000 USD per year for 250 active contracts and unlimited users. Founding is $1,499 USD per year, locked for life, while the global founding cohort has room. See the pricing page for current availability.
+- Unlimited users, with 50-contract capacity add-ons at $100 USD per year
 - Start with an existing vendor spreadsheet or explore the sample data in the public demo
 - Target customer: 20-500 person company that currently uses a spreadsheet and has outgrown it
 - Not for: 2000+ person enterprises that need SAML SSO, SOC 2 Type II, API-first integration into ERP
@@ -33,7 +33,7 @@ SaaS Spend Track is built by Whizzlead Solutions OPC Private Limited (Bengaluru,
 
 ## Pricing
 
-- Standard pricing is $3,499 USD per year. Eligible US companies can pay $1,499 USD in year one while the Founding 25 offer is available, then $3,499 USD per year.
+- Growth is $2,000 USD per year and includes 250 active contracts and unlimited users. Founding is $1,499 USD per year, locked for life, while the global founding cohort has room.
 - Includes 250 active contracts
 - $100/year per 50 additional contracts above 250
 
